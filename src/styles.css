@@ -1,0 +1,28 @@
+
+div#header{
+    background-color:lightblue;
+}
+
+div#banner{
+    width:1152px;
+    height: 300px;
+    background-color: #e3e3e3;
+}
+
+img#img_banner{
+    display:block;
+    margin:auto;
+    width:100%;     /*Ancho*/
+    height: 350px;    /*Altura*/
+    max-width: 1200px;
+    min-width: 100px;    
+}
+
+img#img_thumbnail{
+    top: 350px;
+    left: 100px;
+    width : 120px;      /*Ancho*/
+    height: 120px;
+    margin: 0px;
+
+}

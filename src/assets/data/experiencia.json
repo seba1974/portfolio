@@ -1,0 +1,77 @@
+{
+	"experienciaLaboral":
+	 [
+		{
+			"posicion": "Mantenimiento Centrales Telefónicas",
+			"empresa":	"Telecom",
+			"img": "",
+			"inicio": "Junio 1994",
+			"fin": "Setiembre 1997"
+		},
+		{
+			"posicion": "Operador sala CGO",
+			"empresa":	"Telecom",
+			"img": "",
+			"inicio": "Setiembre 1997",
+			"fin": "Febrero 1999"
+		},
+		{
+			"posicion": "O&M plataforma de VOZ (Call)",
+			"empresa":	"Telecom",
+			"img": "",
+			"inicio": "Febrero 1999",
+			"fin": "Octubre 2002"
+		},
+		{
+			"posicion": "Reclamos Masivos de Abonados",
+			"empresa":	"Telecom",
+			"img": "",
+			"inicio": "Octubre 2002",
+			"fin": "Setiembre 2005"
+		},
+		{
+			"posicion": "O&M Acceso Datos ADSL",
+			"empresa":	"Telecom",
+			"img": "",
+			"inicio": "Setiembre 2005",
+			"fin": "Noviembre 2015"
+		},
+		{
+			"posicion": "O&M Core Móvil",
+			"empresa":	"Telecom",
+			"img": "",
+			"inicio": "Noviembre 2015",
+			"fin": "Actualidad"
+		}
+	],
+
+
+
+
+	"educacion":
+	 [
+		{
+			"periodo": "1987-1992",
+			"institucion":	"Colegio Luis M. Robles",
+			"img": "",
+			"titulo": "Técnico Electrónico con Orientación en Telecomunicaciones",
+			"estado": "Finalizado"
+		},
+		{
+			"periodo": "1993-1995",
+			"institucion":	"UTN Facultad Regional Córdoba",
+			"img": "",
+			"titulo": "Ingeniero Electrónico",
+			"estado": "Abandonado 3er Año"
+		},
+		{
+			"periodo": "1996-2000",
+			"institucion":	"UNC Facultad de Ciencias Médicas",
+			"img": "",
+			"titulo": "Licenciado en Fisioterapia y Kinesiología",
+			"estado": "Abandonado 3er Año"
+		}
+	]
+}
+		
+ 

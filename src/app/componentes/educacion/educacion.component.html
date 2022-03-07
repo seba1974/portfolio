@@ -1,0 +1,14 @@
+<h2>Educación</h2>
+<div>
+
+        <ul>
+                <li *ngFor="let educacion of listaEducacion">
+                        <p>Período: {{educacion.periodo }}</p>
+                        <p>Institución: {{educacion.institucion}}</p>
+                        <p>Título: {{educacion.titulo}}</p>
+                        <p>Estado: {{educacion.estado}}</p>
+                        <hr>
+                </li>
+
+        </ul>
+</div>
