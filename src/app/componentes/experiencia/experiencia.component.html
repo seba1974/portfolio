@@ -1,12 +1,13 @@
-<h2>Experiencia Laboral</h2>
+<h4>Experiencia Laboral</h4>
 <div>
 
         <ul>
                 <li *ngFor="let experiencia of listaExperiencia">
-                        <p>Posición: {{experiencia.posicion}}</p>
-                        <p>Empresa: {{experiencia.empresa}}</p>
-                        <p>Inicio: {{experiencia.inicio}}</p>
-                        <p>Fin: {{experiencia.fin}}</p>
+                        <img src= "{{experiencia.img}}" alt="{{experiencia.empresa}}">
+                        <p class="principal">Posición: {{experiencia.posicion}}</p>
+                        <p class="secundario">Empresa: {{experiencia.empresa}}</p>
+                        <p class="secundario">Inicio: {{experiencia.inicio}}</p>
+                        <p class="secundario">Fin: {{experiencia.fin}}</p>
                         <hr>
                 </li>
 

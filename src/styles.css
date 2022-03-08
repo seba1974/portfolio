@@ -26,3 +26,12 @@ img#img_thumbnail{
     margin: 0px;
 
 }
+p.principal{
+    font-size: 18px;
+    color: gray;
+}
+p.secundario{
+    font-size: 12px;
+    color: black;
+    margin:20px;
+}

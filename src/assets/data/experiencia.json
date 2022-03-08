@@ -4,42 +4,42 @@
 		{
 			"posicion": "Mantenimiento Centrales Telefónicas",
 			"empresa":	"Telecom",
-			"img": "",
+			"img": "/src/app/componentes/header/img/1990.jpg",
 			"inicio": "Junio 1994",
 			"fin": "Setiembre 1997"
 		},
 		{
 			"posicion": "Operador sala CGO",
 			"empresa":	"Telecom",
-			"img": "",
+			"img": "/src/app/componentes/header/img/1990.jpg",
 			"inicio": "Setiembre 1997",
 			"fin": "Febrero 1999"
 		},
 		{
 			"posicion": "O&M plataforma de VOZ (Call)",
 			"empresa":	"Telecom",
-			"img": "",
+			"img": "/src/app/componentes/header/img/1998.jpg",
 			"inicio": "Febrero 1999",
 			"fin": "Octubre 2002"
 		},
 		{
 			"posicion": "Reclamos Masivos de Abonados",
 			"empresa":	"Telecom",
-			"img": "",
+			"img": "/src/app/componentes/header/img/1998.jpg",
 			"inicio": "Octubre 2002",
 			"fin": "Setiembre 2005"
 		},
 		{
 			"posicion": "O&M Acceso Datos ADSL",
 			"empresa":	"Telecom",
-			"img": "",
+			"img": "/src/app/componentes/header/img/2018.jpg",
 			"inicio": "Setiembre 2005",
 			"fin": "Noviembre 2015"
 		},
 		{
 			"posicion": "O&M Core Móvil",
 			"empresa":	"Telecom",
-			"img": "",
+			"img": "/src/app/componentes/header/img/2022.jpg",
 			"inicio": "Noviembre 2015",
 			"fin": "Actualidad"
 		}
