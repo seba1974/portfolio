@@ -3,6 +3,7 @@
 
         <ul>
                 <li *ngFor="let educacion of listaEducacion">
+                        <img src= "{{educacion.img}}" alt="{{educacion.institucion}}" width=60px weight=60px>
                         <p class="principal">Período: {{educacion.periodo }}</p>
                         <p class="secundario">Institución: {{educacion.institucion}}</p>
                         <p class="secundario">Título: {{educacion.titulo}}</p>
