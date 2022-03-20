@@ -1,0 +1,50 @@
+div#header{
+    margin:20px;
+    background-color:rgb(137, 224, 170);
+    border-radius: 15px;
+    border :1px solid #ccc;
+}
+
+div#banner{
+    margin:7px;
+    width:1152px;
+    height: 300px;
+
+}
+
+img#img_iconos{
+    
+    width:90px;
+    height:50px;
+
+}
+
+input#input_iconos{
+    
+    width:25px;
+    height:25px;
+        
+}
+
+
+img#img_banner{
+    
+    width: 97%;     /*Ancho* 97%*/
+    height: 300px;  /* va ok Altura 300px*/
+    margin-right: 80px;
+    /*max-width: 1600px;*/
+    /* min-width: 100px;*/
+    border-radius: 15px;
+    z-index:0;
+    position: absolute;   /*va ok*/
+}
+
+img#img_thumbnail{
+    position: absolute;
+    width : 160px;      /*Ancho 160px*/
+    height: auto;       /*Alto auto par mantener la relacion*/
+    bottom: 140px;      /* desde abajo*/
+    left: 50px;         /* desde la izq*/
+    z-index:1;          /* traer al frente*/
+
+}   

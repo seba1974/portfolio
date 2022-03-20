@@ -1,3 +1,21 @@
+div.conteiner-fluid#acercade{
+    margin-left: 20px;
+    margin-right: 40px;
+    border:2px outset #ccc;
+    
+    border-radius:15px;
+    /*padding-right: 40px;*/
+    /*background-color:rgb(236, 235, 232);*/
+    /*margin:30px;*/   /* Margen arriba y a la izquierda*/
+        
+}
+
+
+#acerca_nombre{
+    background-color: rgb(243, 233, 191);
+}
+
+
 i{
     margin-left:20px;
 }
