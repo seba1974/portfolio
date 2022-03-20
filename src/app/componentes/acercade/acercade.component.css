@@ -10,11 +10,11 @@ div.conteiner-fluid#acercade{
         
 }
 
-
+/*
 #acerca_nombre{
-    background-color: rgb(243, 233, 191);
+    background-color: rgb(184, 180, 168);
 }
-
+*/
 
 i{
     margin-left:20px;
@@ -31,4 +31,16 @@ i{
 .bold{
     font-weight: bold;
     
+}
+.nombre{
+    margin-left: 50px;
 } 
+
+img#img_thumbnail{
+    /*position: absolute top -300;*/
+    width : 160px;      /*Ancho 160px*/
+    height: auto;       /*Alto auto par mantener la relacion*/
+    /*bottom: 140px;      /* desde abajo*/
+    /*left: 50px;         /* desde la izq*/
+    z-index:1;          /* traer al frente*/
+}
