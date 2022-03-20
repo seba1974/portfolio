@@ -1,7 +1,18 @@
 
 <h4>Experiencia Laboral</h4>
-<div class="conteiner">
-
+<div class="conteiner-fluid">
+        <div class="row">
+                <div class="col">
+                        <i class="bi bi-pencil-fill"></i>
+                </div>
+                <div class="col">
+                        <i class="bi bi-plus-circle-fill"></i>
+                </div>
+                <div class="col">
+                        <i class="bi bi-trash-fill"></i>
+                </div>
+        </div>
+    
         <ul>
                 <li *ngFor="let experiencia of listaExperiencia">
                         <img src= "{{experiencia.img}}" alt="{{experiencia.empresa}}" width=50px weight=50px>
