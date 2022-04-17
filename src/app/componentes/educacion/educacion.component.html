@@ -1,25 +1,33 @@
-<div class="divisor"></div>
-<div class="conteiner">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <div class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <h4>Educación</h4>                       
-                </div>
-                <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                        <i class="bi bi-pencil-fill"></i>
-                        <i class="bi bi-plus-circle-fill"></i>
-                        <i class="bi bi-trash-fill"></i>
-                </div>                
-        </div>
-    
-        <ul>
-                <li *ngFor="let educacion of listaEducacion">
-                        <img src= "{{educacion.img}}" alt="{{educacion.institucion}}" width=60px weight=60px>
-                        <p class="principal">Período: {{educacion.periodo }}</p>
-                        <p class="secundario">Institución: {{educacion.institucion}}</p>
-                        <p class="secundario">Título: {{educacion.titulo}}</p>
-                        <p class="secundario">Estado: {{educacion.estado}}</p>
-                        <hr>
-                </li>
 
-        </ul>
+<div class="divisor">
+
 </div>
+<div class="conteiner">
+        <div class="row">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <h2>Educación</h2>
+                        <i class="bi bi-plus-circle-fill"></i>
+                </div>
+    
+                <ul><!-- declaro la variable educacion que recorre la listaEducacion !-->
+                        <li *ngFor="let educacion of listaEducacion"> <!-- directiva estructural recorre la estructura  !-->
+                                <img [src]= "educacion.imagen" [alt]="educacion.institucion" width=60px weight=60px>
+                                <h3>{{educacion.institucion}}</h3>
+                                <p class="secundario">{{educacion.titulo}}</p>
+                                <p class="principal"><time>{{educacion.anio_inicio }}</time> - <time>{{educacion.anio_fin }}</time></p>
+                                <p class="secundario">Promedio: {{educacion.promedio}}</p>
+                                <p class="secundario">{{educacion.estado}}</p>
+                        
+                                <div class="row">
+                                        <div class="col">
+                                                <i class="bi bi-pencil-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                        </div>
+                                </div>
+                        <hr>
+                        </li>
+
+                </ul>
+        </div>
+</div>
+                

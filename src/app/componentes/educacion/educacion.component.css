@@ -17,9 +17,41 @@ i{
 p.principal{
     font-size: 18px;
     color: rgb(92, 91, 91);
+    /*background-color:goldenrod;*/
 }
 p.secundario{
     font-size: 14px;
     color: black;
     margin:20px;
+    /*background-color: skyblue;*/
 }
+/*
+div.conteiner{
+
+    background-color: yellow;
+}
+div.row{
+    
+    background-color: grey;
+}
+
+i.bi{
+    
+    background-color: orange;
+}
+div.d-flex{
+    
+    background-color: greenyellow;
+}
+
+h4
+{
+background-color:green;
+}
+h3
+{
+background-color:rebeccapurple;
+}
+img{
+    background-color:royalblue;
+}*/

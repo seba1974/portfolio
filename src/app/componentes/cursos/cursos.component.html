@@ -1,1 +1,29 @@
-<p>cursos works!</p>
+<div class="divisor">
+
+</div>
+<div class="conteiner">
+        <div class="row">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <h2>Cursos</h2>
+                        <i class="bi bi-plus-circle-fill"></i>
+                </div>
+    
+                <ul><!-- declaro la variable educacion que recorre la listaEducacion !-->
+                        <li *ngFor="let curso of listaCursos"> <!-- directiva estructural recorre la estructura  !-->
+                                <h3>{{curso.curso}}</h3>
+                                <p class="secundario">{{curso.dictado_por}}</p>
+                                <p class="principal"><time>{{curso.anio}}</time></p>
+                                
+                        
+                                <div class="row">
+                                        <div class="col">
+                                                <i class="bi bi-pencil-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                        </div>
+                                </div>
+                        <hr>
+                        </li>
+
+                </ul>
+        </div>
+</div>

@@ -13,6 +13,20 @@ export class SrvdataService {
 
   obtenerDatos():Observable<any>
   {
-    return this.http.get('./assets/data/experiencia.json');
+    return this.http.get('./assets/data/porfolio.json'); /* aca va la url de la bd*/
   }
+  borrarDatos():Observable<any>
+  {
+    return this.http.delete('localhost:3306/porfolio'); /**********Para MAÑANA***************** */
+  }
+/*  crearDatos():Observable<any>
+  {
+    return this.http.put ( './assets/data/experiencia.json' );
+
+  }
+  modificarDatos():Observable<any>
+  {
+    return this.http.post ( './assets/data/experiencia.json' );
+
+  }*/ 
 }

@@ -8,13 +8,15 @@ import { SrvdataService } from 'src/app/servicios/srvdata.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  listaEducacion:any;
-  constructor(private datosEducacion:SrvdataService) { }
+  listaEducacion:any;   /* declaro una variable de tipo any para su posterior uso */
+  constructor(private datosEducacion:SrvdataService) {  /* inyecto en mi componente el servicio */
+
+   }
 
   ngOnInit(): void {
     this.datosEducacion.obtenerDatos().subscribe(data => {
 
-      this.listaEducacion = data.educacion;
+      this.listaEducacion = data.tbleducacion; /*tbleducacion = nombre de la tabla en la BD de acá vamos al html de componente a crear el ngFor*/
       
     })
 

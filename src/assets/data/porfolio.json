@@ -1,0 +1,175 @@
+{
+	"tblcursos":
+	[
+		{
+		"id" : 1,
+		"dni" : 23824141,
+		"anio" : "2022",
+		"curso" : "Ingles para Developers",
+		"dictado_por" : "Argentina Programa"
+		},
+		{
+		"id" : 2,
+		"dni" : 23824141,
+		"anio" : "2022",
+		"curso" : "Full Stack Developer Jr.",
+		"dictado_por" : "Argentina Programa"
+		}
+	],
+
+	"tbleducacion":
+	[
+		{
+		"id" : 1,
+		"dni" : 23824141,
+		"institucion" : "Luis m. Robles",
+		"titulo" : "Técnico Electrónico",
+		"imagen" : "http://colegiorobles.edu.ar/site/images/logo.jpg",
+		"estado" : "Completado",
+		"promedio" : "8.50",
+		"anio_inicio" : "1987",
+		"anio_fin" : "1992"
+		},
+		{
+			"id" : 2,
+			"dni" : 23824141,
+			"institucion" : "UTN",
+			"titulo" : "Ingeniería Electrónica",
+			"imagen" : "//upload.wikimedia.org/wikipedia/commons/6/67/UTN_logo.jpg",
+			"estado" : "Abandonado 3er Año",
+			"promedio" : "7.66",
+			"anio_inicio" : "1993",
+			"anio_fin" : "1995"
+			}
+	],
+
+	"tblexperiencia_laboral":
+	[
+		{
+		"id" : 1,
+		"dni" : 23824141,
+		"empresa" : "Telecom Argentina",
+		"puesto" : "Técnico en equipos",
+		"ubic_empresa" : "Córdoba",
+		"area_cobertura" : "Nacional",
+		"img_logo" : "//upload.wikimedia.org/wikipedia/commons/thumb/9/95/Telecom_Argentina_Logo.svg/1280px-Telecom_Argentina_Logo.svg.png",
+		"fecha_ingreso" : "01/06/1994",
+		"fecha_egreso" : "Actualidad",
+		"descripcion" : "Mantenimiento de centrales telefónicas."
+		}
+	],
+
+	"tblidiomas":
+	[
+		{
+		"id" : 1,
+		"dni" : 23824141,
+		"idioma" : "Castellano",
+		"porcentaje_oral" : 100,
+		"porcentaje_escrita" : 100
+		}
+	],
+
+	"tblperfil":
+	[
+		{
+		"dni" : 23824141,
+		"nombre" : "Sebastian",
+		"apellido" : "Veloce",
+		"fecha_nacimiento" : "11/04/1974",
+		"nacionalidad" : "Argentino",
+		"mail" : "seba.veloce@gmail.com",
+		"sobre_mi" : "Tengo una gran familia. Me gustan las actividades al aire libre como caminar, andar en bicicleta. Disfruto de las pequeñas cosas...",
+		"ocupacion" : "Full Stack Developer Jr.",
+		"imagen_background_header" : "assets/img/banner.jpg",
+		"imagen_perfil" : "assets/img/thumbnail.jpg",
+		"domicilio" : "Las Rosas 146"
+		}
+	],
+
+	"tblproyectos":
+	[
+		{
+		"id" : 1,
+		"dni" : 23824141,
+		"nombre" : "porfolio",
+		"fecha" : "2022",
+		"descripcion" : "Desarrolar una aplicacion Web Full Stack",
+		"link" : "http://www.spotify.com",
+		"imagen" : null
+		},
+		{
+			"id" : 2,
+			"dni" : 23824141,
+			"nombre" : "Api para Carniceria",
+			"fecha" : "2020",
+			"descripcion" : "Desarrolar una aplicacion Web Full Stack Para una carniceria",
+			"link" : "http://www.cadena3.com",
+			"imagen" : null
+			}
+	],
+
+	"tblredes_sociales":
+	[
+		{
+		"id" : 1,
+		"dni" : 23824141,
+		"red" : "Mail",
+		"link" : "seba.veloce@gmail.com",
+		"imagen" : "assets/img/email.svg"},
+		{
+
+		"id" : 2,
+		"dni" : 23824141,
+		"red" : "Telefono",
+		"link" : "seba.veloce@gmail.com",
+		"imagen" : "assets/img/telefono-sonando.svg"},
+		{
+		
+		"id" : 3,
+		"dni" : 23824141,
+		"red" : "Twitter",
+		"link" : "seba.veloce@gmail.com",
+		"imagen" : "assets/img/twitter.svg"},
+		{
+		
+		"id" : 4,
+		"dni" : 23824141,
+		"red" : "Instagram",
+		"link" : "seba.veloce@gmail.com",
+		"imagen" : "assets/img/instagram.svg"
+		}
+	],
+
+	"tblskills_hard":
+	[
+		{
+		"id" : 1,
+		"dni" : 23824141,
+		"habilidad" : "Programación",
+		"porcentaje" : 50
+		},
+		{
+		"id" : 2,
+		"dni" : 23824141,
+		"habilidad" : "Blockchain",
+		"porcentaje" : 25
+		}
+	],
+
+	"tblskills_soft":
+	[
+		{
+		"id" : 1,
+		"dni" : 23824141,
+		"habilidad" : "Autogestión",
+		"porcentaje" : 90
+		},
+		{
+		"id" : 2,
+		"dni" : 23824141,
+		"habilidad" : "Trabajo en equipo",
+		"porcentaje" : 80
+		}
+	]	
+}
