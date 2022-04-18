@@ -12,15 +12,9 @@
         <ul>
                 <li *ngFor="let proyectos of listaProyectos">
                         <img src= "{{proyectos.imagen}}" alt="{{proyectos.nombre}}" width=60px weight=60px>
-                        <h3>{{proyectos.nombre}}</h3><!-- nombre de los campos en la BD o JSON!-->
+                        <h3>{{proyectos.nombre}}<i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></h3><!-- nombre de los campos en la BD o JSON!-->
                         <p class="principal"><time>{{proyectos.fecha}}</time></p> <!-- nombre de los campos en la BD o JSON!-->
                         <p>{{proyectos.descripcion}}</p><!-- nombre de los campos en la BD o JSON!-->
-                        <div class="row">
-                                <div class="col">
-                                        <i class="bi bi-pencil-fill"></i>
-                                        <i class="bi bi-trash-fill"></i>
-                                </div>
-                        </div>
                         <hr>
                 </li>
 

@@ -8,14 +8,15 @@ import { SrvdataService } from 'src/app/servicios/srvdata.service';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-  listaSkills:any;
+  lista_Skills_Hard:any;
+  lista_Skills_Soft:any;
 
   constructor(private datosSkills:SrvdataService) {   }
 
   ngOnInit(): void {  this.datosSkills.obtenerDatos().subscribe(data => {
     console.log(data);
-    this.listaSkills = data.tblskills; //nombre de la tabla de la BD o JSON
-    
+    this.lista_Skills_Hard = data.tblskills_hard; //nombre de la tabla de la BD o JSON
+    this.lista_Skills_Soft = data.tblskills_soft;
   })
 
   }

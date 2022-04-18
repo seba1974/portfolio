@@ -10,18 +10,10 @@
     
                 <ul><!-- declaro la variable educacion que recorre la listaEducacion !-->
                         <li *ngFor="let curso of listaCursos"> <!-- directiva estructural recorre la estructura  !-->
-                                <h3>{{curso.curso}}</h3>
+                                <h3>{{curso.curso}}<i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></h3>
                                 <p class="secundario">{{curso.dictado_por}}</p>
                                 <p class="principal"><time>{{curso.anio}}</time></p>
-                                
-                        
-                                <div class="row">
-                                        <div class="col">
-                                                <i class="bi bi-pencil-fill"></i>
-                                                <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                </div>
-                        <hr>
+                                <hr>
                         </li>
 
                 </ul>

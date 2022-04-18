@@ -21,7 +21,7 @@ export class SrvdataService {
   }
 /*  crearDatos():Observable<any>
   {
-    return this.http.put ( './assets/data/experiencia.json' );
+    return this.http.put ( '../assets/data/porfolio.json' );
 
   }
   modificarDatos():Observable<any>
