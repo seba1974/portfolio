@@ -11,7 +11,7 @@
     
                 <ul><!-- declaro la variable educacion que recorre la listaEducacion !-->
                         <li *ngFor="let educacion of listaEducacion"> <!-- directiva estructural recorre la estructura  !-->
-                                <img [src]= "educacion.imagen" [alt]="educacion.institucion" width=60px weight=60px>
+                                <img [src]= "educacion.imagen" [alt]="educacion.institucion" width=50px weight=50px>
                                 <h4>{{educacion.institucion}}<i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></h4>
                                 <p class="secundario">{{educacion.titulo}}</p>
                                 <p class="principal"><time>{{educacion.anio_inicio }}</time> - <time>{{educacion.anio_fin }}</time></p>

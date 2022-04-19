@@ -116,21 +116,24 @@
 		"dni" : 23824141,
 		"red" : "Mail",
 		"link" : "seba.veloce@gmail.com",
-		"imagen" : "assets/img/email.svg"},
+		"imagen" : "assets/img/email.svg"
+		},
 		{
 
 		"id" : 2,
 		"dni" : 23824141,
 		"red" : "Telefono",
 		"link" : "seba.veloce@gmail.com",
-		"imagen" : "assets/img/telefono-sonando.svg"},
+		"imagen" : "assets/img/telefono-sonando.svg"
+		},
 		{
 		
 		"id" : 3,
 		"dni" : 23824141,
 		"red" : "Twitter",
 		"link" : "seba.veloce@gmail.com",
-		"imagen" : "assets/img/twitter.svg"},
+		"imagen" : "assets/img/twitter.svg"
+		},
 		{
 		
 		"id" : 4,

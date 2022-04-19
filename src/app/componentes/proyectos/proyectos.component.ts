@@ -9,6 +9,7 @@ import { SrvdataService } from 'src/app/servicios/srvdata.service';
 })
 export class ProyectosComponent implements OnInit {
   listaProyectos:any;
+  
   constructor(private datosProyectos:SrvdataService) { }
 
   ngOnInit(): void {

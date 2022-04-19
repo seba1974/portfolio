@@ -1,27 +1,23 @@
 
 <div class="divisor"></div>
 <div class="conteiner">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <div class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <h2>Experiencia Laboral</h2>
-                        <i class="bi bi-plus-circle-fill"></i>                       
+        <div class="card mat-card">
+                <div id="expreriencia">
+                        <div class="card-titles">
+                                <h2>Experiencia Laboral</h2>
+                                <div class="btn-edit">
+                                        <a ref="#" class="btn-right"><i class="bi bi-plus-circle-fill"></i></a>
+                                </div>
+                        </div>                       
                 </div>
-                <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                        
-                        
-                        
-                </div>                
+                <ul calss="items-list">
+                        <li *ngFor="let experiencia of listaExperiencia">
+                                <img src= "{{experiencia.img_logo}}" alt="{{experiencia.empresa}}" width=60px weight=60px>
+                                <h4>{{experiencia.empresa}}<i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></h4><!-- nombre de los campos en la BD o JSON!-->
+                                <p class="principal">{{experiencia.puesto}}</p> <!-- nombre de los campos en la BD o JSON!-->
+                                <p><time>{{experiencia.fecha_ingreso}}</time> - <time>{{experiencia.fecha_egreso}}</time></p><!-- nombre de los campos en la BD o JSON!-->
+                                <hr>
+                        </li>
+                </ul>
         </div>
-    
-        <ul>
-                <li *ngFor="let experiencia of listaExperiencia">
-                        <img src= "{{experiencia.img_logo}}" alt="{{experiencia.empresa}}" width=60px weight=60px>
-                        <h4>{{experiencia.empresa}}<i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></h4><!-- nombre de los campos en la BD o JSON!-->
-                        <p class="principal">{{experiencia.puesto}}</p> <!-- nombre de los campos en la BD o JSON!-->
-                        <p><time>{{experiencia.fecha_ingreso}}</time> - <time>{{experiencia.fecha_egreso}}</time></p><!-- nombre de los campos en la BD o JSON!-->
-                        
-                        <hr>
-                </li>
-
-        </ul>
 </div>
