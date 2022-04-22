@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { SrvdataService } from 'src/app/servicios/srvdata.service';
+import { SkillsService } from 'src/app/servicios/skills.service';
 
 @Component({
   selector: 'app-skills',
@@ -11,9 +11,9 @@ export class SkillsComponent implements OnInit {
   lista_Skills_Hard:any;
   lista_Skills_Soft:any;
 
-  constructor(private datosSkills:SrvdataService) {   }
+  constructor(private datosSkills:SkillsService) {   }
 
-  ngOnInit(): void {  this.datosSkills.obtenerDatos().subscribe(data => {
+  ngOnInit(): void {  this.datosSkills.obtenerSkills().subscribe(data => {
     console.log(data);
     this.lista_Skills_Hard = data.tblskills_hard; //nombre de la tabla de la BD o JSON
     this.lista_Skills_Soft = data.tblskills_soft;

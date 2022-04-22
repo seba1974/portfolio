@@ -12,6 +12,26 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 
 import { HttpClientModule } from '@angular/common/http';
 import { CursosComponent } from './componentes/cursos/cursos.component';
+import { AltaExperienciaComponent } from './componentes/experiencia/alta-experiencia/alta-experiencia.component';
+import { BajaExperienciaComponent } from './componentes/experiencia/baja-experiencia/baja-experiencia.component';
+import { ModificarExperienciaComponent } from './componentes/experiencia/modificar-experiencia/modificar-experiencia.component';
+import { ModificarEducacionComponent } from './componentes/educacion/modificar-educacion/modificar-educacion.component';
+import { AltaEducacionComponent } from './componentes/educacion/alta-educacion/alta-educacion.component';
+import { BajaEducacionComponent } from './componentes/educacion/baja-educacion/baja-educacion.component';
+import { BajaAcercadeComponent } from './componentes/acercade/baja-acercade/baja-acercade.component';
+import { AltaAcercadeComponent } from './componentes/acercade/alta-acercade/alta-acercade.component';
+import { ModificarAcercadeComponent } from './componentes/acercade/modificar-acercade/modificar-acercade.component';
+import { ModificarCursosComponent } from './componentes/cursos/modificar-cursos/modificar-cursos.component';
+import { AltaCursosComponent } from './componentes/cursos/alta-cursos/alta-cursos.component';
+import { BajaCursosComponent } from './componentes/cursos/baja-cursos/baja-cursos.component';
+import { AltaProyectosComponent } from './componentes/proyectos/alta-proyectos/alta-proyectos.component';
+import { BajaProyectosComponent } from './componentes/proyectos/baja-proyectos/baja-proyectos.component';
+import { ModificarProyectosComponent } from './componentes/proyectos/modificar-proyectos/modificar-proyectos.component';
+import { AltaSkillsComponent } from './componentes/skills/alta-skills/alta-skills.component';
+import { BajaSkillsComponent } from './componentes/skills/baja-skills/baja-skills.component';
+import { ModificarSkillsComponent } from './componentes/skills/modificar-skills/modificar-skills.component';
+import { LoginComponent } from './componentes/header/login/login.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -23,11 +43,31 @@ import { CursosComponent } from './componentes/cursos/cursos.component';
     FooterComponent,
     SkillsComponent,
     ProyectosComponent,
-    CursosComponent
+    CursosComponent,
+    AltaExperienciaComponent,
+    BajaExperienciaComponent,
+    ModificarExperienciaComponent,
+    ModificarEducacionComponent,
+    AltaEducacionComponent,
+    BajaEducacionComponent,
+    BajaAcercadeComponent,
+    AltaAcercadeComponent,
+    ModificarAcercadeComponent,
+    ModificarCursosComponent,
+    AltaCursosComponent,
+    BajaCursosComponent,
+    AltaProyectosComponent,
+    BajaProyectosComponent,
+    ModificarProyectosComponent,
+    AltaSkillsComponent,
+    BajaSkillsComponent,
+    ModificarSkillsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

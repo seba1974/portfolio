@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { SrvdataService } from 'src/app/servicios/srvdata.service';
+import { ProyectosService } from 'src/app/servicios/proyectos.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -10,10 +10,10 @@ import { SrvdataService } from 'src/app/servicios/srvdata.service';
 export class ProyectosComponent implements OnInit {
   listaProyectos:any;
   
-  constructor(private datosProyectos:SrvdataService) { }
+  constructor(private datosProyectos:ProyectosService) { }
 
   ngOnInit(): void {
-    this.datosProyectos.obtenerDatos().subscribe(data => {
+    this.datosProyectos.obtenerProyectos().subscribe(data => {
       console.log(data);
       this.listaProyectos = data.tblproyectos; //nombre de la tabla de la BD o JSON
       

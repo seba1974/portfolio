@@ -6,18 +6,19 @@
                         <div class="card-titles">
                                 <h2>Experiencia Laboral</h2>
                                 <div class="btn-edit">
-                                        <a ref="#" class="btn-right"><i class="bi bi-plus-circle-fill"></i></a>
+                                        <a class="btn-right" routerLink="/experiencia/crear"><i class="bi bi-plus-circle-fill"></i></a>
                                 </div>
                         </div>                       
                 </div>
                 <ul calss="items-list">
                         <li *ngFor="let experiencia of listaExperiencia">
                                 <img src= "{{experiencia.img_logo}}" alt="{{experiencia.empresa}}" width=60px weight=60px>
-                                <h4>{{experiencia.empresa}}<i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></h4><!-- nombre de los campos en la BD o JSON!-->
+                                <h4>{{experiencia.empresa}}<i class="bi bi-pencil-fill" routerLink="/experiencia/editar"></i><i class="bi bi-trash-fill" routerLink="/experiencia/borrar"></i></h4><!-- nombre de los campos en la BD o JSON!-->
                                 <p class="principal">{{experiencia.puesto}}</p> <!-- nombre de los campos en la BD o JSON!-->
                                 <p><time>{{experiencia.fecha_ingreso}}</time> - <time>{{experiencia.fecha_egreso}}</time></p><!-- nombre de los campos en la BD o JSON!-->
                                 <hr>
                         </li>
                 </ul>
         </div>
+        
 </div>
