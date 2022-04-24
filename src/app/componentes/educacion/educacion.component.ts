@@ -9,6 +9,8 @@ import { EducacionService } from 'src/app/servicios/educacion.service';
 })
 export class EducacionComponent implements OnInit {
   listaEducacion:any;   /* declaro una variable de tipo any para su posterior uso */
+
+  
   constructor(private datosEducacion:EducacionService) {  /* inyecto en mi componente el servicio */
 
    }

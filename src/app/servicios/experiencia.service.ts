@@ -6,7 +6,7 @@ import { Experiencia } from '../Models/experiencia';
 @Injectable({
   providedIn: 'root'
 })
-export class ExperienciaService {
+export class ExperienciaService  {
 
   experienciaURL = "http://localhost:8080/experiencia";
   

@@ -32,6 +32,9 @@ import { BajaSkillsComponent } from './componentes/skills/baja-skills/baja-skill
 import { ModificarSkillsComponent } from './componentes/skills/modificar-skills/modificar-skills.component';
 import { LoginComponent } from './componentes/header/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ModificarHeaderComponent } from './componentes/header/modificar-header/modificar-header.component';
+import { AltaHeaderComponent } from './componentes/header/alta-header/alta-header.component';
+import { BajaHeaderComponent } from './componentes/header/baja-header/baja-header.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +65,10 @@ import { AppRoutingModule } from './app-routing.module';
     AltaSkillsComponent,
     BajaSkillsComponent,
     ModificarSkillsComponent,
-    LoginComponent
+    LoginComponent,
+    ModificarHeaderComponent,
+    AltaHeaderComponent,
+    BajaHeaderComponent
   ],
   imports: [
     BrowserModule,

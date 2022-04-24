@@ -11,7 +11,9 @@ export class ExperienciaComponent implements OnInit {
   listaExperiencia:any;
 
   
-  constructor(private datosExperiencia:ExperienciaService) {   }
+  constructor(private datosExperiencia:ExperienciaService) { 
+    
+    }
 
   ngOnInit(): void {
     this.datosExperiencia.obtenerExperiencia().subscribe(data => {
