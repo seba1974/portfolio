@@ -18,7 +18,7 @@ export class ExperienciaComponent implements OnInit {
   ngOnInit(): void {
     this.datosExperiencia.obtenerExperiencia().subscribe(data => {
       console.log(data);
-      this.listaExperiencia = data.tblexperiencia_laboral; //nombre de la tabla de la BD o JSON
+      this.listaExperiencia = data; //nombre de la tabla de la BD o JSON
       
     })
 

@@ -11,14 +11,19 @@ export class SkillsComponent implements OnInit {
   lista_Skills_Hard:any;
   lista_Skills_Soft:any;
 
-  constructor(private datosSkills:SkillsService) {   }
+  constructor(private datosSkills_Hard:SkillsService,
+              private datosSkills_Soft:SkillsService) {   }
 
-  ngOnInit(): void {  this.datosSkills.obtenerSkills().subscribe(data => {
+  ngOnInit(): void {  this.datosSkills_Hard.obtenerSkills_Hard().subscribe(data => {
     console.log(data);
-    this.lista_Skills_Hard = data.tblskills_hard; //nombre de la tabla de la BD o JSON
-    this.lista_Skills_Soft = data.tblskills_soft;
+    this.lista_Skills_Hard = data; //nombre de la tabla de la BD o JSON
+    //this.lista_Skills_Soft = data;
+  }) 
+    this.datosSkills_Soft.obtenerSkills_Soft().subscribe(data => {
+    console.log(data);
+    this.lista_Skills_Soft = data; //nombre de la tabla de la BD o JSON
+   
   })
-
-  }
-
+  
+}
 }

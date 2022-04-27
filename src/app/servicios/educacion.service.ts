@@ -12,13 +12,13 @@ export class EducacionService {
   
 constructor(private http:HttpClient) { }
 
-obtenerEducacion():Observable<any>  {
-  return this.http.get('./assets/data/porfolio.json'); /* funciona*/
-}
+/*obtenerEducacion():Observable<any>  {
+  return this.http.get('//localhost:3306/porfolio'); /* funciona
+}*/
 
-/*  obtenerEducacion():Observable<Educacion[]>  {
-  return this.http.get <Educacion[]>(this.educacionURL + '/lista'); /* aca va la url de la bd
-}*/ 
+  obtenerEducacion():Observable<Educacion[]>  {
+  return this.http.get <Educacion[]>(this.educacionURL + '/lista'); /* aca va la url del BackEnd sacar la tabla de el component.ts*/
+} 
 
 borrarEducacion(id: number):Observable<any>  {
   return this.http.delete <Educacion[]>(this.educacionURL + '/borrar'); 

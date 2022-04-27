@@ -8,22 +8,29 @@ import { Skills } from '../Models/skills'
 })
 export class SkillsService {
 
-  skillsURL = "http://localhost:8080/skills"
-  
+  skills_hardURL = "http://localhost:8080/skills_hard"
+  skills_softURL = "http://localhost:8080/skills_soft"
+
+
   constructor(private http:HttpClient) { }
 
-  obtenerSkills():Observable<any>  {
-    return this.http.get('./assets/data/porfolio.json'); /* funciona*/
-  }
 
-/*  obtenerSkills():Observable<Skills[]>  {
-    return this.http.get <Skills[]>(this.skillsURL + '/lista'); /* aca va la url de la bd
-  }*/ 
+
+ obtenerSkills_Hard():Observable<Skills[]>  {
+    return this.http.get <Skills[]>(this.skills_hardURL + '/lista'); /* aca va la url de la bd*/
+  } 
+
+ obtenerSkills_Soft():Observable<Skills[]>  {
+    return this.http.get <Skills[]>(this.skills_softURL + '/lista'); /* aca va la url de la bd*/
+  }
 
   borrarSkills(id: number):Observable<any>  {
-    return this.http.delete <Skills[]>(this.skillsURL + '/borrar'); 
+    return this.http.delete <Skills[]>(this.skills_hardURL + '/borrar'); 
   }
-  
+
+  /*   obtenerSkills():Observable<any>  {
+    return this.http.get('./assets/data/porfolio.json'); /* funciona
+  }*/
   
   /*crearSkills(id: number, dni: String, ):Observable<any> {
     return this.http.put <Skills[]>(this.skillsURL + '/crear');

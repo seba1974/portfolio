@@ -12,23 +12,23 @@ export class CursosService {
   
   constructor(private http:HttpClient) { }
 
-  obtenerCursos():Observable<any>  {
-    return this.http.get('./assets/data/porfolio.json'); /* funciona*/
+  obtenerCursos():Observable<Cursos[]>  {
+    return this.http.get <Cursos[]>(this.cursosURL + '/lista');
   }
-
-/*  obtenerCursos():Observable<Cursos[]>  {
-    return this.http.get <Cursos[]>(this.cursosURL + '/lista'); /* aca va la url de la bd
-  }*/ 
 
   borrarCursos(id: number):Observable<any>  {
     return this.http.delete <Cursos[]>(this.cursosURL + '/borrar'); 
   }
   
-  
+
+
+  /*obtenerCursos():Observable<any>  {
+    return this.http.get('./assets/data/porfolio.json'); /* funciona   /* aca va la url de la bd
+  }*/
+
   /*crearDatos(id: number, dni: String, ):Observable<any> {
     return this.http.put <Cursos[]>(this.cursosURL + '/crear');
   }
-  
   
   modificarDatos(cursos: Cursos):Observable<any>  {
     return this.http.post<Cursos[]> (this.cursosURL + '/modificar');

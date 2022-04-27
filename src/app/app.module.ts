@@ -35,6 +35,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { ModificarHeaderComponent } from './componentes/header/modificar-header/modificar-header.component';
 import { AltaHeaderComponent } from './componentes/header/alta-header/alta-header.component';
 import { BajaHeaderComponent } from './componentes/header/baja-header/baja-header.component';
+import { IdiomasComponent } from './componentes/idiomas/idiomas.component';
+import { BajaIdiomasComponent } from './componentes/idiomas/baja-idiomas/baja-idiomas.component';
+import { AltaIdiomasComponent } from './componentes/idiomas/alta-idiomas/alta-idiomas.component';
+import { ModificarIdiomasComponent } from './componentes/idiomas/modificar-idiomas/modificar-idiomas.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +72,11 @@ import { BajaHeaderComponent } from './componentes/header/baja-header/baja-heade
     LoginComponent,
     ModificarHeaderComponent,
     AltaHeaderComponent,
-    BajaHeaderComponent
+    BajaHeaderComponent,
+    IdiomasComponent,
+    BajaIdiomasComponent,
+    AltaIdiomasComponent,
+    ModificarIdiomasComponent
   ],
   imports: [
     BrowserModule,

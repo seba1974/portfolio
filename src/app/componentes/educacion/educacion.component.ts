@@ -18,7 +18,7 @@ export class EducacionComponent implements OnInit {
   ngOnInit(): void {
     this.datosEducacion.obtenerEducacion().subscribe(data => {
 
-      this.listaEducacion = data.tbleducacion; /*tbleducacion = nombre de la tabla en la BD de acá vamos al html de componente a crear el ngFor*/
+      this.listaEducacion = data; /*tbleducacion = nombre de la tabla en la BD de acá vamos al html de componente a crear el ngFor*/
       
     })
 
