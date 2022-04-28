@@ -12,19 +12,19 @@ export class ProyectosService {
   
   constructor(private http:HttpClient) { }
 
-  obtenerProyectos():Observable<any>  {
-    return this.http.get('./assets/data/porfolio.json'); /* funciona*/
-  }
+  
 
-/*  obtenerProyectos():Observable<Proyectos[]>  {
-    return this.http.get <Proyectos[]>(this.proyectosURL + '/lista'); /* aca va la url de la bd
-  }*/ 
+  obtenerProyectos():Observable<Proyectos[]>  {
+    return this.http.get <Proyectos[]>(this.proyectosURL + '/lista'); /* aca va la url de la bd*/
+  } 
 
   borrarProyectos(id: number):Observable<any>  {
     return this.http.delete <Proyectos[]>(this.proyectosURL + '/borrar'); 
   }
   
-  
+  /*obtenerProyectos():Observable<any>  {
+    return this.http.get('./assets/data/porfolio.json'); /* funciona
+  }*/
   /*crearProyectos(id: number, dni: String, ):Observable<any> {
     return this.http.put <Proyectos[]>(this.proyectosURL + '/crear');
   }

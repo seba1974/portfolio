@@ -15,7 +15,7 @@ export class ProyectosComponent implements OnInit {
   ngOnInit(): void {
     this.datosProyectos.obtenerProyectos().subscribe(data => {
       console.log(data);
-      this.listaProyectos = data.tblproyectos; //nombre de la tabla de la BD o JSON
+      this.listaProyectos = data; //nombre de la tabla de la BD o JSON
       
     })
 
