@@ -10,18 +10,22 @@
     </div>
 
 
-
+     <ul>
+        <li *ngFor="let acercade of listaAcercade">
+       <!-- -->        
     <div class="row" >
-       <div class="col-3 position-relative" id="acerca_nombre" >
-        <img id="img_thumbnail" src="assets/img/thumbnail.jpg" class="rounded-circle position-absolute bottom-100 end-50" alt="thumbnail" > 
-        <i class="bi bi-pencil-fill"></i>
-            <p class="nombre bold">Sebastian Franco Veloce</p>
-            <p class="nombre">Full Stack Developer Jr.</p>
+        <div class="col-3 position-relative" id="acerca_nombre" >
+            <img id="img_thumbnail" [src]="acercade.imagen_perfil" class="rounded-circle position-absolute bottom-100 end-50" alt="thumbnail" > 
+            <i class="bi bi-pencil-fill"></i>
+            <p class="nombre bold">{{acercade.nombre}} {{acercade.apellido}}</p>
+            <p class="nombre">{{acercade.ocupacion}}</p>
         </div>
         <div class="col-1">
         </div>
         <div class="col-8">
-            <p >Tengo una gran familia. Me gustan las actividades al aire libre como caminar, andar en bicicleta. Disfruto de las pequeñas cosas...</p>
+            <p >{{acercade.sobre_mi}}</p>
         </div>
-    </div>    
+    </div>
+    </li>
+    </ul><!-- -->    
 </div>

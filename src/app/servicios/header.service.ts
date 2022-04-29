@@ -8,23 +8,24 @@ import { Header } from '../Models/header';
 })
 export class HeaderService {
 
-  headerURL = "http://localhost:8080/header";
+  headerURL = "http://localhost:8080/redessociales";
+  acercadeURL = "http://localhost:8080/acercade";
 
   constructor(private http:HttpClient) { }
 
-  obtenerHeader():Observable<any>  {
-    return this.http.get('./assets/data/porfolio.json'); /* funciona*/
-  }
+  
 
-/*  obtenerHeader():Observable<Header[]>  {
-    return this.http.get <Header[]>(this.headerURL + '/lista'); /* aca va la url de la bd
-  }*/ 
+  obtenerHeader():Observable<Header[]>  {
+    return this.http.get <Header[]>(this.headerURL + '/lista'); /* aca va la url de la bd*/
+  } 
 
   borrarHeader(id: number):Observable<any>  {
     return this.http.delete <Header[]>(this.headerURL + '/borrar'); 
   }
   
-  
+  /*obtenerHeader():Observable<any>  {
+    return this.http.get('./assets/data/porfolio.json'); /* funciona
+  }*/
   /*crearHeader(id: number, dni: String, ):Observable<any> {
     return this.http.put <Header[]>(this.headerURL + '/crear');
   }

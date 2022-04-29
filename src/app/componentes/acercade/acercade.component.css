@@ -44,3 +44,6 @@ img#img_thumbnail{
     /*left: 50px;         /* desde la izq*/
     z-index:1;          /* traer al frente*/
 }
+li{
+    list-style: none;
+}

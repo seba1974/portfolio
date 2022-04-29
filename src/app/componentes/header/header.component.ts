@@ -12,14 +12,13 @@ export class HeaderComponent implements OnInit {
   listaHeader:any;
   listaRedesSociales:any;
 
-  constructor(private datosHeader:HeaderService,
-              private datosAcercade:AcercadeService) { }
+  constructor(private datosHeader:HeaderService) { }
 
   ngOnInit(): void {
     this.datosHeader.obtenerHeader().subscribe(data => {
     console.log(data);
-    this.listaHeader = data.tblperfil; //nombre de la tabla de la BD o JSON
-    this.listaRedesSociales = data.tblredes_sociales; //nombre de la tabla de la BD o JSON
+    this.listaHeader = data; //nombre de la tabla de la BD o JSON
+    this.listaRedesSociales = data; //nombre de la tabla de la BD o JSON
   })
 }
 

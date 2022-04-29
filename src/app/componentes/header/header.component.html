@@ -4,13 +4,17 @@
         <div class="col">
             <img id="img_iconos" class="rounded float-start" alt= "APlogo"  src="assets/img/APlogo.png">
         </div>
-        <div class="col-6">
+        <div class="col-8">
             <h4>Sebastián F. Veloce</h4>
         </div>
-        <div class="col">
-            <input id="input_iconos" type="image" src="assets/img/email.svg" alt="Mail" href="mailto:seba.veloce@gmail.com">
-        </div>
-        <div class="col">
+        <!-- -->
+        <ul>
+            <li *ngFor="let redes of listaRedesSociales">
+        <!-- -->        
+                <div class="col"><!---->
+                    <input id="input_iconos" type="image" [src]="redes.imagen" [alt]="redes.red" href="redes.link">
+                </div><!---->
+                <!--<div class="col">
             <input  id="input_iconos" type="image" src="assets/img/telefono-sonando.svg" alt="Telefono" href="tel:+5493513769813">
         </div>
         <div class="col">
@@ -18,7 +22,10 @@
         </div>
         <div class="col">
             <input id="input_iconos" type="image" src="assets/img/instagram.svg" alt="Instagram" href="http://instagram.com">
-        </div>
+        </div>-->
+                
+            </li>
+        </ul>
         <div class="col">
             <button type="login" class="btn btn-secondary">Login</button>
         </div>
