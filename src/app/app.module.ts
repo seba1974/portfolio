@@ -39,6 +39,9 @@ import { IdiomasComponent } from './componentes/idiomas/idiomas.component';
 import { BajaIdiomasComponent } from './componentes/idiomas/baja-idiomas/baja-idiomas.component';
 import { AltaIdiomasComponent } from './componentes/idiomas/alta-idiomas/alta-idiomas.component';
 import { ModificarIdiomasComponent } from './componentes/idiomas/modificar-idiomas/modificar-idiomas.component';
+import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -76,12 +79,16 @@ import { ModificarIdiomasComponent } from './componentes/idiomas/modificar-idiom
     IdiomasComponent,
     BajaIdiomasComponent,
     AltaIdiomasComponent,
-    ModificarIdiomasComponent
+    ModificarIdiomasComponent,
+    
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

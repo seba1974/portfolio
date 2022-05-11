@@ -2,15 +2,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Header } from '../Models/header';
-
+import { Acercade } from '../Models/acercade'
 @Injectable({
   providedIn: 'root'
 })
 export class HeaderService {
 
   headerURL = "http://localhost:8080/redessociales";
-  acercadeURL = "http://localhost:8080/acercade";
-
+  
   constructor(private http:HttpClient) { }
 
   

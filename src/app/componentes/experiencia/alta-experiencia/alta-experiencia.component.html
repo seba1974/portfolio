@@ -1,13 +1,53 @@
-<!--- Prueba de formularios -->
+<div class=" container">
+    <div class= "row mt-10">
+      <div class="col-md-9 mx-auto">
+        <form (ngSubmit) = "onCreate()" novalidate #f ="ngForm">
+          <div class="form-group">
+            <label for="dni">DNI</label>
+            <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" [(ngModel)]="dni" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="empresa">Empresa</label>
+            <input type="text" class="form-control" id="empresa" placeholder="Empresa" name="empresa" [(ngModel)]="empresa" required>
+          </div>
 
-<form>
-    <div class="row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+          <div class="form-group">
+            <label for="puesto">Puesto</label>
+            <input type="text" class="form-control" id="puesto" placeholder="Puesto" name="puesto" [(ngModel)]="puesto" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="ubic_empresa">Ubicación de la Empresa</label>
+            <input type="text" class="form-control" id="ubic_empresa" placeholder="Ubicación de la Empresa" name="ubic_empresa" [(ngModel)]="ubic_empresa" required>
+          </div>
+
+          <div class="form-group">
+            <label for="area_cobertura">Area de Cobertura</label>
+            <input type="text" class="form-control" id="area_cobertura" placeholder="Area de Cobertura" name="area_cobertura" [(ngModel)]="area_cobertura" required>
+          </div>
+
+          <div class="form-group">
+            <label for="img_logo">URL Logo Empresa</label>
+            <input type="text" class="form-control" id="img_logo" placeholder="URL Logo Empresa" name="img_logo" [(ngModel)]="img_logo" required>
+          </div>
+
+          <div class="form-group">
+            <label for="fecha_ingreso">Fecha de Ingreso</label>
+            <input type="text" class="form-control" id="fecha_ingreso" placeholder="Fecha de Ingreso" name="fecha_ingreso" [(ngModel)]="fecha_ingreso" required>
+          </div>
+
+          <div class="form-group">
+            <label for="fecha_egreso">Fecha de Egreso</label>
+            <input type="text" class="form-control" id="fecha_egreso" placeholder="Fecha de Egreso" name="fecha_egreso" [(ngModel)]="fecha_egreso" required>
+          </div>
+
+          <div class="form-group">
+            <label for="descripcion">Descripcion del Puesto</label>
+            <input type="text" class="form-control" id="descripcion" placeholder="Descripcion del Puesto" name="descripcion" [(ngModel)]="descripcion" required>
+          </div>
+          <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+          </form>
         </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-        </div>
-      </div>
-  </form>
- 
+  </div>
+</div>

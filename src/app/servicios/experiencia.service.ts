@@ -10,7 +10,7 @@ export class ExperienciaService  {
 
   experienciaURL = "http://localhost:8080/experiencialaboral";
   
-  constructor(private http:HttpClient) { }
+  constructor(private http : HttpClient) { }
 
   obtenerExperiencia():Observable<Experiencia[]>  {
     return this.http.get <Experiencia[]>(this.experienciaURL + '/lista'); /* aca va la url de la bd*/
@@ -20,20 +20,11 @@ export class ExperienciaService  {
     return this.http.delete <Experiencia[]>(this.experienciaURL + '/borrar'); 
   }
   
-  /*obtenerExperiencia():Observable<any>  {
-    return this.http.get('./assets/data/porfolio.json'); /* funciona
-  }*/
-
-  
-  
-  
-  /*crearExperiencia(id: number, dni: String, ):Observable<any> {
-    return this.http.put <Experiencia[]>(this.experienciaURL + '/crear');
+  crearExperiencia(experiencia : Experiencia):Observable<any> {
+    return this.http.post <Experiencia[]>(this.experienciaURL + '/crear', experiencia);
   }
+    
+  /*modificarExperiencia(experiencia: Experiencia):Observable<any>  {
+    return this.http.post<Experiencia[]> (this.experienciaURL + '/modificar');}*/
   
-  
-  modificarExperiencia(experiencia: Experiencia):Observable<any>  {
-    return this.http.post<Experiencia[]> (this.experienciaURL + '/modificar');
-
-  }*/
 }

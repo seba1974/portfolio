@@ -35,34 +35,34 @@ import { HeaderComponent } from './componentes/header/header.component';
 const routes : Routes = [
 
   {path: '', component:HeaderComponent},
-  {path: '**', redirectTo: '', pathMatch: 'full'},
+  //{path: '**', redirectTo: '', pathMatch: 'full'},
   {path: 'experiencia/crear', component:AltaExperienciaComponent},
   {path: 'experiencia/editar', component:ModificarExperienciaComponent},
   {path: 'experiencia/borrar', component:BajaExperienciaComponent},
 
   {path: 'educacion/crear', component:AltaEducacionComponent},
-{path: 'educacion/editar', component:ModificarEducacionComponent},
-{path: 'educacion/borrar', component:BajaEducacionComponent},
+  {path: 'educacion/editar', component:ModificarEducacionComponent},
+  {path: 'educacion/borrar', component:BajaEducacionComponent},
 
-{path: 'skills/crear', component:AltaSkillsComponent},
-{path: 'skills/editar', component:ModificarSkillsComponent},
-{path: 'skills/borrar', component:BajaSkillsComponent},
+  {path: 'skills/crear', component:AltaSkillsComponent},
+  {path: 'skills/editar', component:ModificarSkillsComponent},
+  {path: 'skills/borrar', component:BajaSkillsComponent},
 
-{path: 'proyectos/crear', component:AltaProyectosComponent},
-{path: 'proyectos/editar', component:ModificarProyectosComponent},
-{path: 'proyectos/borrar', component:BajaProyectosComponent},
+  {path: 'proyectos/crear', component:AltaProyectosComponent},
+  {path: 'proyectos/editar', component:ModificarProyectosComponent},
+  {path: 'proyectos/borrar', component:BajaProyectosComponent},
 
-{path: 'cursos/crear', component:AltaCursosComponent},
-{path: 'cursos/editar', component:ModificarCursosComponent},
-{path: 'cursos/borrar', component:BajaCursosComponent},
+  {path: 'cursos/crear', component:AltaCursosComponent},
+  {path: 'cursos/editar', component:ModificarCursosComponent},
+  {path: 'cursos/borrar', component:BajaCursosComponent},
 
-{path: 'acercade/crear', component:AltaAcercadeComponent},
-{path: 'acercade/editar', component:ModificarAcercadeComponent},
-{path: 'acercade/borrar', component:BajaAcercadeComponent},
+  {path: 'acercade/crear', component:AltaAcercadeComponent},
+  {path: 'acercade/editar', component:ModificarAcercadeComponent},
+  {path: 'acercade/borrar', component:BajaAcercadeComponent},
 
-{path: 'header/crear', component:AltaHeaderComponent},
-{path: 'header/editar', component:ModificarHeaderComponent},
-{path: 'header/borrar', component:BajaHeaderComponent}
+  {path: 'header/crear', component:AltaHeaderComponent},
+  {path: 'header/editar', component:ModificarHeaderComponent},
+  {path: 'header/borrar', component:BajaHeaderComponent}
 
 ];
 

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AcercadeService } from 'src/app/servicios/acercade.service';
 
+import { AcercadeService } from 'src/app/servicios/acercade.service';
 import { HeaderService } from 'src/app/servicios/header.service';
+import { RedessocialesService } from 'src/app/servicios/redessociales.service';
 
 @Component({
   selector: 'app-header',
@@ -11,15 +12,21 @@ import { HeaderService } from 'src/app/servicios/header.service';
 export class HeaderComponent implements OnInit {
   listaHeader:any;
   listaRedesSociales:any;
+  listaAcercade:any;
 
-  constructor(private datosHeader:HeaderService) { }
+  constructor(private datosHeader:HeaderService,
+              private datosAcercade:AcercadeService,
+              private datosRedesSociales:RedessocialesService) { }
 
   ngOnInit(): void {
     this.datosHeader.obtenerHeader().subscribe(data => {
-    console.log(data);
-    this.listaHeader = data; //nombre de la tabla de la BD o JSON
-    this.listaRedesSociales = data; //nombre de la tabla de la BD o JSON
-  })
+        this.listaHeader = data;}) 
+
+    this.datosAcercade.obtenerAcercade().subscribe(data => {
+      this.listaAcercade = data;}) 
+    
+    this.datosRedesSociales.obtenerRedesSociales().subscribe(data => {
+      this.listaRedesSociales = data;})
 }
 
 }
