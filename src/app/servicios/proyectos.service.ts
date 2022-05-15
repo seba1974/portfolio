@@ -15,23 +15,22 @@ export class ProyectosService {
   
 
   obtenerProyectos():Observable<Proyectos[]>  {
-    return this.http.get <Proyectos[]>(this.proyectosURL + '/lista'); /* aca va la url de la bd*/
-  } 
-
-  borrarProyectos(id: number):Observable<any>  {
-    return this.http.delete <Proyectos[]>(this.proyectosURL + '/borrar'); 
+    return this.http.get <Proyectos[]>(this.proyectosURL + '/lista'); /* aca va la url del BackEnd sacar la tabla de el component.ts*/
   }
   
-  /*obtenerProyectos():Observable<any>  {
-    return this.http.get('./assets/data/porfolio.json'); /* funciona
-  }*/
-  /*crearProyectos(id: number, dni: String, ):Observable<any> {
-    return this.http.put <Proyectos[]>(this.proyectosURL + '/crear');
+  obtenerUnaProyectos(id: string):Observable<any> {
+    return this.http.get(this.proyectosURL + '/detail/' + id);
   }
   
+  editarProyectos(id:string, proyectos : Proyectos):Observable<any> {
+    return this.http.put(this.proyectosURL + '/modificar/' + id, proyectos);
+  }
   
-  modificarProyectos(proyectos: Proyectos):Observable<any>  {
-    return this.http.post<Proyectos[]> (this.proyectosURL + '/modificar');
-
-  }*/
+  borrarProyectos(id: string):Observable<any>  {
+    return this.http.delete <Proyectos[]>(this.proyectosURL + '/borrar/' +  id); 
+  }
+  
+  crearProyectos(proyectos : Proyectos):Observable<any> {
+    return this.http.post <Proyectos[]>(this.proyectosURL + '/crear', proyectos);
+  }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IdiomasService} from 'src/app/servicios/idiomas.service';
+import { IdiomasService } from 'src/app/servicios/idiomas.service';
 
 @Component({
   selector: 'app-idiomas',
@@ -7,14 +7,22 @@ import { IdiomasService} from 'src/app/servicios/idiomas.service';
   styleUrls: ['./idiomas.component.css']
 })
 export class IdiomasComponent implements OnInit {
-  listaIdiomas:any;
+  listaIdiomas: any;
 
-  constructor(private datosIdiomas:IdiomasService) {  }
+  constructor(private idiomasService: IdiomasService) { }
 
   ngOnInit(): void {
-    this.datosIdiomas.obtenerIdiomas().subscribe(data => {
-          this.listaIdiomas = data; //.tblidiomas nombre de la tabla de la BD o JSON
-    })
+    this.idiomasService.obtenerIdiomas().subscribe(data => {
+      console.log(data);
+      this.listaIdiomas = data; //.tblidiomas nombre de la tabla de la BD o JSON
+    });
   }
 
+  eliminarIdiomas(id: string) {
+    this.idiomasService.borrarIdiomas(id).subscribe
+      (
+        data => { this.ngOnInit(); },
+        err => console.log(err)
+      );
+  }
 }

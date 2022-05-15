@@ -1,1 +1,35 @@
-<p>alta-idiomas works!</p>
+<div class=" container">
+    <div class="row mt-10">
+      <div class="col-md-9 mx-auto">
+        <h4>Alta Idioma</h4>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="dni">DNI</label>
+            <input type="text" class="form-control" id="dni" placeholder=" Númerio de DNI" name="dni" [(ngModel)]="dni" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="idioma">Idioma</label>
+            <input type="text" class="form-control" id="idioma" placeholder="Castellano/Inglés/Frances/Etc" name="idioma"
+              [(ngModel)]="idioma" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="porcentaje_oral">Porcentaje Oral</label>
+            <input type="text" class="form-control" id="titulo" placeholder="Que porcentaje habla del idioma" name="porcentaje_oral"
+              [(ngModel)]="porcentaje_oral" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="porcentaje_escrito">porcentaje_escrito</label>
+            <input type="text" class="form-control" id="porcentaje_escrito" placeholder="Que porcentaje escribe del idioma" name="porcentaje_escrito"
+              [(ngModel)]="porcentaje_escrita" required>
+          </div>
+          <br>
+
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+        <button class="btn btn-danger" [routerLink]="['/']">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>

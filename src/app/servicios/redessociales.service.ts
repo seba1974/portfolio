@@ -13,11 +13,23 @@ export class RedessocialesService {
   constructor(private http:HttpClient) { }
 
   obtenerRedesSociales():Observable<RedesSociales[]>  {
-    return this.http.get <RedesSociales[]>(this.redessocialesURL + '/lista');
+    return this.http.get <RedesSociales[]>(this.redessocialesURL + '/lista'); /* aca va la url del BackEnd sacar la tabla de el component.ts*/
   }
-
-  borrarCursos(id: number):Observable<any>  {
-    return this.http.delete <RedesSociales[]>(this.redessocialesURL + '/borrar'); 
+  
+  obtenerUnaRedesSociales(id: string):Observable<any> {
+    return this.http.get(this.redessocialesURL + '/detail/' + id);
+  }
+  
+  editarRedesSociales(id:string, redessociales : RedesSociales):Observable<any> {
+    return this.http.put(this.redessocialesURL + '/modificar/' + id, redessociales);
+  }
+  
+  borrarRedesSociales(id: string):Observable<any>  {
+    return this.http.delete <RedesSociales[]>(this.redessocialesURL + '/borrar/' +  id); 
+  }
+  
+  crearRedesSociales(redessociales : RedesSociales):Observable<any> {
+    return this.http.post <RedesSociales[]>(this.redessocialesURL + '/crear', redessociales);
   }
 
 }

@@ -1,1 +1,31 @@
-<p>baja-idiomas works!</p>
+<div class="conteiner">
+    <div class="row mt-10">
+        <div class="col-md-9 mx-auto">
+            <h4>Modificar Idioma</h4>
+            <form>
+                <div class="form-group">
+                    <label for="dni">DNI</label>
+                    <input type="text" class="form-control" id="dni" name="dni" [(ngModel)]="idiomaActual.dni">
+                </div>
+
+                <div class="form-group">
+                    <label for="idioma">Idioma</label>
+                    <input type="text" class="form-control" id="idioma" name="idioma" [(ngModel)]="idiomaActual.idioma">
+                </div>
+
+                <div class="form-group">
+                    <label for="porcentaje_oral">Porcentaje Oral</label>
+                    <input type="text" class="form-control" id="porcentaje_oral" name="porcentaje_oral" [(ngModel)]="idiomaActual.porcentaje_oral">
+                </div>
+
+                <div class="form-group">
+                    <label for="porcentaje_escrita">Porcentaje Escrito</label>
+                    <input type="text" class="form-control" id="porcentaje_escrita" name="porcentaje_escrita" [(ngModel)]="idiomaActual.porcentaje_escrita">
+                </div>
+                <br>
+                <button class="btn btn-danger" (click)="borrar()">Eliminar</button>
+                <button class="btn btn-success" [routerLink]="['/']">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</div>

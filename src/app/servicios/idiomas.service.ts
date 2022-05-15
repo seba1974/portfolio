@@ -14,24 +14,22 @@ export class IdiomasService {
   constructor(private http:HttpClient) { }
 
   obtenerIdiomas():Observable<Idiomas[]>  {
-    return this.http.get <Idiomas[]>(this.idiomasURL + '/lista'); /* aca va la url de la bd*/
-  } 
-
-  borrarIdiomas(id: number):Observable<any>  {
-    return this.http.delete <Idiomas[]>(this.idiomasURL + '/borrar'); 
-  }
-
-
-  /*obtenerIdiomas():Observable<any>  {
-    return this.http.get('./assets/data/porfolio.json'); /* funciona*/
-  
-  /*crearDatos(id: number, dni: String, ):Observable<any> {
-    return this.http.put <Cursos[]>(this.cursosURL + '/crear');
+    return this.http.get <Idiomas[]>(this.idiomasURL + '/lista'); /* aca va la url del BackEnd sacar la tabla de el component.ts*/
   }
   
+  obtenerUnIdioma(id: string):Observable<any> {
+    return this.http.get(this.idiomasURL + '/detail/' + id);
+  }
   
-  modificarDatos(cursos: Cursos):Observable<any>  {
-    return this.http.post<Cursos[]> (this.cursosURL + '/modificar');
-
-  }*/
+  editarIdiomas(id:string, idiomas : Idiomas):Observable<any> {
+    return this.http.put(this.idiomasURL + '/modificar/' + id, idiomas);
+  }
+  
+  borrarIdiomas(id: string):Observable<any>  {
+    return this.http.delete <Idiomas[]>(this.idiomasURL + '/borrar/' +  id); 
+  }
+  
+  crearIdiomas(idiomas : Idiomas):Observable<any> {
+    return this.http.post <Idiomas[]>(this.idiomasURL + '/crear', idiomas);
+  }
 }

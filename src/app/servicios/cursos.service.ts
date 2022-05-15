@@ -13,25 +13,22 @@ export class CursosService {
   constructor(private http:HttpClient) { }
 
   obtenerCursos():Observable<Cursos[]>  {
-    return this.http.get <Cursos[]>(this.cursosURL + '/lista');
-  }
-
-  borrarCursos(id: number):Observable<any>  {
-    return this.http.delete <Cursos[]>(this.cursosURL + '/borrar'); 
+    return this.http.get <Cursos[]>(this.cursosURL + '/lista'); /* aca va la url del BackEnd sacar la tabla de el component.ts*/
   }
   
-
-
-  /*obtenerCursos():Observable<any>  {
-    return this.http.get('./assets/data/porfolio.json'); /* funciona   /* aca va la url de la bd
-  }*/
-
-  /*crearDatos(id: number, dni: String, ):Observable<any> {
-    return this.http.put <Cursos[]>(this.cursosURL + '/crear');
+  obtenerUnaCursos(id: string):Observable<any> {
+    return this.http.get(this.cursosURL + '/detail/' + id);
   }
   
-  modificarDatos(cursos: Cursos):Observable<any>  {
-    return this.http.post<Cursos[]> (this.cursosURL + '/modificar');
-
-  }*/
+  editarCursos(id:string, cursos : Cursos):Observable<any> {
+    return this.http.put(this.cursosURL + '/modificar/' + id, cursos);
+  }
+  
+  borrarCursos(id: string):Observable<any>  {
+    return this.http.delete <Cursos[]>(this.cursosURL + '/borrar/' +  id); 
+  }
+  
+  crearCursos(cursos : Cursos):Observable<any> {
+    return this.http.post <Cursos[]>(this.cursosURL + '/crear', cursos);
+  }
 }

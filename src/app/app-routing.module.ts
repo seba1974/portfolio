@@ -30,6 +30,9 @@ import { ModificarAcercadeComponent } from './componentes/acercade/modificar-ace
 import { BajaAcercadeComponent } from './componentes/acercade/baja-acercade/baja-acercade.component';
 
 import { HeaderComponent } from './componentes/header/header.component';
+import { BajaIdiomasComponent } from './componentes/idiomas/baja-idiomas/baja-idiomas.component';
+import { ModificarIdiomasComponent } from './componentes/idiomas/modificar-idiomas/modificar-idiomas.component';
+import { AltaIdiomasComponent } from './componentes/idiomas/alta-idiomas/alta-idiomas.component';
 
 
 const routes : Routes = [
@@ -43,6 +46,10 @@ const routes : Routes = [
   {path: 'educacion/crear', component:AltaEducacionComponent},
   {path: 'educacion/editar/:id', component:ModificarEducacionComponent},
   {path: 'educacion/borrar/:id', component:BajaEducacionComponent},
+
+  {path: 'idiomas/crear', component:AltaIdiomasComponent},
+  {path: 'idiomas/editar/:id', component:ModificarIdiomasComponent},
+  {path: 'idiomas/borrar/:id', component:BajaIdiomasComponent},
 
   {path: 'skills/crear', component:AltaSkillsComponent},
   {path: 'skills/editar/:id', component:ModificarSkillsComponent},

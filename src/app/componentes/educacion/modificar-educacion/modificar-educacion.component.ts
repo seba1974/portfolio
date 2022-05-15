@@ -19,13 +19,13 @@ export class ModificarEducacionComponent implements OnInit {
 
   constructor(
     private educacionService: EducacionService,
-    private activatedRouter: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private router: Router
   ) { }
 
   ngOnInit(): void {
 
-    this.id = this.activatedRouter.snapshot.params['id'];
+    this.id = this.activatedRoute.snapshot.params['id'];
     this.educacionService.obtenerUnaEducacion(this.id).subscribe(
       res => { this.educacionActual = res },
       err => console.log(err)

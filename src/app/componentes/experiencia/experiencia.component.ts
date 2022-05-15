@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 
 @Component({
@@ -11,22 +9,17 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 export class ExperienciaComponent implements OnInit {
   listaExperiencia: any;
 
-  constructor(
-    private datosExperiencia: ExperienciaService,
-    private router: Router) {
-
-      
-  }
+  constructor(private experienciaService : ExperienciaService) { }
 
   ngOnInit(): void {
-    this.datosExperiencia.obtenerExperiencia().subscribe(data => {
+    this.experienciaService.obtenerExperiencia().subscribe(data => {
       console.log(data);
       this.listaExperiencia = data; //nombre de la tabla de la BD o JSON 
     });
   }
 
   eliminarExperiencia(id: string) {
-    this.datosExperiencia.borrarExperiencia(id).subscribe
+    this.experienciaService.borrarExperiencia(id).subscribe
       (
         data => { this.ngOnInit(); },
         err => console.log(err)
