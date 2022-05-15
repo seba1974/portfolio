@@ -1,1 +1,50 @@
-<p>modificar-educacion works!</p>
+<div class="conteiner">
+    <div class="row mt-10">
+        <div class="col-md-9 mx-auto">
+            <form>
+                <div class="form-group">
+                    <label for="dni">DNI</label>
+                    <input type="text" class="form-control" id="dni" name="dni" [(ngModel)]="educacionActual.dni">
+                </div>
+                <div class="form-group">
+                    <label for="institucion">Institucion</label>
+                    <input type="text" class="form-control" id="institucion" name="institucion"
+                        [(ngModel)]="educacionActual.institucion">
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Título</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo"
+                        [(ngModel)]="educacionActual.titulo">
+                </div>
+                <div class="form-group">
+                    <label for="imagen">Imagen</label>
+                    <input type="text" class="form-control" id="imagen" name="imagen"
+                        [(ngModel)]="educacionActual.imagen">
+                </div>
+                <div class="form-group">
+                    <label for="estado">Estado</label>
+                    <input type="text" class="form-control" id="estado" name="estado"
+                        [(ngModel)]="educacionActual.estado">
+                </div>
+                <div class="form-group">
+                    <label for="promedio">Promedio</label>
+                    <input type="text" class="form-control" id="promedio" name="promedio"
+                        [(ngModel)]="educacionActual.promedio">
+                </div>
+                <div class="form-group">
+                    <label for="anio_inicio">Año Inicio</label>
+                    <input type="text" class="form-control" id="anio_inicio" name="anio_inicio"
+                        [(ngModel)]="educacionActual.anio_inicio">
+                </div>
+                <div class="form-group">
+                    <label for="anio_fin">Año Fin</label>
+                    <input type="text" class="form-control" id="anio_fin" name="anio_fin"
+                        [(ngModel)]="educacionActual.anio_fin">
+                </div>
+                <br>
+                <button class="btn btn-danger" (click)="guardar()">Guardar</button>
+                <button class="btn btn-success" [routerLink]="['/']">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</div>

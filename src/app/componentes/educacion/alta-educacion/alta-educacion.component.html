@@ -1,14 +1,58 @@
-<!--- Prueba de formularios -->
-
-
-
-<form>
-    <div class="row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+<div class=" container">
+  <div class="row mt-10">
+    <div class="col-md-9 mx-auto">
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="dni">DNI</label>
+          <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" [(ngModel)]="dni" required>
         </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+
+        <div class="form-group">
+          <label for="institucion">Institución</label>
+          <input type="text" class="form-control" id="institucion" placeholder="Institución" name="institucion"
+            [(ngModel)]="institucion" required>
         </div>
-      </div>
-  </form>
+
+        <div class="form-group">
+          <label for="titulo">Título Otorgado</label>
+          <input type="text" class="form-control" id="titulo" placeholder="Título Otorgado" name="titulo"
+            [(ngModel)]="titulo" required>
+        </div>
+
+        <div class="form-group">
+          <label for="imagen">URL Imágen de la Institución</label>
+          <input type="text" class="form-control" id="imagen" placeholder="URL Imágen de la Institución" name="imagen"
+            [(ngModel)]="imagen" required>
+        </div>
+
+        <div class="form-group">
+          <label for="estado">Estado</label>
+          <input type="text" class="form-control" id="estado" placeholder="Finalizado/Cursando/Abandonado" name="estado"
+            [(ngModel)]="estado" required>
+        </div>
+
+        <div class="form-group">
+          <label for="promedio">Promedio de la carrera</label>
+          <input type="text" class="form-control" id="promedio" placeholder="Promedio de la carrera" name="promedio"
+            [(ngModel)]="promedio" required>
+        </div>
+
+        <div class="form-group">
+          <label for="anio_inicio">Año de Inicio</label>
+          <input type="text" class="form-control" id="anio_inicio" placeholder="Año de Inicio" name="anio_inicio"
+            [(ngModel)]="anio_inicio" required>
+        </div>
+
+        <div class="form-group">
+          <label for="anio_fin">Año de Egreso</label>
+          <input type="text" class="form-control" id="anio_fin" placeholder="Año de Egreso" name="anio_fin"
+            [(ngModel)]="anio_fin" required>
+        </div>
+        <br>
+
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+        <button class="btn btn-danger" [routerLink]="['/']">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>

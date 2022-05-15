@@ -28,7 +28,7 @@ export class AltaExperienciaComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-  }
+  } 
   
   onCreate(): void {
   const experiencia = new Experiencia ( this.dni, this.empresa, this.puesto, this.ubic_empresa, this.area_cobertura,

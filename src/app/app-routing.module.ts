@@ -37,32 +37,32 @@ const routes : Routes = [
   {path: '', component:HeaderComponent},
   //{path: '**', redirectTo: '', pathMatch: 'full'},
   {path: 'experiencia/crear', component:AltaExperienciaComponent},
-  {path: 'experiencia/editar', component:ModificarExperienciaComponent},
-  {path: 'experiencia/borrar', component:BajaExperienciaComponent},
+  {path: 'experiencia/editar/:id', component:ModificarExperienciaComponent},
+  {path: 'experiencia/borrar/:id', component:BajaExperienciaComponent},
 
   {path: 'educacion/crear', component:AltaEducacionComponent},
-  {path: 'educacion/editar', component:ModificarEducacionComponent},
-  {path: 'educacion/borrar', component:BajaEducacionComponent},
+  {path: 'educacion/editar/:id', component:ModificarEducacionComponent},
+  {path: 'educacion/borrar/:id', component:BajaEducacionComponent},
 
   {path: 'skills/crear', component:AltaSkillsComponent},
-  {path: 'skills/editar', component:ModificarSkillsComponent},
-  {path: 'skills/borrar', component:BajaSkillsComponent},
+  {path: 'skills/editar/:id', component:ModificarSkillsComponent},
+  {path: 'skills/borrar/:id', component:BajaSkillsComponent},
 
   {path: 'proyectos/crear', component:AltaProyectosComponent},
-  {path: 'proyectos/editar', component:ModificarProyectosComponent},
-  {path: 'proyectos/borrar', component:BajaProyectosComponent},
+  {path: 'proyectos/editar/:id', component:ModificarProyectosComponent},
+  {path: 'proyectos/borrar/:id', component:BajaProyectosComponent},
 
   {path: 'cursos/crear', component:AltaCursosComponent},
-  {path: 'cursos/editar', component:ModificarCursosComponent},
-  {path: 'cursos/borrar', component:BajaCursosComponent},
+  {path: 'cursos/editar/:id', component:ModificarCursosComponent},
+  {path: 'cursos/borrar/:id', component:BajaCursosComponent},
 
   {path: 'acercade/crear', component:AltaAcercadeComponent},
-  {path: 'acercade/editar', component:ModificarAcercadeComponent},
-  {path: 'acercade/borrar', component:BajaAcercadeComponent},
+  {path: 'acercade/editar/:id', component:ModificarAcercadeComponent},
+  {path: 'acercade/borrar/:id', component:BajaAcercadeComponent},
 
   {path: 'header/crear', component:AltaHeaderComponent},
-  {path: 'header/editar', component:ModificarHeaderComponent},
-  {path: 'header/borrar', component:BajaHeaderComponent}
+  {path: 'header/editar/:id', component:ModificarHeaderComponent},
+  {path: 'header/borrar/:id', component:BajaHeaderComponent}
 
 ];
 

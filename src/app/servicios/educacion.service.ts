@@ -12,26 +12,27 @@ export class EducacionService {
   
 constructor(private http:HttpClient) { }
 
-/*obtenerEducacion():Observable<any>  {
-  return this.http.get('//localhost:3306/porfolio'); /* funciona
-}*/
 
-  obtenerEducacion():Observable<Educacion[]>  {
+
+obtenerEducacion():Observable<Educacion[]>  {
   return this.http.get <Educacion[]>(this.educacionURL + '/lista'); /* aca va la url del BackEnd sacar la tabla de el component.ts*/
-} 
+}
 
-borrarEducacion(id: number):Observable<any>  {
-  return this.http.delete <Educacion[]>(this.educacionURL + '/borrar'); 
+obtenerUnaEducacion(id: string):Observable<any> {
+  return this.http.get(this.educacionURL + '/detail/'+ id);
+}
+
+editarEducacion(id:string, educacion : Educacion):Observable<any>{
+  return this.http.put(this.educacionURL + '/modificar/' + id, educacion);
+}
+
+borrarEducacion(id: string):Observable<any>  {
+  return this.http.delete <Educacion[]>(this.educacionURL + '/borrar/' +  id); 
 }
 
 
-/*crearEducacion(id: number, dni: String, ):Observable<any> {
-  return this.http.put <Educacion[]>(this.educacionURL + '/crear');
+crearEducacion(educacion : Educacion):Observable<any> {
+  return this.http.post <Educacion[]>(this.educacionURL + '/crear', educacion);
 }
 
-
-modificarEducacion(educacion: Educacion):Observable<any>  {
-  return this.http.post<Educacion[]> (this.educacionURL + '/modificar');
-
-}*/
 }

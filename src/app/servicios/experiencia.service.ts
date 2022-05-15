@@ -16,8 +16,13 @@ export class ExperienciaService  {
     return this.http.get <Experiencia[]>(this.experienciaURL + '/lista'); /* aca va la url de la bd*/
   } 
 
+  obtenerUnaExperiencia(id: number):Observable<any>  {
+    return this.http.get <Experiencia>(this.experienciaURL + '/detail/${id}'); 
+    console.log(Experiencia)
+  }
+
   borrarExperiencia(id: number):Observable<any>  {
-    return this.http.delete <Experiencia[]>(this.experienciaURL + '/borrar'); 
+    return this.http.delete <any>(this.experienciaURL + '/borrar/${id}'); 
   }
   
   crearExperiencia(experiencia : Experiencia):Observable<any> {

@@ -24,13 +24,13 @@ export class ExperienciaComponent implements OnInit {
     })
 
   }
-  navegarCrearEperiencia() {
+  navegarCrearExperiencia() {
     this.router.navigate(['/experiencia/crear']);
   }
-  navegarEditarEperiencia(){
+  navegarEditarExperiencia(){
     this.router.navigate(['/experiencia/editar']);
   }
-  navegarBorrarEperiencia() {
+  navegarBorrarExperiencia(id:number) {
     this.router.navigate(['/experiencia/borrar']);
   }
 }
