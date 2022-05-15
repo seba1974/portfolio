@@ -1,1 +1,42 @@
-<p>modificar-proyectos works!</p>
+<div class="conteiner">
+    <div class="row mt-10">
+        <div class="col-md-9 mx-auto">
+            <h4>Modificar Proyecto</h4>
+            <form>
+                <div class="form-group">
+                    <label for="dni">DNI</label>
+                    <input type="text" class="form-control" id="dni" name="dni" [(ngModel)]="proyectoActual.dni">
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre del Proyecto</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre"
+                        [(ngModel)]="proyectoActual.nombre">
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha de realización</label>
+                    <input type="text" class="form-control" id="fecha" name="fecha"
+                        [(ngModel)]="proyectoActual.fecha">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Breve descripción del proyecto</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion"
+                        [(ngModel)]="proyectoActual.descripcion">
+                </div>
+                <div class="form-group">
+                    <label for="link">Link al proyecto</label>
+                    <input type="text" class="form-control" id="link" name="link"
+                        [(ngModel)]="proyectoActual.link">
+                </div>
+                <div class="form-group">
+                    <label for="imagen">Imagen del proyecto</label>
+                    <input type="text" class="form-control" id="imagen" name="imagen"
+                        [(ngModel)]="proyectoActual.imagen">
+                </div>
+                <br>
+
+                <button class="btn btn-danger" (click)="guardar()">Modificar</button>
+                <button class="btn btn-success" [routerLink]="['/']">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</div>

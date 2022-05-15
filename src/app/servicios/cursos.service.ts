@@ -12,19 +12,21 @@ export class CursosService {
   
   constructor(private http:HttpClient) { }
 
+
+  
   obtenerCursos():Observable<Cursos[]>  {
     return this.http.get <Cursos[]>(this.cursosURL + '/lista'); /* aca va la url del BackEnd sacar la tabla de el component.ts*/
   }
   
-  obtenerUnaCursos(id: string):Observable<any> {
+  obtenerUnCurso(id: string):Observable<any> {
     return this.http.get(this.cursosURL + '/detail/' + id);
   }
   
-  editarCursos(id:string, cursos : Cursos):Observable<any> {
+  editarCurso(id:string, cursos : Cursos):Observable<any> {
     return this.http.put(this.cursosURL + '/modificar/' + id, cursos);
   }
   
-  borrarCursos(id: string):Observable<any>  {
+  borrarCurso(id: string):Observable<any>  {
     return this.http.delete <Cursos[]>(this.cursosURL + '/borrar/' +  id); 
   }
   

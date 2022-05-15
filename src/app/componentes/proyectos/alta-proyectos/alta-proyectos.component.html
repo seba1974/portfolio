@@ -1,1 +1,41 @@
-<p>alta-proyectos works!</p>
+<div class=" container">
+    <div class="row mt-10">
+      <div class="col-md-9 mx-auto">
+        <h4>Alta Proyecto</h4>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="dni">DNI</label>
+            <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" [(ngModel)]="dni" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="nombre">Nombre del proyecto</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Año de Dictado" name="nombre" [(ngModel)]="nombre" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input type="text" class="form-control" id="fecha" placeholder="Fecha de realización del proyecto" name="fecha" [(ngModel)]="fecha" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <input type="text" class="form-control" id="descripcion" placeholder="Breve descripción del proyecto" name="descripcion" [(ngModel)]="descripcion" required>
+          </div>
+          <div class="form-group">
+            <label for="link">Link al proyecto</label>
+            <input type="text" class="form-control" id="link" placeholder="Link al proyecto" name="link" [(ngModel)]="link" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="imagen">Link imagen</label>
+            <input type="text" class="form-control" id="imagen" placeholder="Link a la imagen del proyecto" name="imagen" [(ngModel)]="imagen" required>
+          </div>
+          <br>
+
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+        <button class="btn btn-danger" [routerLink]="['/']">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>

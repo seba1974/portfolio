@@ -1,21 +1,23 @@
-<div class="divisor">
-
-</div>
+<div class="divisor"></div>
 <div class="conteiner">
         <div class="row">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                         <h2>Cursos</h2>
-                        <i class="bi bi-plus-circle-fill"></i>
+                        <i class="bi bi-plus-circle-fill" [routerLink]="['/cursos/crear']"></i>
                 </div>
-    
-                <ul><!-- declaro la variable educacion que recorre la listaEducacion !-->
-                        <li *ngFor="let curso of listaCursos"> <!-- directiva estructural recorre la estructura  !-->
-                                <h3>{{curso.curso}}<i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></h3>
+
+                <ul>
+                        <!-- declaro la variable educacion que recorre la listaEducacion !-->
+                        <li *ngFor="let curso of listaCursos">
+                                <!-- directiva estructural recorre la estructura  !-->
+                                <h4>{{curso.curso}}<i class="bi bi-pencil-fill"
+                                                [routerLink]="['/cursos/editar/',curso.id]"></i>
+                                        <i class="bi bi-trash-fill" [routerLink]="['/cursos/borrar/',curso.id]"></i>
+                                </h4>
                                 <p class="secundario">{{curso.dictado_por}}</p>
                                 <p class="principal"><time>{{curso.anio}}</time></p>
                                 <hr>
                         </li>
-
                 </ul>
         </div>
 </div>

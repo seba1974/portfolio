@@ -1,23 +1,25 @@
-
-<div class="divisor">
-
-</div>
+<div class="divisor"></div>
 <div class="conteiner">
         <div class="row">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                        <h2>Proyectos</h2> 
-                        <i class="bi bi-plus-circle-fill"></i>                      
+                        <h2>Proyectos</h2>
+                        <i class="bi bi-plus-circle-fill" [routerLink]="['/proyectos/crear']"></i>
                 </div>
-        
-        <ul>
-                <li *ngFor="let proyectos of listaProyectos">
-                        <img src= "{{proyectos.imagen}}" alt="{{proyectos.nombre}}" width=60px weight=60px>
-                        <h3>{{proyectos.nombre}}<i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></h3><!-- nombre de los campos en la BD o JSON!-->
-                        <p class="principal"><time>{{proyectos.fecha}}</time></p> <!-- nombre de los campos en la BD o JSON!-->
-                        <p>{{proyectos.descripcion}}</p><!-- nombre de los campos en la BD o JSON!-->
-                        <hr>
-                </li>
 
-        </ul>
+                <ul>
+                        <li *ngFor="let proyecto of listaProyectos">
+                                <img src="{{proyecto.imagen}}" alt="{{proyecto.nombre}}" width=60px weight=60px>
+                                <h4>{{proyecto.nombre}}
+                                        <i class="bi bi-pencil-fill" [routerLink]="['/proyectos/editar/',proyecto.id]"></i>
+                                        <i class="bi bi-trash-fill" [routerLink]="['/proyectos/borrar/',proyecto.id]"></i>
+                                </h4>
+                                <!-- nombre de los campos en la BD o JSON!-->
+                                <p class="principal"><time>{{proyecto.fecha}}</time></p>
+                                <p>{{proyecto.descripcion}}</p>
+                                <p>{{proyecto.link}}</p>
+                                <hr>
+                        </li>
+
+                </ul>
         </div>
- </div>
+</div>

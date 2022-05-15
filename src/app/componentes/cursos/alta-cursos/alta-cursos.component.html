@@ -1,1 +1,32 @@
-<p>alta-cursos works!</p>
+<div class=" container">
+    <div class="row mt-10">
+      <div class="col-md-9 mx-auto">
+        <h4>Alta Curso</h4>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="dni">DNI</label>
+            <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" [(ngModel)]="dni" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="anio">Año de dictado</label>
+            <input type="text" class="form-control" id="anio" placeholder="Año de Dictado" name="anio" [(ngModel)]="anio" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="curso">Nombre del curso</label>
+            <input type="text" class="form-control" id="curso" placeholder="Nombre del curso" name="curso" [(ngModel)]="curso" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="dictado_por">Dictado por:</label>
+            <input type="text" class="form-control" id="dictado_por" placeholder="Dictado por Institución / Instructor" name="dictado_por" [(ngModel)]="dictado_por" required>
+          </div>
+          <br>
+
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+        <button class="btn btn-danger" [routerLink]="['/']">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>
