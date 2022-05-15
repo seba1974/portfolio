@@ -12,24 +12,26 @@ export class ExperienciaService  {
   
   constructor(private http : HttpClient) { }
 
+
+
   obtenerExperiencia():Observable<Experiencia[]>  {
     return this.http.get <Experiencia[]>(this.experienciaURL + '/lista'); /* aca va la url de la bd*/
   } 
 
-  obtenerUnaExperiencia(id: number):Observable<any>  {
-    return this.http.get <Experiencia>(this.experienciaURL + '/detail/${id}'); 
-    console.log(Experiencia)
+  obtenerUnaExperiencia(id: string):Observable<any>  {
+    return this.http.get (this.experienciaURL + '/detail/' + id);
   }
 
-  borrarExperiencia(id: number):Observable<any>  {
-    return this.http.delete <any>(this.experienciaURL + '/borrar/${id}'); 
+  editarExperiencia(id:string, experiencia : Experiencia):Observable<any> {
+    return this.http.put(this.experienciaURL + '/modificar/' + id, experiencia);
+  }
+
+  borrarExperiencia(id: string):Observable<any>  {
+    return this.http.delete <Experiencia[]>(this.experienciaURL + '/borrar/' +  id); 
   }
   
   crearExperiencia(experiencia : Experiencia):Observable<any> {
     return this.http.post <Experiencia[]>(this.experienciaURL + '/crear', experiencia);
   }
-    
-  /*modificarExperiencia(experiencia: Experiencia):Observable<any>  {
-    return this.http.post<Experiencia[]> (this.experienciaURL + '/modificar');}*/
   
 }

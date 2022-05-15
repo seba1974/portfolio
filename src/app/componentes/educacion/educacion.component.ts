@@ -21,17 +21,15 @@ export class EducacionComponent implements OnInit {
   ngOnInit(): void {
     this.datosEducacion.obtenerEducacion().subscribe((data) => {
       console.log(data);
-      this.listaEducacion =
-        data; /*tbleducacion = nombre de la tabla en la BD de acá vamos al html de componente a crear el ngFor*/
+      this.listaEducacion = data; /*tbleducacion = nombre de la tabla en la BD de acá vamos al html de componente a crear el ngFor*/
     });
   }
 
-  eliminarEducacion(id: string) 
-  {
+  eliminarEducacion(id: string) {
     this.datosEducacion.borrarEducacion(id).subscribe
-    (
-      data => { this.ngOnInit();},
-      err => console.log(err)
-    );
+      (
+        data => { this.ngOnInit(); },
+        err => console.log(err)
+      );
   }
 }

@@ -3,18 +3,23 @@
         <div class="row">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                         <h2>Educación</h2>
-                        <i class="bi bi-plus-circle-fill" [routerLink] ="['/educacion/crear']"></i>
+                        <i class="bi bi-plus-circle-fill" [routerLink]="['/educacion/crear']"></i>
                 </div>
-    
-                <ul><!-- declaro la variable educacion que recorre la listaEducacion !-->
-                        <li *ngFor="let educacion of listaEducacion"> <!-- directiva estructural recorre la estructura  !-->
-                                <img [src]= "educacion.imagen" [alt]="educacion.institucion" width=50px weight=50px>
+
+                <ul>
+                        <!-- declaro la variable educacion que recorre la listaEducacion !-->
+                        <li *ngFor="let educacion of listaEducacion">
+                                <!-- directiva estructural recorre la estructura  !-->
+                                <img [src]="educacion.imagen" [alt]="educacion.institucion" width=50px weight=50px>
                                 <h4>{{educacion.institucion}}
-                                        <i class="bi bi-pencil-fill" [routerLink] ="['/educacion/editar/',educacion.id]"></i>
-                                        <i class="bi bi-trash-fill" [routerLink] ="['/educacion/borrar/',educacion.id]"></i>
+                                        <i class="bi bi-pencil-fill"
+                                                [routerLink]="['/educacion/editar/',educacion.id]"></i>
+                                        <i class="bi bi-trash-fill"
+                                                [routerLink]="['/educacion/borrar/',educacion.id]"></i>
                                 </h4>
                                 <p class="secundario">{{educacion.titulo}}</p>
-                                <p class="principal"><time>{{educacion.anio_inicio }}</time> - <time>{{educacion.anio_fin }}</time></p>
+                                <p class="principal"><time>{{educacion.anio_inicio }}</time> -
+                                        <time>{{educacion.anio_fin }}</time></p>
                                 <p class="secundario">Promedio: {{educacion.promedio}}</p>
                                 <p class="secundario">{{educacion.estado}}</p>
                                 <hr>
@@ -22,4 +27,3 @@
                 </ul>
         </div>
 </div>
-                

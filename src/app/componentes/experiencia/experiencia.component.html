@@ -2,23 +2,31 @@
 <div class="conteiner">
         <div class="card mat-card">
                 <div id="expreriencia">
-                        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <div
+                                class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                                 <h2>Experiencia Laboral</h2>
-                                <!--<a class= "nav-link" ><i class="bi bi-plus-circle-fill" routerLink="/experiencia/crear"></i></a>-->        
-                                <a class= "nav-link" ><i class="bi bi-plus-circle-fill" (click)="navegarCrearExperiencia()"></i></a>
-                                <!--<router-outlet></router-outlet>-->
-                        </div>                       
+                                <i class="bi bi-plus-circle-fill" [routerLink]="['/experiencia/crear']"></i>
+                               
+                        </div>
                 </div>
                 <ul class="items-list">
                         <li *ngFor="let experiencia of listaExperiencia">
-                                <img src= "{{experiencia.img_logo}}" alt="{{experiencia.empresa}}" width=60px weight=60px>
-                                <h4>{{experiencia.empresa}}<i class="bi bi-pencil-fill" (click)="navegarEditarExperiencia()"></i>
-                                                           <i class="bi bi-trash-fill" (click)="navegarBorrarExperiencia(experiencia.id)"></i></h4><!-- nombre de los campos en la BD o JSON!-->
-                                <p class="principal">{{experiencia.puesto}}</p> <!-- nombre de los campos en la BD o JSON!-->
-                                <p><time>{{experiencia.fecha_ingreso}}</time> - <time>{{experiencia.fecha_egreso}}</time></p><!-- nombre de los campos en la BD o JSON!-->
+                                <img src="{{experiencia.img_logo}}" alt="{{experiencia.empresa}}" width=60px
+                                        weight=60px>
+                                <h4>{{experiencia.empresa}}
+                                        <i class="bi bi-pencil-fill"
+                                        [routerLink]="['/experiencia/editar/',experiencia.id]"></i>
+                                        <i class="bi bi-trash-fill"
+                                        [routerLink]="['/experiencia/borrar/',experiencia.id]"></i>
+                                </h4><!-- nombre de los campos en la BD o JSON!-->
+                                <p class="principal">{{experiencia.puesto}}</p>
+                                <!-- nombre de los campos en la BD o JSON!-->
+                                <p><time>{{experiencia.fecha_ingreso}}</time> -
+                                        <time>{{experiencia.fecha_egreso}}</time></p>
+                                <!-- nombre de los campos en la BD o JSON!-->
                                 <hr>
                         </li>
                 </ul>
         </div>
-        
+
 </div>

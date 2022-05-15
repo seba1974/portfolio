@@ -19,17 +19,16 @@ obtenerEducacion():Observable<Educacion[]>  {
 }
 
 obtenerUnaEducacion(id: string):Observable<any> {
-  return this.http.get(this.educacionURL + '/detail/'+ id);
+  return this.http.get(this.educacionURL + '/detail/' + id);
 }
 
-editarEducacion(id:string, educacion : Educacion):Observable<any>{
+editarEducacion(id:string, educacion : Educacion):Observable<any> {
   return this.http.put(this.educacionURL + '/modificar/' + id, educacion);
 }
 
 borrarEducacion(id: string):Observable<any>  {
   return this.http.delete <Educacion[]>(this.educacionURL + '/borrar/' +  id); 
 }
-
 
 crearEducacion(educacion : Educacion):Observable<any> {
   return this.http.post <Educacion[]>(this.educacionURL + '/crear', educacion);

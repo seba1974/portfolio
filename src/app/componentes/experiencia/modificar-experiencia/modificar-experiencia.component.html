@@ -1,1 +1,57 @@
-<p>modificar-experiencia works!</p>
+<div class="conteiner">
+    <div class="row mt-10">
+        <div class="col-md-9 mx-auto">
+            <h4>Modificar Experiencia</h4>
+            <form>
+                <div class="form-group">
+                    <label for="dni">DNI</label>
+                    <input type="text" class="form-control" id="dni" name="dni" [(ngModel)]="experienciaActual.dni">
+                </div>
+                <div class="form-group">
+                    <label for="empresa">Empresa</label>
+                    <input type="text" class="form-control" id="empresa" name="empresa"
+                        [(ngModel)]="experienciaActual.empresa">
+                </div>
+                <div class="form-group">
+                    <label for="puesto">Puesto</label>
+                    <input type="text" class="form-control" id="puesto" name="puesto"
+                        [(ngModel)]="experienciaActual.puesto">
+                </div>
+                <div class="form-group">
+                    <label for="ubic_empresa">Ubicación de la empresa</label>
+                    <input type="text" class="form-control" id="ubic_empresa" name="ubic_empresa"
+                        [(ngModel)]="experienciaActual.ubic_empresa">
+                </div>
+                <div class="form-group">
+                    <label for="area_cobertura">Area de cobertura</label>
+                    <input type="text" class="form-control" id="area_cobertura" name="area_cobertura"
+                        [(ngModel)]="experienciaActual.area_cobertura">
+                </div>
+                <div class="form-group">
+                    <label for="img_logo">URL Logo de la empresa</label>
+                    <input type="text" class="form-control" id="img_logo" name="img_logo"
+                        [(ngModel)]="experienciaActual.img_logo">
+                </div>
+                <div class="form-group">
+                    <label for="fecha_ingreso">Fecha de ingreso</label>
+                    <input type="text" class="form-control" id="fecha_ingreso" name="fecha_ingreso"
+                        [(ngModel)]="experienciaActual.fecha_ingreso">
+                </div>
+                <div class="form-group">
+                    <label for="fecha_egreso">Fecha de egreso</label>
+                    <input type="text" class="form-control" id="fecha_egreso" name="fecha_egreso"
+                        [(ngModel)]="experienciaActual.fecha_egreso">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion"
+                        [(ngModel)]="experienciaActual.descripcion">
+                </div>
+                <br>
+
+                <button class="btn btn-danger" (click)="guardar()">Guardar</button>
+                <button class="btn btn-success" [routerLink]="['/']">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</div>
