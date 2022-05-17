@@ -1,27 +1,35 @@
 <div class="divisor"></div>
 <div class="conteiner">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <div class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <h2>Hard & Soft Skills</h2>
-                        <i class="bi bi-plus-circle-fill"></i>                       
+        <div class="card mat-card">
+                <div id="expreriencia">
+                        <div
+                                class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                                <h4>Hard & Soft Skills</h4>
+                                <i class="bi bi-plus-circle-fill"></i>
+                        </div>
+
                 </div>
-                
+                <ul>
+                        <h6>Hard Skills</h6>
+                        <li *ngFor="let skills_hard of lista_Skills_Hard">
+                                <p>{{skills_hard.habilidad}}<i class="bi bi-pencil-fill"></i><i
+                                                class="bi bi-trash-fill"></i></p>
+                                <!-- nombre de los campos en la BD o JSON!-->
+                                <p class="principal">{{skills_hard.porcentaje}}%</p>
+                                <!-- nombre de los campos en la BD o JSON!-->
+                        </li>
+                </ul>
+                <hr>
+                <ul>
+                        <h6>Soft Skills</h6>
+                        <li *ngFor="let skills_soft of lista_Skills_Soft">
+                                <p>{{skills_soft.habilidad}}<i class="bi bi-pencil-fill"></i><i
+                                                class="bi bi-trash-fill"></i></p>
+                                <!-- nombre de los campos en la BD o JSON!-->
+                                <p class="principal">{{skills_soft.porcentaje}}%</p>
+                                <!-- nombre de los campos en la BD o JSON!-->
+
+                        </li>
+                </ul>
+                <hr>
         </div>
-        <ul>
-                <h3>Hard Skills</h3>
-                <li *ngFor="let skills_hard of lista_Skills_Hard"> 
-                        <p>{{skills_hard.habilidad}}<i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></p><!-- nombre de los campos en la BD o JSON!-->
-                        <p class="principal">{{skills_hard.porcentaje}}%</p> <!-- nombre de los campos en la BD o JSON!-->
-                </li>
-        </ul>
-        <hr>
-        <ul>
-                <h3>Soft Skills</h3>
-                <li *ngFor="let skills_soft of lista_Skills_Soft">
-                        <p>{{skills_soft.habilidad}}<i class="bi bi-pencil-fill"></i><i class="bi bi-trash-fill"></i></p><!-- nombre de los campos en la BD o JSON!-->
-                        <p class="principal">{{skills_soft.porcentaje}}%</p> <!-- nombre de los campos en la BD o JSON!-->
-                        
-                </li>
-        </ul>
-        <hr>
-</div>

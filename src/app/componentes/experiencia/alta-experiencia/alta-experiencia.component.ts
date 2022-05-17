@@ -36,6 +36,7 @@ export class AltaExperienciaComponent implements OnInit {
     this.experienciaService.crearExperiencia(experiencia).subscribe(
       data => {
         this.router.navigate(['/']);
+        console.log(data)
       },
       err => {
         console.log(err);

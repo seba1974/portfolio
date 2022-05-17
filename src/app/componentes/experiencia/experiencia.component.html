@@ -4,25 +4,26 @@
                 <div id="expreriencia">
                         <div
                                 class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                                <h2>Experiencia Laboral</h2>
+                                <h4>Experiencia Laboral</h4>
                                 <i class="bi bi-plus-circle-fill" [routerLink]="['/experiencia/crear']"></i>
-                               
+
                         </div>
                 </div>
                 <ul class="items-list">
                         <li *ngFor="let experiencia of listaExperiencia">
                                 <img src="{{experiencia.img_logo}}" alt="{{experiencia.empresa}}" width=60px
                                         weight=60px>
-                                <h4>{{experiencia.empresa}}
+                                <h6>{{experiencia.empresa}}
                                         <i class="bi bi-pencil-fill"
-                                        [routerLink]="['/experiencia/editar/',experiencia.id]"></i>
+                                                [routerLink]="['/experiencia/editar/',experiencia.id]"></i>
                                         <i class="bi bi-trash-fill"
-                                        [routerLink]="['/experiencia/borrar/',experiencia.id]"></i>
-                                </h4><!-- nombre de los campos en la BD o JSON!-->
+                                                [routerLink]="['/experiencia/borrar/',experiencia.id]"></i>
+                                </h6><!-- nombre de los campos en la BD o JSON!-->
                                 <p class="principal">{{experiencia.puesto}}</p>
                                 <!-- nombre de los campos en la BD o JSON!-->
                                 <p><time>{{experiencia.fecha_ingreso}}</time> -
-                                        <time>{{experiencia.fecha_egreso}}</time></p>
+                                        <time>{{experiencia.fecha_egreso}}</time>
+                                </p>
                                 <!-- nombre de los campos en la BD o JSON!-->
                                 <hr>
                         </li>

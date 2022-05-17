@@ -2,28 +2,29 @@
 <div class="conteiner">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <div class="nav col-12 col-lg-10 me-lg-auto mb-2 justify-content-center mb-md-0">
-            <h2>Acerca de ...</h2>                       
+            <h4>Acerca de ...</h4>
         </div>
-            <i class="bi bi-pencil-fill"></i>
+        <i class="bi bi-pencil-fill"></i>
     </div>
 
 
-     <ul>
+    <ul>
         <li *ngFor="let acercade of listaAcercade">
-       <!-- -->        
-    <div class="row" >
-        <div class="col-3 position-relative" id="acerca_nombre" >
-            <img id="img_thumbnail" [src]="acercade.imagen_perfil" class="rounded-circle position-absolute bottom-100 end-50" alt="thumbnail" > 
-            <i class="bi bi-pencil-fill"></i>
-            <p class="nombre bold">{{acercade.nombre}} {{acercade.apellido}}</p>
-            <p class="nombre">{{acercade.ocupacion}}</p>
-        </div>
-        <div class="col-1">
-        </div>
-        <div class="col-8">
-            <p >{{acercade.sobre_mi}}</p>
-        </div>
-    </div>
-    </li>
-    </ul><!-- -->    
+
+            <div class="row">
+                <div class="col-3 position-relative" id="acerca_nombre">
+                    <img id="img_thumbnail" [src]="acercade.imagen_perfil"
+                        class="rounded-circle position-absolute bottom-100 end-50" alt="thumbnail">
+                    <i class="bi bi-pencil-fill"></i>
+                    <p class="nombre bold">{{acercade.nombre}} {{acercade.apellido}}</p>
+                    <p class="nombre">{{acercade.ocupacion}}</p>
+                </div>
+                <div class="col-1">
+                </div>
+                <div class="col-8">
+                    <p>{{acercade.sobre_mi}}</p>
+                </div>
+            </div>
+        </li>
+    </ul>
 </div>
