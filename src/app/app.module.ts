@@ -42,6 +42,10 @@ import { ModificarIdiomasComponent } from './componentes/idiomas/modificar-idiom
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AltaRedessocialesComponent } from './componentes/redessociales/alta-redessociales/alta-redessociales.component';
+import { BajaRedessocialesComponent } from './componentes/redessociales/baja-redessociales/baja-redessociales.component';
+import { ModificarRedessocialesComponent } from './componentes/redessociales/modificar-redessociales/modificar-redessociales.component';
+import { RedessocialesComponent } from './componentes/redessociales/redessociales.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +84,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BajaIdiomasComponent,
     AltaIdiomasComponent,
     ModificarIdiomasComponent,
+    AltaRedessocialesComponent,
+    BajaRedessocialesComponent,
+    ModificarRedessocialesComponent,
+    RedessocialesComponent,
     
   ],
   imports: [

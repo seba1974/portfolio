@@ -27,6 +27,5 @@ export class HeaderComponent implements OnInit {
     
     this.datosRedesSociales.obtenerRedesSociales().subscribe(data => {
       this.listaRedesSociales = data;})
-}
-
+  }
 }

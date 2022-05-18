@@ -30,10 +30,15 @@ import { ModificarAcercadeComponent } from './componentes/acercade/modificar-ace
 import { BajaAcercadeComponent } from './componentes/acercade/baja-acercade/baja-acercade.component';
 
 import { HeaderComponent } from './componentes/header/header.component';
+
 import { BajaIdiomasComponent } from './componentes/idiomas/baja-idiomas/baja-idiomas.component';
 import { ModificarIdiomasComponent } from './componentes/idiomas/modificar-idiomas/modificar-idiomas.component';
 import { AltaIdiomasComponent } from './componentes/idiomas/alta-idiomas/alta-idiomas.component';
 
+import { RedessocialesComponent } from './componentes/redessociales/redessociales.component';
+import { BajaRedessocialesComponent } from './componentes/redessociales/baja-redessociales/baja-redessociales.component';
+import { ModificarRedessocialesComponent } from './componentes/redessociales/modificar-redessociales/modificar-redessociales.component';
+import { AltaRedessocialesComponent } from './componentes/redessociales/alta-redessociales/alta-redessociales.component';
 
 const routes : Routes = [
 
@@ -66,6 +71,11 @@ const routes : Routes = [
   {path: 'acercade/crear', component:AltaAcercadeComponent},
   {path: 'acercade/editar/:id', component:ModificarAcercadeComponent},
   {path: 'acercade/borrar/:id', component:BajaAcercadeComponent},
+
+  {path: 'redessociales/listar', component:RedessocialesComponent},
+  {path: 'redessociales/crear', component:AltaRedessocialesComponent},
+  {path: 'redessociales/editar/:id', component:ModificarRedessocialesComponent},
+  {path: 'redessociales/borrar/:id', component:BajaRedessocialesComponent},
 
   {path: 'header/crear', component:AltaHeaderComponent},
   {path: 'header/editar/:id', component:ModificarHeaderComponent},

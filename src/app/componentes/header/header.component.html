@@ -5,9 +5,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item" *ngFor="let redes of listaRedesSociales">
-                    <a class="nav-link active" aria-current="page" [href]="redes.link"><img id="img_iconos"[src]="redes.imagen"
-                            [alt]="redes.red"></a>
+                    <a class="nav-link active" aria-current="page" [href]="redes.link"><img id="img_iconos"
+                            [src]="redes.imagen" [alt]="redes.red"></a>
                 </li>
+                <i class="bi bi-pencil-fill" [routerLink]="['/redessociales/listar']"></i>
                 <li class="nav-item">
                     <button type="login" class="btn btn-success">Login</button>
                 </li>
@@ -24,10 +25,7 @@
         </ul>
     </div>
 </div>
-
 <app-acercade></app-acercade>
-<!---->
-<!---->
 <app-experiencia></app-experiencia>
 <app-educacion></app-educacion>
 <app-skills></app-skills>

@@ -1,0 +1,35 @@
+<div class=" container">
+    <div class="row mt-10">
+      <div class="col-md-9 mx-auto">
+        <h4>Alta Red Social</h4>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="dni">DNI</label>
+            <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" [(ngModel)]="dni" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="imagen">URL Imágen</label>
+            <input type="text" class="form-control" id="imagen" placeholder="URL de la imágen de la red Social" default= "S/D " name="imagen"
+              [(ngModel)]="imagen" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="link">Link Personal</label>
+            <input type="text" class="form-control" id="link" placeholder="Link personal de la Red Social" name="link"
+              [(ngModel)]="link" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="red">Nombre de la Red Social</label>
+            <input type="text" class="form-control" id="red" placeholder="Nombre de la Red Social" name="red"
+              [(ngModel)]="red" required>
+          </div>
+          <br>
+
+        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+        <button class="btn btn-danger" [routerLink]="['/']">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>

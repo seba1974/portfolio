@@ -16,19 +16,19 @@ export class RedessocialesService {
     return this.http.get <RedesSociales[]>(this.redessocialesURL + '/lista'); /* aca va la url del BackEnd sacar la tabla de el component.ts*/
   }
   
-  obtenerUnaRedesSociales(id: string):Observable<any> {
+  obtenerUnaRedSocial(id: string):Observable<any> {
     return this.http.get(this.redessocialesURL + '/detail/' + id);
   }
   
-  editarRedesSociales(id:string, redessociales : RedesSociales):Observable<any> {
+  editarUnaRedSocial(id:string, redessociales : RedesSociales):Observable<any> {
     return this.http.put(this.redessocialesURL + '/modificar/' + id, redessociales);
   }
   
-  borrarRedesSociales(id: string):Observable<any>  {
+  borrarUnaRedSocial(id: string):Observable<any>  {
     return this.http.delete <RedesSociales[]>(this.redessocialesURL + '/borrar/' +  id); 
   }
   
-  crearRedesSociales(redessociales : RedesSociales):Observable<any> {
+  crearUnaRedSocial(redessociales : RedesSociales):Observable<any> {
     return this.http.post <RedesSociales[]>(this.redessocialesURL + '/crear', redessociales);
   }
 

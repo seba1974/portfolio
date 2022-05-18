@@ -4,20 +4,20 @@ import { RedesSociales } from 'src/app/Models/redessociales';
 import { RedessocialesService } from 'src/app/servicios/redessociales.service';
 
 @Component({
-  selector: 'app-modificar-header',
-  templateUrl: './modificar-header.component.html',
-  styleUrls: ['./modificar-header.component.css']
+  selector: 'app-modificar-redessociales',
+  templateUrl: './modificar-redessociales.component.html',
+  styleUrls: ['./modificar-redessociales.component.css']
 })
-export class ModificarHeaderComponent implements OnInit {
-  
+export class ModificarRedessocialesComponent implements OnInit {
+
   id: string = "";
   redsocialActual: RedesSociales =
     {
-      dni: '', imagen: '', link: '', red: ''
+      dni: '', red: '', link: '', imagen: ''
     };
 
   constructor(
-    private redesSocialesService: RedessocialesService,
+    private redsocialService: RedessocialesService,
     private activatedRoute: ActivatedRoute,
     private router: Router
   ) { }
@@ -25,14 +25,14 @@ export class ModificarHeaderComponent implements OnInit {
   ngOnInit(): void {
 
     this.id = this.activatedRoute.snapshot.params['id'];
-    this.redesSocialesService.obtenerUnaRedSocial(this.id).subscribe(
+    this.redsocialService.obtenerUnaRedSocial(this.id).subscribe(
       res => { this.redsocialActual = res },
       err => console.log(err)
     );
   }
 
   guardar() {
-    this.redesSocialesService.editarUnaRedSocial(this.id, this.redsocialActual).subscribe(
+    this.redsocialService.editarUnaRedSocial(this.id, this.redsocialActual).subscribe(
       res => { this.router.navigate(['/']) },
       err => console.log(err)
     );

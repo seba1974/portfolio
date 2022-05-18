@@ -1,0 +1,27 @@
+<div class="divisor"></div>
+<div class="conteiner">
+        <div class="card mat-card">
+                <div id="redessociales">
+                        <div
+                                class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                                <h4>Redes Sociales</h4>
+                                <i class="bi bi-plus-circle-fill" [routerLink]="['/redessociales/crear']"></i>
+                        </div>
+                </div>
+                <ul>
+                        <!-- declaro la variable educacion que recorre la listaEducacion !-->
+                        <li *ngFor="let redessociales of listaRedSocial">
+                                <!-- directiva estructural recorre la estructura  !-->
+                                <h6>{{redessociales.red}}
+                                        <i class="bi bi-pencil-fill" [routerLink]="['/redessociales/editar/',redessociales.id]"></i>
+                                        <i class="bi bi-trash-fill" [routerLink]="['/redessociales/borrar/',redessociales.id]"></i>
+                                </h6>
+                                <p class="secundario">{{redessociales.link}}</p>
+                                <img id="img_iconos" width = 50px [src]="redessociales.imagen" [alt]="redessociales.red">
+                                <p class="secundario">{{redessociales.imagen}}</p>
+                                <hr>
+                        </li>
+
+                </ul>
+        </div>
+</div>

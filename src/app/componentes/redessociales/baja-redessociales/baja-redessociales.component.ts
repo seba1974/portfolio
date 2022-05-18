@@ -4,38 +4,35 @@ import { RedesSociales } from 'src/app/Models/redessociales';
 import { RedessocialesService } from 'src/app/servicios/redessociales.service';
 
 @Component({
-  selector: 'app-modificar-header',
-  templateUrl: './modificar-header.component.html',
-  styleUrls: ['./modificar-header.component.css']
+  selector: 'app-baja-redessociales',
+  templateUrl: './baja-redessociales.component.html',
+  styleUrls: ['./baja-redessociales.component.css']
 })
-export class ModificarHeaderComponent implements OnInit {
-  
+export class BajaRedessocialesComponent implements OnInit {
+
   id: string = "";
   redsocialActual: RedesSociales =
     {
-      dni: '', imagen: '', link: '', red: ''
+      dni: '', red: '', link: '', imagen: ''
     };
 
-  constructor(
-    private redesSocialesService: RedessocialesService,
+  constructor(private redessocialesService: RedessocialesService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
-  ) { }
+    private router: Router) { }
 
   ngOnInit(): void {
 
     this.id = this.activatedRoute.snapshot.params['id'];
-    this.redesSocialesService.obtenerUnaRedSocial(this.id).subscribe(
+    this.redessocialesService.obtenerUnaRedSocial(this.id).subscribe(
       res => { this.redsocialActual = res },
       err => console.log(err)
     );
   }
 
-  guardar() {
-    this.redesSocialesService.editarUnaRedSocial(this.id, this.redsocialActual).subscribe(
+  borrar() {
+    this.redessocialesService.borrarUnaRedSocial(this.id).subscribe(
       res => { this.router.navigate(['/']) },
       err => console.log(err)
     );
   }
-
 }
