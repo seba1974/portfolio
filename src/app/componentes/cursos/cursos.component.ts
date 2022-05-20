@@ -13,8 +13,7 @@ export class CursosComponent implements OnInit {
 
   ngOnInit(): void {
     this.cursosService.obtenerCursos().subscribe(data => {
-      console.log(data);
-      this.listaCursos = data; //.tblcursos nombre de la tabla de la BD o JSON
+      this.listaCursos = data;
     })
   }
 

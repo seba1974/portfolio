@@ -9,7 +9,6 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
-
 import { HttpClientModule } from '@angular/common/http';
 import { CursosComponent } from './componentes/cursos/cursos.component';
 import { AltaExperienciaComponent } from './componentes/experiencia/alta-experiencia/alta-experiencia.component';
@@ -28,8 +27,6 @@ import { AltaProyectosComponent } from './componentes/proyectos/alta-proyectos/a
 import { BajaProyectosComponent } from './componentes/proyectos/baja-proyectos/baja-proyectos.component';
 import { ModificarProyectosComponent } from './componentes/proyectos/modificar-proyectos/modificar-proyectos.component';
 import { AltaSkillsComponent } from './componentes/skills/alta-skills/alta-skills.component';
-import { BajaSkillsComponent } from './componentes/skills/baja-skills/baja-skills.component';
-import { ModificarSkillsComponent } from './componentes/skills/modificar-skills/modificar-skills.component';
 import { LoginComponent } from './componentes/header/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ModificarHeaderComponent } from './componentes/header/modificar-header/modificar-header.component';
@@ -46,6 +43,10 @@ import { AltaRedessocialesComponent } from './componentes/redessociales/alta-red
 import { BajaRedessocialesComponent } from './componentes/redessociales/baja-redessociales/baja-redessociales.component';
 import { ModificarRedessocialesComponent } from './componentes/redessociales/modificar-redessociales/modificar-redessociales.component';
 import { RedessocialesComponent } from './componentes/redessociales/redessociales.component';
+import { ModificarSkillsSoftComponent } from './componentes/skills/modificar-skills-soft/modificar-skills-soft.component';
+import { ModificarSkillsHardComponent } from './componentes/skills/modificar-skills-hard/modificar-skills-hard.component';
+import { BajaSkillsHardComponent } from './componentes/skills/baja-skills-hard/baja-skills-hard.component';
+import { BajaSkillsSoftComponent } from './componentes/skills/baja-skills-soft/baja-skills-soft.component';
 
 @NgModule({
   declarations: [
@@ -74,8 +75,6 @@ import { RedessocialesComponent } from './componentes/redessociales/redessociale
     BajaProyectosComponent,
     ModificarProyectosComponent,
     AltaSkillsComponent,
-    BajaSkillsComponent,
-    ModificarSkillsComponent,
     LoginComponent,
     ModificarHeaderComponent,
     AltaHeaderComponent,
@@ -88,6 +87,10 @@ import { RedessocialesComponent } from './componentes/redessociales/redessociale
     BajaRedessocialesComponent,
     ModificarRedessocialesComponent,
     RedessocialesComponent,
+    ModificarSkillsSoftComponent,
+    ModificarSkillsHardComponent,
+    BajaSkillsHardComponent,
+    BajaSkillsSoftComponent,
     
   ],
   imports: [

@@ -1,21 +1,53 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6d8d6c;">
-    <div class="container-fluid justify-content-start">
-        <img id="img_logo" class="rounded float-start" alt="APlogo" src="assets/img/APlogo.png">
-        <a class="navbar-brand mx-5">Sebastián F. Veloce</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item" *ngFor="let redes of listaRedesSociales">
-                    <a class="nav-link active" aria-current="page" [href]="redes.link"><img id="img_iconos"
-                            [src]="redes.imagen" [alt]="redes.red"></a>
-                </li>
-                <i class="bi bi-pencil-fill" [routerLink]="['/redessociales/listar']"></i>
-                <li class="nav-item">
-                    <button type="login" class="btn btn-success">Login</button>
-                </li>
-            </ul>
+{{isAdmin}} - Role
+<ng-container *ngIf="!isAdmin; else viewAdmin">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6d8d6c;">
+        <div class="container-fluid justify-content-start">
+            <img id="img_logo" class="rounded float-start" alt="APlogo" src="assets/img/APlogo.png">
+            <a class="navbar-brand mx-5">Sebastián F. Veloce</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" *ngFor="let redes of listaRedesSociales">
+                        <a class="nav-link active" aria-current="page" [href]="redes.link"><img id="img_iconos"
+                                [src]="redes.imagen" [alt]="redes.red"></a>
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <button type="login" class="btn btn-success">Login</button>
+                        <button type="logout" class="btn btn-danger">Logout</button>
+
+                        <button type="login" class="btn btn-warning" (click)="isAdmin = !isAdmin">Cambio</button>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</ng-container>
+
+<ng-template #viewAdmin>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6d8d6c;">
+        <div class="container-fluid justify-content-start">
+            <img id="img_logo" class="rounded float-start" alt="APlogo" src="assets/img/APlogo.png">
+            <a class="navbar-brand mx-5">Sebastián F. Veloce</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" *ngFor="let redes of listaRedesSociales">
+                        <a class="nav-link active" aria-current="page" [href]="redes.link"><img id="img_iconos"
+                                [src]="redes.imagen" [alt]="redes.red"></a>
+                    </li>
+                    <i class="bi bi-pencil-fill" (click)="onToggleSidenav()"></i>  <!---[routerLink]="['/redessociales/listar']"-->
+                    <li class="nav-item">
+                        <button type="login" class="btn btn-success">Login</button>
+                        <button type="logout" class="btn btn-danger">Logout</button>
+                        <button type="login" class="btn btn-warning" (click)="isAdmin = !isAdmin">Cambio</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</ng-template>
 <div class="row" id="banner">
     <div class="col">
         <ul>
@@ -25,6 +57,7 @@
         </ul>
     </div>
 </div>
+
 <app-acercade></app-acercade>
 <app-experiencia></app-experiencia>
 <app-educacion></app-educacion>

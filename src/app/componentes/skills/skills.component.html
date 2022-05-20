@@ -1,34 +1,33 @@
 <div class="divisor"></div>
 <div class="conteiner">
         <div class="card mat-card">
-                <div id="expreriencia">
+                <div id="skills">
                         <div
                                 class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                                 <h4>Hard & Soft Skills</h4>
-                                <i class="bi bi-plus-circle-fill"></i>
+                                <i class="bi bi-plus-circle-fill" [routerLink]="['/skills/crear']"></i>
                         </div>
 
                 </div>
                 <ul>
                         <h6>Hard Skills</h6>
+                        
                         <li *ngFor="let skills_hard of lista_Skills_Hard">
-                                <p>{{skills_hard.habilidad}}<i class="bi bi-pencil-fill"></i><i
-                                                class="bi bi-trash-fill"></i></p>
-                                <!-- nombre de los campos en la BD o JSON!-->
+                                <p>{{skills_hard.habilidad}}
+                                        <i class="bi bi-pencil-fill" [routerLink]="['/skills_hard/editar/',skills_hard.id]"></i>
+                                        <i class="bi bi-trash-fill" [routerLink]="['/skills_hard/borrar/',skills_hard.id]"></i></p>
                                 <p class="principal">{{skills_hard.porcentaje}}%</p>
-                                <!-- nombre de los campos en la BD o JSON!-->
                         </li>
                 </ul>
                 <hr>
                 <ul>
                         <h6>Soft Skills</h6>
+                        
                         <li *ngFor="let skills_soft of lista_Skills_Soft">
-                                <p>{{skills_soft.habilidad}}<i class="bi bi-pencil-fill"></i><i
-                                                class="bi bi-trash-fill"></i></p>
-                                <!-- nombre de los campos en la BD o JSON!-->
+                                <p>{{skills_soft.habilidad}}
+                                        <i class="bi bi-pencil-fill" [routerLink]="['/skills_soft/editar/',skills_soft.id]"></i>
+                                        <i class="bi bi-trash-fill" [routerLink]="['/skills_soft/borrar/',skills_soft.id]"></i></p>
                                 <p class="principal">{{skills_soft.porcentaje}}%</p>
-                                <!-- nombre de los campos en la BD o JSON!-->
-
                         </li>
                 </ul>
                 <hr>

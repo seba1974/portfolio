@@ -14,8 +14,10 @@ import { ModificarProyectosComponent } from './componentes/proyectos/modificar-p
 import { BajaProyectosComponent } from './componentes/proyectos/baja-proyectos/baja-proyectos.component';
 
 import { AltaSkillsComponent } from './componentes/skills/alta-skills/alta-skills.component';
-import { ModificarSkillsComponent } from './componentes/skills/modificar-skills/modificar-skills.component';
-import { BajaSkillsComponent } from './componentes/skills/baja-skills/baja-skills.component';
+import { ModificarSkillsHardComponent } from './componentes/skills/modificar-skills-hard/modificar-skills-hard.component';
+import { ModificarSkillsSoftComponent } from './componentes/skills/modificar-skills-soft/modificar-skills-soft.component';
+import { BajaSkillsHardComponent } from './componentes/skills/baja-skills-hard/baja-skills-hard.component';
+import { BajaSkillsSoftComponent } from './componentes/skills/baja-skills-soft/baja-skills-soft.component';
 
 import { AltaEducacionComponent } from './componentes/educacion/alta-educacion/alta-educacion.component';
 import { ModificarEducacionComponent } from './componentes/educacion/modificar-educacion/modificar-educacion.component';
@@ -40,6 +42,7 @@ import { BajaRedessocialesComponent } from './componentes/redessociales/baja-red
 import { ModificarRedessocialesComponent } from './componentes/redessociales/modificar-redessociales/modificar-redessociales.component';
 import { AltaRedessocialesComponent } from './componentes/redessociales/alta-redessociales/alta-redessociales.component';
 
+
 const routes : Routes = [
 
   {path: '', component:HeaderComponent},
@@ -57,8 +60,10 @@ const routes : Routes = [
   {path: 'idiomas/borrar/:id', component:BajaIdiomasComponent},
 
   {path: 'skills/crear', component:AltaSkillsComponent},
-  {path: 'skills/editar/:id', component:ModificarSkillsComponent},
-  {path: 'skills/borrar/:id', component:BajaSkillsComponent},
+  {path: 'skills_hard/editar/:id', component:ModificarSkillsHardComponent},
+  {path: 'skills_soft/editar/:id', component:ModificarSkillsSoftComponent},
+  {path: 'skills_hard/borrar/:id', component:BajaSkillsHardComponent},
+  {path: 'skills_soft/borrar/:id', component:BajaSkillsSoftComponent},
 
   {path: 'proyectos/crear', component:AltaProyectosComponent},
   {path: 'proyectos/editar/:id', component:ModificarProyectosComponent},

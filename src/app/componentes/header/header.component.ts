@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 import { AcercadeService } from 'src/app/servicios/acercade.service';
 import { HeaderService } from 'src/app/servicios/header.service';
@@ -10,6 +10,14 @@ import { RedessocialesService } from 'src/app/servicios/redessociales.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  
+  isAdmin: boolean = false;
+  @Output() toggleSidenav = new EventEmitter<void>();
+
+
+
+
+  
   listaHeader:any;
   listaRedesSociales:any;
   listaAcercade:any;
@@ -19,13 +27,20 @@ export class HeaderComponent implements OnInit {
               private datosRedesSociales:RedessocialesService) { }
 
   ngOnInit(): void {
+
     this.datosHeader.obtenerHeader().subscribe(data => {
-        this.listaHeader = data;}) 
+      this.listaHeader = data;}) 
 
     this.datosAcercade.obtenerAcercade().subscribe(data => {
       this.listaAcercade = data;}) 
     
     this.datosRedesSociales.obtenerRedesSociales().subscribe(data => {
       this.listaRedesSociales = data;})
+  }
+
+
+
+  onToggleSidenav () : void{
+    this.toggleSidenav.emit();
   }
 }

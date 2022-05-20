@@ -1,1 +1,28 @@
-<p>alta-skills works!</p>
+<div class=" container">
+    <div class="row mt-10">
+      <div class="col-md-9 mx-auto">
+        <h4>Alta Skill</h4>
+        <form>
+          <div class="form-group">
+            <label for="dni">DNI</label>
+            <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" [(ngModel)]="dni" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="habilidad">Habilidad</label>
+            <input type="text" class="form-control" id="habilidad" placeholder="Habilidad" name="habilidad" [(ngModel)]="habilidad" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="porcentaje">Porcentaje</label>
+            <input type="text" class="form-control" id="porcentaje" placeholder="Porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
+          </div>
+
+
+        <button class="btn btn-outline-success btn-block mx-4" (click)="onCreateHard()">Crear Hard Skill</button>
+        <button class="btn btn-outline-success btn-block mx-4" (click)="onCreateSoft()">Crear Soft Skill</button>
+        <button class="btn btn-danger" [routerLink]="['/']">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>

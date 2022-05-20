@@ -1,0 +1,27 @@
+<div class=" container">
+    <div class="row mt-10">
+      <div class="col-md-9 mx-auto">
+        <h4>Modificar  Hard Skill</h4>
+        <form>
+          <div class="form-group">
+            <label for="dni">DNI</label>
+            <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" [(ngModel)]="skillActual.dni" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="habilidad">Habilidad</label>
+            <input type="text" class="form-control" id="habilidad" placeholder="Habilidad" name="habilidad" [(ngModel)]="skillActual.habilidad" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="porcentaje">Porcentaje</label>
+            <input type="text" class="form-control" id="porcentaje" placeholder="Porcentaje" name="porcentaje" [(ngModel)]="skillActual.porcentaje" required>
+          </div>
+          <br>
+
+          <button class="btn btn-danger" (click)="guardar()">Modificar</button>
+          <button class="btn btn-success" [routerLink]="['/']">Cancelar</button>
+      </form>
+  </div>
+</div>
+</div>
