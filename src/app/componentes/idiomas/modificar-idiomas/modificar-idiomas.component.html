@@ -22,6 +22,11 @@
                     <label for="porcentaje_escrita">Porcentaje Escrito</label>
                     <input type="text" class="form-control" id="porcentaje_escrita" name="porcentaje_escrita" [(ngModel)]="idiomaActual.porcentaje_escrita">
                 </div>
+
+                <div class="form-group">
+                    <label for="porcentaje_lectura">Porcentaje Lectura</label>
+                    <input type="text" class="form-control" id="porcentaje_lectura" name="porcentaje_lectura" [(ngModel)]="idiomaActual.porcentaje_lectura">
+                </div>
                 <br>
                 <button class="btn btn-danger" (click)="guardar()">Modificar</button>
                 <button class="btn btn-success" [routerLink]="['/']">Cancelar</button>

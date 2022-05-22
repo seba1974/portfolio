@@ -13,7 +13,7 @@ export class ModificarIdiomasComponent implements OnInit {
   id: string = "";
   idiomaActual: Idiomas =
     {
-      dni: '', idioma: '', porcentaje_oral: '', porcentaje_escrita: ''
+      dni: '', idioma: '', porcentaje_oral: '', porcentaje_escrita: '', porcentaje_lectura: ''
     };
 
   constructor(

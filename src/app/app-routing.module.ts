@@ -42,6 +42,9 @@ import { BajaRedessocialesComponent } from './componentes/redessociales/baja-red
 import { ModificarRedessocialesComponent } from './componentes/redessociales/modificar-redessociales/modificar-redessociales.component';
 import { AltaRedessocialesComponent } from './componentes/redessociales/alta-redessociales/alta-redessociales.component';
 
+import { ModificarUsuarioComponent } from './componentes/usuarios/modificar-usuario/modificar-usuario.component';
+import { AltaUsuarioComponent } from './componentes/usuarios/alta-usuario/alta-usuario.component';
+
 
 const routes : Routes = [
 
@@ -84,7 +87,11 @@ const routes : Routes = [
 
   {path: 'header/crear', component:AltaHeaderComponent},
   {path: 'header/editar/:id', component:ModificarHeaderComponent},
-  {path: 'header/borrar/:id', component:BajaHeaderComponent}
+  {path: 'header/borrar/:id', component:BajaHeaderComponent},
+
+  {path: 'usuarios/crear', component:AltaUsuarioComponent},
+  {path: 'usuarios/editar/:id', component:ModificarUsuarioComponent},
+  //{path: 'usuarios/borrar/:id', component:BajaHeaderComponent}
 
 ];
 

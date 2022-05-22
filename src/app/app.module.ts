@@ -47,6 +47,9 @@ import { ModificarSkillsSoftComponent } from './componentes/skills/modificar-ski
 import { ModificarSkillsHardComponent } from './componentes/skills/modificar-skills-hard/modificar-skills-hard.component';
 import { BajaSkillsHardComponent } from './componentes/skills/baja-skills-hard/baja-skills-hard.component';
 import { BajaSkillsSoftComponent } from './componentes/skills/baja-skills-soft/baja-skills-soft.component';
+import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
+import { AltaUsuarioComponent } from './componentes/usuarios/alta-usuario/alta-usuario.component';
+import { ModificarUsuarioComponent } from './componentes/usuarios/modificar-usuario/modificar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +94,9 @@ import { BajaSkillsSoftComponent } from './componentes/skills/baja-skills-soft/b
     ModificarSkillsHardComponent,
     BajaSkillsHardComponent,
     BajaSkillsSoftComponent,
+    UsuariosComponent,
+    AltaUsuarioComponent,
+    ModificarUsuarioComponent,
     
   ],
   imports: [
