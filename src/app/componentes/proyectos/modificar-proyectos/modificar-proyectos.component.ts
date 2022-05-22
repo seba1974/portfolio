@@ -13,7 +13,7 @@ export class ModificarProyectosComponent implements OnInit {
   id: string = "";
   proyectoActual: Proyectos =
     {
-      dni: '', nombre: '', fecha: '', descripcion: '', link:'', imagen:''
+      nombre: '', fecha: '', descripcion: '', link:'', imagen:''
     };
 
   constructor(

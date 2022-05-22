@@ -22,7 +22,7 @@ export class AltaRedessocialesComponent implements OnInit {
   }
 
   onCreate(): void {
-    const redsocial = new RedesSociales(this.dni, this.red, this.link, this.imagen)
+    const redsocial = new RedesSociales(this.red, this.link, this.imagen)
     this.redessocialesService.crearUnaRedSocial(redsocial).subscribe(
       data => {
         console.log(data);

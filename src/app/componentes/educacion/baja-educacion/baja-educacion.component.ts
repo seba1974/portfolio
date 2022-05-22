@@ -14,7 +14,7 @@ export class BajaEducacionComponent implements OnInit {
   id: string = "";
   educacionActual: Educacion =
     {
-      dni: '', institucion: '', titulo: '', imagen: '',
+      institucion: '', titulo: '', imagen: '',
       estado: '', promedio: '', anio_inicio: '', anio_fin: ''
     };
 

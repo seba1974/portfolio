@@ -13,7 +13,7 @@ export class BajaRedessocialesComponent implements OnInit {
   id: string = "";
   redsocialActual: RedesSociales =
     {
-      dni: '', red: '', link: '', imagen: ''
+       red: '', link: '', imagen: ''
     };
 
   constructor(private redessocialesService: RedessocialesService,

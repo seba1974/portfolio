@@ -10,10 +10,10 @@ import { IdiomasService } from 'src/app/servicios/idiomas.service';
 })
 export class AltaIdiomasComponent implements OnInit {
 
-  dni: any;
   idioma: any;
   porcentaje_oral: any;
   porcentaje_escrita: any;
+  porcentaje_lectura : any;
 
   constructor(
     private idiomasService: IdiomasService,
@@ -23,7 +23,7 @@ export class AltaIdiomasComponent implements OnInit {
   }
 
   onCreate(): void {
-    const idiomas = new Idiomas(this.dni, this.idioma, this.porcentaje_oral, this.porcentaje_escrita)
+    const idiomas = new Idiomas(this.idioma, this.porcentaje_oral, this.porcentaje_escrita, this.porcentaje_lectura)
     this.idiomasService.crearIdiomas(idiomas).subscribe(
       data => {
         console.log(data);

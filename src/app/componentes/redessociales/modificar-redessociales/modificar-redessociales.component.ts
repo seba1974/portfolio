@@ -13,7 +13,7 @@ export class ModificarRedessocialesComponent implements OnInit {
   id: string = "";
   redsocialActual: RedesSociales =
     {
-      dni: '', red: '', link: '', imagen: ''
+       red: '', link: '', imagen: ''
     };
 
   constructor(

@@ -1,7 +1,6 @@
 export class Usuarios {
 
     constructor (
-        public dni : String,
         public nombre : String,
         public apellido : String,
         public fecha_nacimiento: String,

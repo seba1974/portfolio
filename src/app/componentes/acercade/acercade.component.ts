@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AcercadeService } from 'src/app/servicios/acercade.service';
+//import { AcercadeService } from 'src/app/servicios/acercade.service';
+import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
 @Component({
   selector: 'app-acercade',
@@ -8,14 +9,14 @@ import { AcercadeService } from 'src/app/servicios/acercade.service';
   styleUrls: ['./acercade.component.css']
 })
 export class AcercadeComponent implements OnInit {
-  listaAcercade:any; // variable 
+  listaUsuarios:any; // variable 
 
-  constructor(private acercadeService:AcercadeService) { }
+  constructor(private usuariosService:UsuariosService) { }
 
   ngOnInit(): void {
-    this.acercadeService.obtenerAcercade().subscribe(data => {
+    this.usuariosService.obtenerUsuarios().subscribe(data => {
       console.log(data);
-      this.listaAcercade = data; //nombre de la tabla de la BD o JSON
+      this.listaUsuarios = data; //nombre de la tabla de la BD o JSON
       
     })
   }

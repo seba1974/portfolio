@@ -13,7 +13,7 @@ export class BajaCursosComponent implements OnInit {
   id: string = "";
   cursoActual: Cursos =
     {
-      dni: '', anio: '', curso: '', dictado_por: ''
+      anio: '', curso: '', dictado_por: ''
     };
 
   constructor(private cursosService: CursosService,

@@ -1,7 +1,6 @@
 export class Experiencia {
 
     constructor (
-        public dni : String,
         public empresa: String,
         public puesto : String,
         public ubic_empresa : String,

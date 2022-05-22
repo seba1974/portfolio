@@ -4,11 +4,6 @@
         <h4>Alta Red Social</h4>
         <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
           <div class="form-group">
-            <label for="dni">DNI</label>
-            <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" [(ngModel)]="dni" required>
-          </div>
-  
-          <div class="form-group">
             <label for="imagen">URL Imágen</label>
             <input type="text" class="form-control" id="imagen" placeholder="URL de la imágen de la red Social" default= "S/D " name="imagen"
               [(ngModel)]="imagen" required>

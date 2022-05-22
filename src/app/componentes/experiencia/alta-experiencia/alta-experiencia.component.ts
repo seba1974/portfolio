@@ -11,7 +11,6 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AltaExperienciaComponent implements OnInit {
 
-  dni: any;
   empresa: any;
   puesto: any;
   ubic_empresa: any;
@@ -31,7 +30,7 @@ export class AltaExperienciaComponent implements OnInit {
   }
 
   onCreate(): void {
-    const experiencia = new Experiencia(this.dni, this.empresa, this.puesto, this.ubic_empresa, this.area_cobertura,
+    const experiencia = new Experiencia(this.empresa, this.puesto, this.ubic_empresa, this.area_cobertura,
       this.img_logo, this.fecha_ingreso, this.fecha_egreso, this.descripcion);
     this.experienciaService.crearExperiencia(experiencia).subscribe(
       data => {

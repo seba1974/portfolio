@@ -26,7 +26,7 @@ export class AltaSkillsComponent implements OnInit {
   }
 
   onCreateHard(): void {
-    const skills_hard = new Skills(this.dni, this.habilidad, this.porcentaje)
+    const skills_hard = new Skills(this.habilidad, this.porcentaje)
     this.skillhardService.crearSkill_Hard(skills_hard).subscribe(
       data => {
         console.log(data);
@@ -39,7 +39,7 @@ export class AltaSkillsComponent implements OnInit {
     );
     }
     onCreateSoft(): void {    
-    const skills_soft = new Skills(this.dni, this.habilidad, this.porcentaje)
+    const skills_soft = new Skills(this.habilidad, this.porcentaje)
     this.skillsoftService.crearSkill_Soft(skills_soft).subscribe(
       data => {
         console.log(data);

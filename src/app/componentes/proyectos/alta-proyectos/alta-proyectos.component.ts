@@ -10,7 +10,6 @@ import { ProyectosService } from 'src/app/servicios/proyectos.service';
 })
 export class AltaProyectosComponent implements OnInit {
 
-  dni: any;
   nombre: any;
   fecha: any;
   descripcion: any;
@@ -26,7 +25,7 @@ export class AltaProyectosComponent implements OnInit {
   }
   
   onCreate(): void {
-    const proyecto = new Proyectos(this.dni, this.nombre, this.fecha, this.descripcion,
+    const proyecto = new Proyectos(this.nombre, this.fecha, this.descripcion,
       this.link, this.imagen)
     this.proyectosService.crearProyecto(proyecto).subscribe(
       data => {

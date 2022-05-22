@@ -1,7 +1,6 @@
-export class Acercade {
+/*export class Acercade {
 
     constructor (
-        public dni : String,
         public nombre: String,
         public apellido : String,
         public fecha_nacimiento : String,
@@ -14,4 +13,4 @@ export class Acercade {
         public domicilio : String
     )
 {}
-    }
+    }*/

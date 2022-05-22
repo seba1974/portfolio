@@ -13,7 +13,7 @@ export class BajaIdiomasComponent implements OnInit {
   id: string = "";
   idiomaActual: Idiomas =
     {
-      dni: '', idioma: '', porcentaje_oral: '', porcentaje_escrita: ''
+      idioma: '', porcentaje_oral: '', porcentaje_escrita: '', porcentaje_lectura: ''
     };
 
   constructor(private idiomasService: IdiomasService,

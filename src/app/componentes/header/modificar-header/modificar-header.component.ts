@@ -13,7 +13,7 @@ export class ModificarHeaderComponent implements OnInit {
   id: string = "";
   redsocialActual: RedesSociales =
     {
-      dni: '', imagen: '', link: '', red: ''
+      imagen: '', link: '', red: ''
     };
 
   constructor(

@@ -15,7 +15,7 @@ export class ModificarSkillsHardComponent implements OnInit {
   id: string = "";
   skillActual: Skills =
     {
-      dni: '', habilidad: '', porcentaje: ''
+      habilidad: '', porcentaje: ''
     };
 
   constructor(

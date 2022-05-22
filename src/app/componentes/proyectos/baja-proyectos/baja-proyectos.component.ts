@@ -13,7 +13,7 @@ export class BajaProyectosComponent implements OnInit {
   id: string = "";
   proyectoActual: Proyectos =
     {
-      dni: '', nombre: '', fecha: '', descripcion: '', link: '', imagen: ''
+      nombre: '', fecha: '', descripcion: '', link: '', imagen: ''
     };
 
   constructor(private proyectosService: ProyectosService,

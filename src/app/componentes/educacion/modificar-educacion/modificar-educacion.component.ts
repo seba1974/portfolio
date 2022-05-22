@@ -13,7 +13,7 @@ export class ModificarEducacionComponent implements OnInit {
   id: string = "";
   educacionActual: Educacion =
     {
-      dni: '', institucion: '', titulo: '', imagen: '', estado: '',
+      institucion: '', titulo: '', imagen: '', estado: '',
       promedio: '', anio_inicio: '', anio_fin: ''
     };
 

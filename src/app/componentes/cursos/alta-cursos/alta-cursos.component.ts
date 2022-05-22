@@ -9,7 +9,7 @@ import { CursosService } from 'src/app/servicios/cursos.service';
   styleUrls: ['./alta-cursos.component.css']
 })
 export class AltaCursosComponent implements OnInit {
-  dni: any;
+  
   anio: any;
   curso: any;
   dictado_por: any;
@@ -24,7 +24,7 @@ export class AltaCursosComponent implements OnInit {
   }
 
   onCreate(): void {
-    const cursos = new Cursos(this.dni, this.anio, this.curso, this.dictado_por)
+    const cursos = new Cursos(this.anio, this.curso, this.dictado_por)
     this.cursosService.crearCursos(cursos).subscribe(
       data => {
         console.log(data);

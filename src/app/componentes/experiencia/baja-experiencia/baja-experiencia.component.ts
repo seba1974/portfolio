@@ -14,7 +14,7 @@ export class BajaExperienciaComponent implements OnInit {
   id: string = "";
   experienciaActual: Experiencia =
     {
-      dni: '', empresa: '', puesto: '', ubic_empresa: '', area_cobertura: '',
+      empresa: '', puesto: '', ubic_empresa: '', area_cobertura: '',
       img_logo: '', fecha_ingreso: '', fecha_egreso: '', descripcion: ''
     };
 

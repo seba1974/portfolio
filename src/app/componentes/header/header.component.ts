@@ -1,8 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
-import { AcercadeService } from 'src/app/servicios/acercade.service';
 import { HeaderService } from 'src/app/servicios/header.service';
 import { RedessocialesService } from 'src/app/servicios/redessociales.service';
+import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
 @Component({
   selector: 'app-header',
@@ -20,10 +20,10 @@ export class HeaderComponent implements OnInit {
   
   listaHeader:any;
   listaRedesSociales:any;
-  listaAcercade:any;
+  listaUsuarios:any;
 
   constructor(private datosHeader:HeaderService,
-              private datosAcercade:AcercadeService,
+              private datosUsuarios:UsuariosService,
               private datosRedesSociales:RedessocialesService) { }
 
   ngOnInit(): void {
@@ -31,8 +31,8 @@ export class HeaderComponent implements OnInit {
     this.datosHeader.obtenerHeader().subscribe(data => {
       this.listaHeader = data;}) 
 
-    this.datosAcercade.obtenerAcercade().subscribe(data => {
-      this.listaAcercade = data;}) 
+    this.datosUsuarios.obtenerUsuarios().subscribe(data => {
+      this.listaUsuarios = data;}) 
     
     this.datosRedesSociales.obtenerRedesSociales().subscribe(data => {
       this.listaRedesSociales = data;})

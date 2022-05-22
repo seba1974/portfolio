@@ -1,7 +1,6 @@
 export class Educacion {
 
     constructor (
-        public dni : String,
         public institucion: String,
         public titulo : String,
         public imagen : String,

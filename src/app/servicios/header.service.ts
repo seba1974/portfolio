@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Header } from '../Models/header';
-import { Acercade } from '../Models/acercade'
+//import { Acercade } from '../Models/acercade'
 @Injectable({
   providedIn: 'root'
 })

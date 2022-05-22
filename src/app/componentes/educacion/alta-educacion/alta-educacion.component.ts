@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 })
 export class AltaEducacionComponent implements OnInit {
 
-  dni: any;
   institucion: any;
   titulo: any;
   imagen: any;
@@ -29,7 +28,7 @@ export class AltaEducacionComponent implements OnInit {
   }
 
   onCreate(): void {
-    const educacion = new Educacion(this.dni, this.institucion, this.titulo, this.imagen,
+    const educacion = new Educacion(this.institucion, this.titulo, this.imagen,
       this.estado, this.promedio, this.anio_inicio, this.anio_fin)
     this.educacionService.crearEducacion(educacion).subscribe(
       data => {
