@@ -1,27 +1,38 @@
 <div class="divisor"></div>
-<div class="conteiner">
-        <div class="card mat-card">
-                <div id="redessociales">
-                        <div
-                                class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                                <h4>Redes Sociales</h4>
-                                <i class="bi bi-plus-circle-fill" [routerLink]="['/redessociales/crear']"></i>
-                        </div>
-                </div>
-                <ul>
-                        <!-- declaro la variable educacion que recorre la listaEducacion !-->
-                        <li *ngFor="let redessociales of listaRedSocial">
-                                <!-- directiva estructural recorre la estructura  !-->
-                                <h6>{{redessociales.red}}
-                                        <i class="bi bi-pencil-fill" [routerLink]="['/redessociales/editar/',redessociales.id]"></i>
-                                        <i class="bi bi-trash-fill" [routerLink]="['/redessociales/borrar/',redessociales.id]"></i>
-                                </h6>
-                                <p class="secundario">{{redessociales.link}}</p>
-                                <img id="img_iconos" width = 50px [src]="redessociales.imagen" [alt]="redessociales.red">
-                                <p class="secundario">{{redessociales.imagen}}</p>
-                                <hr>
-                        </li>
 
-                </ul>
+<div class="container-fluid">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">
+                    Redes Sociales <a><i class="bi bi-plus-circle-fill mx-4" [routerLink]="['/redessociales/crear']"></i></a>
+                </h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="usuarios" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>red Social</th>
+                                <th>Imagen</th>
+                                <th>Link</th>
+                                <th>Acciones</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let redessociales of listaRedSocial">
+                                <td>{{redessociales.red}}</td>
+                                <td><img id="img_iconos" width = 50px [src]="redessociales.imagen" [alt]="redessociales.red"></td>
+                                <td>{{redessociales.link}}</td>
+                                <td>
+                                    <a><i class="bi bi-pencil-fill mx-2" [routerLink]="['/redessociales/editar/',redessociales.id]"></i></a> 
+                                    <a><i class="bi bi-trash-fill mx-2" [routerLink]="['/redessociales/borrar/',redessociales.id]"></i></a>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <button class="btn btn-success" [routerLink]="['/']">Cancelar</button>
+                </div>
+            </div>
         </div>
-</div>
+    </div>

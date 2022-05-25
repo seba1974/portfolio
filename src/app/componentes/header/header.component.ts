@@ -57,8 +57,8 @@ export class HeaderComponent implements OnInit {
     this.toggleSidenav.emit();
   }
   
-  Login(): void {
+  /*Login(): void {
     
-  }
+  }*/
 
 }

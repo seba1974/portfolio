@@ -36,9 +36,9 @@
                         <a class="nav-link active" aria-current="page" [href]="redes.link"><img id="img_iconos"
                                 [src]="redes.imagen" [alt]="redes.red"></a>
                     </li>
-                    <i class="bi bi-pencil-fill" (click)="onToggleSidenav()"></i>  <!---[routerLink]="['/redessociales/listar']"-->
+                    <i class="bi bi-pencil-fill" [routerLink]="['/redessociales/listar']"></i>  <!---(click)="onToggleSidenav()"-->
                     <li class="nav-item">
-                        <button type="logout" class="btn btn-danger mx-4"[routerLink]="['/usuarios/listar']">Administrar</button>
+                        <button type="admin" class="btn btn-success mx-4"[routerLink]="['/usuarios/listar']">Administrar</button>
                         <button type="logout" class="btn btn-danger mx-4">Logout</button>
                         <button type="login" class="btn btn-warning mx-4" (click)="isAdmin = !isAdmin">Cambio</button>
                     </li>
