@@ -62,9 +62,9 @@
                     <label for="perfil">Perfil</label>
                     <input type="text" class="form-control" id="perfil" name="perfil" [(ngModel)]="usuarioActual.perfil">
                 </div>
-
                 <br>
-                <button class="btn btn-danger" (click)="guardar()">Modificar</button>
+
+                <button class="btn btn-danger" (click)="borrar()">Eliminar</button>
                 <button class="btn btn-success" [routerLink]="['/']">Cancelar</button>
             </form>
         </div>

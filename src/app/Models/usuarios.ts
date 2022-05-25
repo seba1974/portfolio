@@ -10,7 +10,7 @@ export class Usuarios {
         public password : String,
         public sobre_mi : String,
         public ocupacion : String,
-        public imagen_background_heder : String,
+        public imagen_background_header : String,
         public imagen_perfil : String,
         public perfil : String,
         )

@@ -9,20 +9,20 @@
 
 
     <ul>
-        <li *ngFor="let acercade of listaUsuarios">
+        <li>
 
             <div class="row">
                 <div class="col-3 position-relative" id="acerca_nombre">
-                    <img id="img_thumbnail" [src]="acercade.imagen_perfil"
+                    <img id="img_thumbnail" [src]="usuarioActual.imagen_perfil"
                         class="rounded-circle position-absolute bottom-100 end-50" alt="thumbnail">
                     <i class="bi bi-pencil-fill"(click)="editarFoto()"></i>
-                    <p class="nombre bold">{{acercade.nombre}} {{acercade.apellido}}</p>
-                    <p class="nombre">{{acercade.ocupacion}}</p>
+                    <p class="nombre bold">{{usuarioActual.nombre}} {{usuarioActual.apellido}}</p>
+                    <p class="nombre">{{usuarioActual.ocupacion}}</p>
                 </div>
                 <div class="col-1">
                 </div>
                 <div class="col-8">
-                    <p>{{acercade.sobre_mi}}</p>
+                    <p>{{usuarioActual.sobre_mi}}</p>
                 </div>
             </div>
         </li>

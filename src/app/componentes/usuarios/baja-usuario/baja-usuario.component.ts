@@ -4,11 +4,11 @@ import { Usuarios } from 'src/app/Models/usuarios';
 import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
 @Component({
-  selector: 'app-modificar-usuario',
-  templateUrl: './modificar-usuario.component.html',
-  styleUrls: ['./modificar-usuario.component.css']
+  selector: 'app-baja-usuario',
+  templateUrl: './baja-usuario.component.html',
+  styleUrls: ['./baja-usuario.component.css']
 })
-export class ModificarUsuarioComponent implements OnInit {
+export class BajaUsuarioComponent implements OnInit {
 
   id: string = "";
   usuarioActual: Usuarios =
@@ -20,8 +20,7 @@ export class ModificarUsuarioComponent implements OnInit {
   constructor(
     private usuarioService: UsuariosService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
-  ) { }
+    private router: Router) { }
 
   ngOnInit(): void {
 
@@ -30,14 +29,12 @@ export class ModificarUsuarioComponent implements OnInit {
       res => { this.usuarioActual = res },
       err => console.log(err)
     );
-    
   }
 
-  guardar() {
-    this.usuarioService.editarUsuario(this.id, this.usuarioActual).subscribe(
+  borrar() {
+    this.usuarioService.borrarUsuario(this.id).subscribe(
       res => { this.router.navigate(['/']) },
       err => console.log(err)
     );
   }
-
 }

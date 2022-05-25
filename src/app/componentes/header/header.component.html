@@ -3,9 +3,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6d8d6c;">
         <div class="container-fluid justify-content-start">
             <img id="img_logo" class="rounded float-start" alt="APlogo" src="assets/img/APlogo.png">
-            <a class="navbar-brand mx-5">Sebastián F. Veloce</a>
+            <a class="navbar-brand mx-1" >{{usuarioActual.nombre}}</a><a class="navbar-brand mx-1" >{{usuarioActual.apellido}}</a>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5">
                     <li class="nav-item" *ngFor="let redes of listaRedesSociales">
                         <a class="nav-link active" aria-current="page" [href]="redes.link"><img id="img_iconos"
                                 [src]="redes.imagen" [alt]="redes.red"></a>
@@ -14,10 +14,10 @@
 
                     <li class="nav-item">
 
-                        <button type="login" class="btn btn-success">Login</button>
-                        <button type="logout" class="btn btn-danger">Logout</button>
+                        <button type="login" class="btn btn-success mx-4" [routerLink]="['/login']">Login</button>
+                        
 
-                        <button type="login" class="btn btn-warning" (click)="isAdmin = !isAdmin">Cambio</button>
+                        <button type="login" class="btn btn-warning mx-4" (click)="isAdmin = !isAdmin">Cambio</button>
                     </li>
                 </ul>
             </div>
@@ -29,18 +29,18 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6d8d6c;">
         <div class="container-fluid justify-content-start">
             <img id="img_logo" class="rounded float-start" alt="APlogo" src="assets/img/APlogo.png">
-            <a class="navbar-brand mx-5">Sebastián F. Veloce</a>
+            <a class="navbar-brand mx-1" >{{usuarioActual.nombre}}</a><a class="navbar-brand mx-1" >{{usuarioActual.apellido}}</a>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5">
                     <li class="nav-item" *ngFor="let redes of listaRedesSociales">
                         <a class="nav-link active" aria-current="page" [href]="redes.link"><img id="img_iconos"
                                 [src]="redes.imagen" [alt]="redes.red"></a>
                     </li>
                     <i class="bi bi-pencil-fill" (click)="onToggleSidenav()"></i>  <!---[routerLink]="['/redessociales/listar']"-->
                     <li class="nav-item">
-                        <button type="login" class="btn btn-success">Login</button>
-                        <button type="logout" class="btn btn-danger">Logout</button>
-                        <button type="login" class="btn btn-warning" (click)="isAdmin = !isAdmin">Cambio</button>
+                        <button type="logout" class="btn btn-danger mx-4"[routerLink]="['/usuarios/listar']">Administrar</button>
+                        <button type="logout" class="btn btn-danger mx-4">Logout</button>
+                        <button type="login" class="btn btn-warning mx-4" (click)="isAdmin = !isAdmin">Cambio</button>
                     </li>
                 </ul>
             </div>
@@ -48,16 +48,19 @@
     </nav>
 
 </ng-template>
-<div class="row" id="banner">
+
+
+<div class="row " id="banner">
     <div class="col">
         <ul>
-            <li *ngFor="let acercade of listaUsuarios">
-                <img id="img_banner" [src]="acercade.imagen_background_header" class="img-responsive" alt="Banner">
+            <li>
+                <img id="img_banner" [src]="usuarioActual.imagen_background_header">
             </li>
         </ul>
     </div>
 </div>
-<!--<app-usuarios></app-usuarios>-->
+
+
 <app-acercade></app-acercade>
 <app-experiencia></app-experiencia>
 <app-educacion></app-educacion>
@@ -65,4 +68,4 @@
 <app-idiomas></app-idiomas>
 <app-cursos></app-cursos>
 <app-proyectos></app-proyectos>
-<app-footer></app-footer>  
+<app-footer></app-footer>       <!--  --> 

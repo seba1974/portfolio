@@ -7,7 +7,7 @@ div#header{
 }
 
 div#banner{
-    margin:7px;
+    /*margin:7px;*/
     width:1152px;
     height: 300px;
     
@@ -38,8 +38,8 @@ img#img_banner{
     
     width: 97%;     /*Ancho* 97%*/
     height: 300px;  /* va ok Altura 300px*/
-    margin-right: 50px;
-    /*max-width: 1600px;*/
+    /*margin-right: 50px;
+    max-width: 1600px;*/
     /* min-width: 100px;*/
     border-radius: 15px;
     z-index:0;

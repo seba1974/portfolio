@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Usuarios } from 'src/app/Models/usuarios';
 
 import { HeaderService } from 'src/app/servicios/header.service';
 import { RedessocialesService } from 'src/app/servicios/redessociales.service';
@@ -15,13 +16,17 @@ export class HeaderComponent implements OnInit {
   @Output() toggleSidenav = new EventEmitter<void>();
 
 
-
-
-  
   listaHeader:any;
   listaRedesSociales:any;
   listaUsuarios:any;
-
+  //prueba agregué hasta //
+  id: string = "";
+  usuarioActual: Usuarios =
+    {
+      nombre: '', apellido: '', fecha_nacimiento: '', domicilio: '', nacionalidad :'', mail : '', password : '',
+      sobre_mi : '', ocupacion : '', imagen_background_header : '', imagen_perfil : '', perfil :''
+    };
+    //
   constructor(private datosHeader:HeaderService,
               private datosUsuarios:UsuariosService,
               private datosRedesSociales:RedessocialesService) { }
@@ -31,9 +36,17 @@ export class HeaderComponent implements OnInit {
     this.datosHeader.obtenerHeader().subscribe(data => {
       this.listaHeader = data;}) 
 
+    /*
     this.datosUsuarios.obtenerUsuarios().subscribe(data => {
       this.listaUsuarios = data;}) 
-    
+    */
+      // Agrego esto hasta //
+      this.id = "1";//this.activatedRoute.snapshot.params['id'];
+    this.datosUsuarios.obtenerUnUsuario(this.id).subscribe(
+      res => { this.usuarioActual = res },
+      err => console.log(err)
+    );
+      //
     this.datosRedesSociales.obtenerRedesSociales().subscribe(data => {
       this.listaRedesSociales = data;})
   }
@@ -43,4 +56,9 @@ export class HeaderComponent implements OnInit {
   onToggleSidenav () : void{
     this.toggleSidenav.emit();
   }
+  
+  Login(): void {
+    
+  }
+
 }

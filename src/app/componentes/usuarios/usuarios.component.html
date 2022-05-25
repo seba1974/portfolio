@@ -1,27 +1,27 @@
 <div class="container-fluid">
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Administración de Usuarios</h6>
+            <h6 class="m-0 font-weight-bold text-primary">
+                Administración de Usuarios <a><i class="bi bi-plus-circle-fill mx-4" [routerLink]="['/usuarios/crear']"></i></a>
+            </h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="usuarios" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>DNI</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Fecha de Nacimiento</th>
                             <th>Domicilio</th>
                             <th>Nacionalidad</th>
                             <th>Mail</th>
-                            <th>Password</th>
                             <th>Sobre mi...</th>
                             <th>Ocupación</th>
                             <th>Imágen Background</th>
                             <th>Foto de Perfil</th>
                             <th>Acciones</th>
-                        </tr>
+                            </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let usuario of listaUsuarios">
@@ -31,19 +31,20 @@
                             <td>{{usuario.domicilio}}</td>
                             <td>{{usuario.nacionalidad}}</td>
                             <td>{{usuario.mail}}</td>
-                            <td>{{usuario.password}}</td>
                             <td>{{usuario.sobre_mi}}</td>
                             <td>{{usuario.ocupacion}}</td>
                             <td><img id="img_banner"  [src]="usuario.imagen_background_header" alt="Imagen Background"></td>
                             <td><img class="rounded-circle" id="img_thumbnail" [src]="usuario.imagen_perfil" alt="Imagen Perfil"></td>
                             <td>
-                                <a><i class="bi bi-pencil-fill mx-2" [routerLink]="['/usuario/editar/',usuario.id]"></i></a> 
-                                <a><i class="bi bi-trash-fill mx-2" [routerLink]="['/usuario/borrar/',usuario.id]"></i></a>
+                                
+                                <a><i class="bi bi-pencil-fill mx-2" [routerLink]="['/usuarios/editar/',usuario.id]"></i></a> 
+                                <a><i class="bi bi-trash-fill mx-2" [routerLink]="['/usuarios/borrar/',usuario.id]"></i></a>
                             </td>
                         </tr>
                         
                     </tbody>
                 </table>
+                <button class="btn btn-success" [routerLink]="['/']">Cancelar</button>
             </div>
         </div>
     </div>

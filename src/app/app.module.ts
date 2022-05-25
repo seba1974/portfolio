@@ -17,9 +17,6 @@ import { ModificarExperienciaComponent } from './componentes/experiencia/modific
 import { ModificarEducacionComponent } from './componentes/educacion/modificar-educacion/modificar-educacion.component';
 import { AltaEducacionComponent } from './componentes/educacion/alta-educacion/alta-educacion.component';
 import { BajaEducacionComponent } from './componentes/educacion/baja-educacion/baja-educacion.component';
-import { BajaAcercadeComponent } from './componentes/acercade/baja-acercade/baja-acercade.component';
-import { AltaAcercadeComponent } from './componentes/acercade/alta-acercade/alta-acercade.component';
-import { ModificarAcercadeComponent } from './componentes/acercade/modificar-acercade/modificar-acercade.component';
 import { ModificarCursosComponent } from './componentes/cursos/modificar-cursos/modificar-cursos.component';
 import { AltaCursosComponent } from './componentes/cursos/alta-cursos/alta-cursos.component';
 import { BajaCursosComponent } from './componentes/cursos/baja-cursos/baja-cursos.component';
@@ -50,6 +47,8 @@ import { BajaSkillsSoftComponent } from './componentes/skills/baja-skills-soft/b
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { AltaUsuarioComponent } from './componentes/usuarios/alta-usuario/alta-usuario.component';
 import { ModificarUsuarioComponent } from './componentes/usuarios/modificar-usuario/modificar-usuario.component';
+import { BajaUsuarioComponent } from './componentes/usuarios/baja-usuario/baja-usuario.component';
+import { AltaLoginComponent } from './componentes/header/login/alta-login/alta-login.component';
 
 @NgModule({
   declarations: [
@@ -68,9 +67,6 @@ import { ModificarUsuarioComponent } from './componentes/usuarios/modificar-usua
     ModificarEducacionComponent,
     AltaEducacionComponent,
     BajaEducacionComponent,
-    BajaAcercadeComponent,
-    AltaAcercadeComponent,
-    ModificarAcercadeComponent,
     ModificarCursosComponent,
     AltaCursosComponent,
     BajaCursosComponent,
@@ -97,6 +93,8 @@ import { ModificarUsuarioComponent } from './componentes/usuarios/modificar-usua
     UsuariosComponent,
     AltaUsuarioComponent,
     ModificarUsuarioComponent,
+    BajaUsuarioComponent,
+    AltaLoginComponent,
     
   ],
   imports: [

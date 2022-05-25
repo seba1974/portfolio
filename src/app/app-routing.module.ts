@@ -27,9 +27,9 @@ import { AltaCursosComponent } from './componentes/cursos/alta-cursos/alta-curso
 import { ModificarCursosComponent } from './componentes/cursos/modificar-cursos/modificar-cursos.component';
 import { BajaCursosComponent } from './componentes/cursos/baja-cursos/baja-cursos.component';
 
-import { AltaAcercadeComponent } from './componentes/acercade/alta-acercade/alta-acercade.component';
-import { ModificarAcercadeComponent } from './componentes/acercade/modificar-acercade/modificar-acercade.component';
-import { BajaAcercadeComponent } from './componentes/acercade/baja-acercade/baja-acercade.component';
+//import { AltaAcercadeComponent } from './componentes/acercade/alta-acercade/alta-acercade.component';
+//import { ModificarAcercadeComponent } from './componentes/acercade/modificar-acercade/modificar-acercade.component';
+//import { BajaAcercadeComponent } from './componentes/acercade/baja-acercade/baja-acercade.component';
 
 import { HeaderComponent } from './componentes/header/header.component';
 
@@ -44,6 +44,11 @@ import { AltaRedessocialesComponent } from './componentes/redessociales/alta-red
 
 import { ModificarUsuarioComponent } from './componentes/usuarios/modificar-usuario/modificar-usuario.component';
 import { AltaUsuarioComponent } from './componentes/usuarios/alta-usuario/alta-usuario.component';
+import { LoginComponent } from './componentes/header/login/login.component';
+import { AltaLoginComponent } from './componentes/header/login/alta-login/alta-login.component';
+import { BajaUsuarioComponent } from './componentes/usuarios/baja-usuario/baja-usuario.component';
+
+import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 
 
 const routes : Routes = [
@@ -76,9 +81,9 @@ const routes : Routes = [
   {path: 'cursos/editar/:id', component:ModificarCursosComponent},
   {path: 'cursos/borrar/:id', component:BajaCursosComponent},
 
-  {path: 'acercade/crear', component:AltaAcercadeComponent},
-  {path: 'acercade/editar/:id', component:ModificarAcercadeComponent},
-  {path: 'acercade/borrar/:id', component:BajaAcercadeComponent},
+  //{path: 'acercade/crear', component:AltaAcercadeComponent},
+  //{path: 'acercade/editar/:id', component:ModificarAcercadeComponent},
+  //{path: 'acercade/borrar/:id', component:BajaAcercadeComponent},
 
   {path: 'redessociales/listar', component:RedessocialesComponent},
   {path: 'redessociales/crear', component:AltaRedessocialesComponent},
@@ -89,10 +94,13 @@ const routes : Routes = [
   {path: 'header/editar/:id', component:ModificarHeaderComponent},
   {path: 'header/borrar/:id', component:BajaHeaderComponent},
 
+  {path: 'usuarios/listar', component:UsuariosComponent},
   {path: 'usuarios/crear', component:AltaUsuarioComponent},
   {path: 'usuarios/editar/:id', component:ModificarUsuarioComponent},
-  //{path: 'usuarios/borrar/:id', component:BajaHeaderComponent}
+  {path: 'usuarios/borrar/:id', component:BajaUsuarioComponent},
 
+  {path: 'login', component:LoginComponent},
+  {path: 'registrarse', component:AltaLoginComponent}
 ];
 
 @NgModule({
