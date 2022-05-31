@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { UsuariosService } from 'src/app/servicios/usuarios.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Login } from 'src/app/Models/login';
+import { LoginService } from 'src/app/servicios/login.service';
 
 @Component({
   selector: 'app-login',
@@ -8,28 +9,27 @@ import { UsuariosService } from 'src/app/servicios/usuarios.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  txtEmail: any; txtPassword: any
-
-  constructor(private usuarioService: UsuariosService,
+  txtEmail : any;
+  txtPassword : any;
+  
+  constructor(private loginService: LoginService,
               private router: Router) { }
     
 
   ngOnInit(): void {
   }
-
-  IniciarSesion(): void { 
-        const email = this.txtEmail
-        const pass = this.txtPassword
-        this.usuarioService.iniciarSesion(email).subscribe(
+/*verificarSesion() : void {
+  const login = new Login(this.txtEmail, this.txtPassword)
+    this.loginService.iniciarSesion(login).subscribe(
       data => {
-        console.log(data);
         this.router.navigate(['/']);
       },
       err => {
         console.log(err);
         this.router.navigate(['/']);
+
       }
     );
-  }
+  }*/
+
 }
