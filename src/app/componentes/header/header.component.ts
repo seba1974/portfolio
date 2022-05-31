@@ -12,10 +12,6 @@ import { UsuariosService } from 'src/app/servicios/usuarios.service';
 })
 export class HeaderComponent implements OnInit {
   
-  isAdmin: boolean = false;
-  @Output() toggleSidenav = new EventEmitter<void>();
-
-
   listaHeader:any;
   listaRedesSociales:any;
   listaUsuarios:any;
@@ -36,10 +32,10 @@ export class HeaderComponent implements OnInit {
     this.datosHeader.obtenerHeader().subscribe(data => {
       this.listaHeader = data;}) 
 
-    /*
+    
     this.datosUsuarios.obtenerUsuarios().subscribe(data => {
       this.listaUsuarios = data;}) 
-    */
+    
       // Agrego esto hasta //
       this.id = "1";//this.activatedRoute.snapshot.params['id'];
     this.datosUsuarios.obtenerUnUsuario(this.id).subscribe(
@@ -50,15 +46,4 @@ export class HeaderComponent implements OnInit {
     this.datosRedesSociales.obtenerRedesSociales().subscribe(data => {
       this.listaRedesSociales = data;})
   }
-
-
-
-  onToggleSidenav () : void{
-    this.toggleSidenav.emit();
-  }
-  
-  /*Login(): void {
-    
-  }*/
-
 }
