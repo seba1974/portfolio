@@ -44,17 +44,22 @@ import { AltaRedessocialesComponent } from './componentes/redessociales/alta-red
 
 import { ModificarUsuarioComponent } from './componentes/usuarios/modificar-usuario/modificar-usuario.component';
 import { AltaUsuarioComponent } from './componentes/usuarios/alta-usuario/alta-usuario.component';
-import { LoginComponent } from './componentes/header/login/login.component';
-import { AltaLoginComponent } from './componentes/header/login/alta-login/alta-login.component';
+//import { LoginComponent } from './componentes/header/login/login.component';
+//import { AltaLoginComponent } from './componentes/header/login/alta-login/alta-login.component';
 import { BajaUsuarioComponent } from './componentes/usuarios/baja-usuario/baja-usuario.component';
 
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
+
+import { RegistroComponent } from './auth/registro.component';
+import { LoginComponent } from './auth/login.component';
 
 
 const routes : Routes = [
 
   {path: '', component:HeaderComponent},
   //{path: '**', redirectTo: '', pathMatch: 'full'},
+  {path: 'login', component:LoginComponent},
+  {path: 'registro', component:RegistroComponent},
   {path: 'experiencia/crear', component:AltaExperienciaComponent},
   {path: 'experiencia/editar/:id', component:ModificarExperienciaComponent},
   {path: 'experiencia/borrar/:id', component:BajaExperienciaComponent},
@@ -99,8 +104,8 @@ const routes : Routes = [
   {path: 'usuarios/editar/:id', component:ModificarUsuarioComponent},
   {path: 'usuarios/borrar/:id', component:BajaUsuarioComponent},
 
-  {path: 'login', component:LoginComponent},
-  {path: 'registrarse', component:AltaLoginComponent}
+  //{path: 'login', component:LoginComponent},
+  //{path: 'registrarse', component:AltaLoginComponent}
 ];
 
 @NgModule({

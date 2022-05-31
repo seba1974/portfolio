@@ -49,6 +49,7 @@ import { AltaUsuarioComponent } from './componentes/usuarios/alta-usuario/alta-u
 import { ModificarUsuarioComponent } from './componentes/usuarios/modificar-usuario/modificar-usuario.component';
 import { BajaUsuarioComponent } from './componentes/usuarios/baja-usuario/baja-usuario.component';
 import { AltaLoginComponent } from './componentes/header/login/alta-login/alta-login.component';
+import { RegistroComponent } from './auth/registro.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { AltaLoginComponent } from './componentes/header/login/alta-login/alta-l
     ModificarUsuarioComponent,
     BajaUsuarioComponent,
     AltaLoginComponent,
+    RegistroComponent,
     
   ],
   imports: [
