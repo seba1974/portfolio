@@ -10,7 +10,8 @@ import { JwtDTO } from '../Models/jwt-dto';
 })
 export class AuthService {
 
-  authURL = '//localhost:8080/auth/';
+  //authURL = '//localhost:8080/auth/';
+  authURL = 'https://beporfoliosebaveloce.herokuapp.com/auth';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -19,6 +20,6 @@ export class AuthService {
   }
 
   public login(loginUsuario : LoginUsuario): Observable<JwtDTO> {
-    return this.httpClient.post<JwtDTO>(this.authURL + 'nuevo', loginUsuario);    
+    return this.httpClient.post<JwtDTO>(this.authURL + 'login', loginUsuario);    
   }
 }

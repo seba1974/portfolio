@@ -8,7 +8,8 @@ import { Header } from '../Models/header';
 })
 export class HeaderService {
 
-  headerURL = "http://localhost:8080/redessociales";
+  //headerURL = "http://localhost:8080/redessociales";
+  headerURL = "https://beporfoliosebaveloce.herokuapp.com/redessociales";
   
   constructor(private http:HttpClient) { }
 

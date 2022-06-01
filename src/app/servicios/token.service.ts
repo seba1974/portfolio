@@ -19,7 +19,7 @@ export class TokenService {
   }
 
   public getToken(): string {
-    return sessionStorage.getItem(TOKEN_KEY); // le agregué !
+    return sessionStorage.getItem(TOKEN_KEY)!; // le agregué !
   }
 
   public setUserName(userName: string): void {
@@ -28,7 +28,7 @@ export class TokenService {
   }
 
   public getUserName(): string {
-    return sessionStorage.getItem(USERNAME_KEY); // le agregué !
+    return sessionStorage.getItem(USERNAME_KEY)!; // le agregué !
   }
 
   public setAuthorities(authorities: string[]): void {
@@ -39,7 +39,7 @@ export class TokenService {
   public getAuthorities(): string[] {
     this.roles = [];
     if (sessionStorage.getItem(AUTHORITIES_KEY)) {
-      JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)).foreach( authority => {  // le agregué !
+      JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)!).foreach( (authority: { authority: string; }) => {  // le agregué ! y  : { authority: string; }
         this.roles.push(authority.authority);
       });
     }

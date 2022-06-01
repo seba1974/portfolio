@@ -1,8 +1,8 @@
 export class NuevoUsuario {
-    nombre: string;
-    nombreusuario: string;
-    email: string;
-    password: string;
-    authorities: string[]
+    nombre: string | undefined; // le agrego | undefined
+    nombreusuario: string | undefined; // le agrego | undefined
+    email: string | undefined; // le agrego | undefined
+    password: string | undefined; // le agrego | undefined
+    authorities: string[] | undefined // le agrego | undefined
 
 }

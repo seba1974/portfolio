@@ -8,8 +8,8 @@ import { Cursos } from '../Models/cursos'
 })
 export class CursosService {
 
-  cursosURL = "http://localhost:8080/cursos";
-  
+  //cursosURL = "http://localhost:8080/cursos";
+  cursosURL = 'https://beporfoliosebaveloce.herokuapp.com/cursos';
   constructor(private http:HttpClient) { }
 
 
