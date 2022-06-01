@@ -9,8 +9,8 @@ import { Idiomas } from '../Models/idiomas';
 export class IdiomasService {
 
 
-  //idiomasURL = "http://localhost:8080/idiomas";
-  idiomasURL = "https://beporfoliosebaveloce.herokuapp.com/idiomas";
+  idiomasURL = "http://localhost:8080/idiomas";
+  //idiomasURL = "https://beporfoliosebaveloce.herokuapp.com/idiomas";
   
   constructor(private http:HttpClient) { }
 

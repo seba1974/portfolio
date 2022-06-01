@@ -9,8 +9,8 @@ import { Login } from '../Models/login';
 export class LoginService {
 
 
-  //loginURL = "http://localhost:8080/login";
-  loginURL = "https://beporfoliosebaveloce.herokuapp.com/login";
+  loginURL = "http://localhost:8080/login";
+  //loginURL = "https://beporfoliosebaveloce.herokuapp.com/login";
   
   constructor(private http:HttpClient) { }
 
