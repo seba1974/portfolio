@@ -1,1 +1,21 @@
-<p>registro works!</p>
+<div class="text-center" *ngIf="isLogged; else loggedOut">
+    <h2>Ya has iniciado Sesión</h2>
+    </div>
+    
+    <ng-template #loggedOut>
+    <div class="container d-flex justify-content-center">
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/login"> IniciarSesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" routerLink="/registro"> Crear Cuenta</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    </ng-template>

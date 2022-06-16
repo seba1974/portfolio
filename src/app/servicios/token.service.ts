@@ -39,7 +39,8 @@ export class TokenService {
   public getAuthorities(): string[] {
     this.roles = [];
     if (sessionStorage.getItem(AUTHORITIES_KEY)) {
-      JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)!).foreach( (authority: { authority: string; }) => {  // le agregué ! y  : { authority: string; }
+      JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)!)
+      .forEach( (authority: { authority: string; }) => {  // le agregué ! y  : { authority: string; }
         this.roles.push(authority.authority);
       });
     }

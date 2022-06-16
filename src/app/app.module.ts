@@ -24,7 +24,6 @@ import { AltaProyectosComponent } from './componentes/proyectos/alta-proyectos/a
 import { BajaProyectosComponent } from './componentes/proyectos/baja-proyectos/baja-proyectos.component';
 import { ModificarProyectosComponent } from './componentes/proyectos/modificar-proyectos/modificar-proyectos.component';
 import { AltaSkillsComponent } from './componentes/skills/alta-skills/alta-skills.component';
-import { LoginComponent } from './componentes/header/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ModificarHeaderComponent } from './componentes/header/modificar-header/modificar-header.component';
 import { AltaHeaderComponent } from './componentes/header/alta-header/alta-header.component';
@@ -48,8 +47,8 @@ import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 import { AltaUsuarioComponent } from './componentes/usuarios/alta-usuario/alta-usuario.component';
 import { ModificarUsuarioComponent } from './componentes/usuarios/modificar-usuario/modificar-usuario.component';
 import { BajaUsuarioComponent } from './componentes/usuarios/baja-usuario/baja-usuario.component';
-import { AltaLoginComponent } from './componentes/header/login/alta-login/alta-login.component';
 import { RegistroComponent } from './auth/registro.component';
+import { LoginComponent } from './auth/login.component';
 
 @NgModule({
   declarations: [
@@ -95,7 +94,6 @@ import { RegistroComponent } from './auth/registro.component';
     AltaUsuarioComponent,
     ModificarUsuarioComponent,
     BajaUsuarioComponent,
-    AltaLoginComponent,
     RegistroComponent,
     
   ],
