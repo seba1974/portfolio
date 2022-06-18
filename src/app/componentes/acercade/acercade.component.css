@@ -9,6 +9,22 @@ div.conteiner-fluid#acercade{
     /*margin:30px;*/   /* Margen arriba y a la izquierda*/
         
 }
+div#banner{
+    /*margin:7px;*/
+    width:1152px;
+    height: 300px;
+}
+img#img_banner{
+    
+    width: 97%;     /*Ancho* 97%*/
+    height: 300px;  /* va ok Altura 300px*/
+    /*margin-right: 50px;
+    max-width: 1600px;*/
+    /* min-width: 100px;*/
+    border-radius: 15px;
+    z-index:0;
+    position: absolute;   /*va ok*/
+}
 
 /*
 #acerca_nombre{
@@ -42,7 +58,7 @@ img#img_thumbnail{
     width : 160px;      /*Ancho 160px*/
     height: auto;       /*Alto auto par mantener la relacion*/
     /*bottom: 140px;      /* desde abajo*/
-    /*left: 50px;         /* desde la izq*/
+    left: 50px;         /* desde la izq*/
     z-index:1;          /* traer al frente*/
 }
 li{
