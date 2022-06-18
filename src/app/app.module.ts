@@ -49,6 +49,7 @@ import { ModificarUsuarioComponent } from './componentes/usuarios/modificar-usua
 import { BajaUsuarioComponent } from './componentes/usuarios/baja-usuario/baja-usuario.component';
 import { RegistroComponent } from './auth/registro.component';
 import { LoginComponent } from './auth/login.component';
+import { MenuComponent } from './componentes/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { LoginComponent } from './auth/login.component';
     ModificarUsuarioComponent,
     BajaUsuarioComponent,
     RegistroComponent,
+    MenuComponent,
     
   ],
   imports: [

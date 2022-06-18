@@ -1,0 +1,54 @@
+div#header{
+    margin:20px;
+    background-color:rgb(135, 221, 157);
+    border-radius: 15px;
+    border :1px solid rgb(25, 13, 78);
+    
+}
+
+div#banner{
+    /*margin:7px;*/
+    width:1152px;
+    height: 300px;
+    
+
+}
+img#img_logo{
+    
+    width: 80px;
+    height: 50px;
+
+}
+img#img_iconos{
+    
+    width:25px;
+    height: 25px;
+
+}
+
+input#input_iconos{
+    
+    width:25px;
+    height:25px;
+        
+}
+
+
+img#img_banner{
+    
+    width: 97%;     /*Ancho* 97%*/
+    height: 300px;  /* va ok Altura 300px*/
+    /*margin-right: 50px;
+    max-width: 1600px;*/
+    /* min-width: 100px;*/
+    border-radius: 15px;
+    z-index:0;
+    position: absolute;   /*va ok*/
+}
+
+li{
+    list-style: none;
+}
+i{
+    font-size: 15px;
+}

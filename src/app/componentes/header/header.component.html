@@ -1,28 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6d8d6c;">
-    <div class="container-fluid justify-content-start">
-        <img id="img_logo" class="rounded float-start" alt="APlogo" src="assets/img/APlogo.png">
-        <a class="navbar-brand mx-1">{{usuarioActual.nombre}}</a><a
-            class="navbar-brand mx-1">{{usuarioActual.apellido}}</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5">
-                <li class="nav-item" *ngFor="let redes of listaRedesSociales">
-                    <a class="nav-link active" aria-current="page" [href]="redes.link"><img id="img_iconos"
-                            [src]="redes.imagen" [alt]="redes.red"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/login"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/registro"><i class="fas fa-door-open"></i> Cerrar Sesión</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
-
-
+<app-menu></app-menu>
 <app-acercade></app-acercade>
 <app-experiencia></app-experiencia>
 <app-educacion></app-educacion>
