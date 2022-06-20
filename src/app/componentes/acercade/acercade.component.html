@@ -12,7 +12,8 @@
 
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <div class="nav col-12 col-lg-10 me-lg-auto mb-2 justify-content-center mb-md-0">
-            <h4>Acerca de ...<i class="bi bi-pencil-fill" (click)="editarAcercade()"></i></h4>
+            <h4>Acerca de ...
+                <i class="bi bi-pencil-fill" *ngIf="isLogged" (click)="editarAcercade()"></i></h4>
         </div>
         
     </div>
@@ -25,7 +26,8 @@
                 <div class="col-3 position-relative" id="acerca_nombre">
                     <img id="img_thumbnail" [src]="usuarioActual.imagen_perfil"
                         class="rounded-circle position-absolute bottom-100 end-50" alt="thumbnail">
-                    <p class="nombre bold">{{usuarioActual.nombre}} {{usuarioActual.apellido}}<i class="bi bi-pencil-fill"(click)="editarFoto()"></i></p>
+                    <p class="nombre bold">{{usuarioActual.nombre}} {{usuarioActual.apellido}}
+                        <i class="bi bi-pencil-fill" *ngIf="isLogged" (click)="editarFoto()"></i></p>
                     <p class="nombre">{{usuarioActual.ocupacion}}</p>
                     
                 </div>

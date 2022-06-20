@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuarios } from 'src/app/Models/usuarios';
+import { TokenService } from 'src/app/servicios/token.service';
 
 //import { AcercadeService } from 'src/app/servicios/acercade.service';
 import { UsuariosService } from 'src/app/servicios/usuarios.service';
@@ -18,9 +19,21 @@ export class AcercadeComponent implements OnInit {
       sobre_mi : '', ocupacion : '', imagen_background_header : '', imagen_perfil : '', perfil :''
     };
     //
-  constructor(private usuariosService:UsuariosService) { }
+
+    isLogged = false;
+    nombreUsuario = '';
+
+  constructor(private usuariosService:UsuariosService,
+              private tokenService : TokenService) { }
 
   ngOnInit(): void {
+    if(this.tokenService.getToken()) {
+      this.isLogged = true;
+      this.nombreUsuario = this.tokenService.getUserName();
+    } else {
+      this.isLogged = false;
+      this.nombreUsuario = '';
+    }
     /*this.usuariosService.obtenerUsuarios().subscribe(data => {
       console.log(data);
       this.listaUsuarios = data; //nombre de la tabla de la BD o JSON
@@ -43,6 +56,7 @@ export class AcercadeComponent implements OnInit {
 
   editarFoto(): void {
     alert ("se va a editar la Foto...");
+    
   }
 }
 
