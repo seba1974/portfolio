@@ -29,8 +29,8 @@
                     <img id="img_thumbnail" [src]="usuarioActual.imagen_perfil"
                         class="rounded-circle position-absolute bottom-100 end-50" alt="thumbnail">
                     <p class="nombre bold">{{usuarioActual.nombre}} {{usuarioActual.apellido}}
-                        <button class="btn btn-dark btn-sm" [routerLink]="['/usuarios/editar/',1]" *ngIf="isLogged">
-                            <i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class="btn btn-dark btn-sm" [routerLink]="['/usuarios/editar_img/',1]" *ngIf="isLogged">
+                            <i class="fa-solid fa-pen-to-square"></i> Editar</button>
                     </p>
                     <p class="nombre">{{usuarioActual.ocupacion}}</p>
 
