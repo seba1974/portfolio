@@ -14,7 +14,7 @@
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <div class="nav col-12 col-lg-10 me-lg-auto mb-2 justify-content-center mb-md-0">
             <h4>Acerca de ...
-                <a [routerLink]="['/usuarios/editar/',1]">
+                <a [routerLink]="['/usuarios/editar/',1]" *ngIf="isLogged" >
                     <button class="btn btn-dark btn-sm">
                         <i class="fa-solid fa-pen-to-square" >
                         </i> Editar</button></a></h4>
