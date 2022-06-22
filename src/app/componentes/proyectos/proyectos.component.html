@@ -5,15 +5,15 @@
                         <div
                                 class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                                 <h4>Proyectos</h4>
-                        <i class="bi bi-plus-circle-fill" [routerLink]="['/proyectos/crear']"></i>
+                        <i class="bi bi-plus-circle-fill" *ngIf="isLogged" [routerLink]="['/proyectos/crear']"></i>
                 </div>
 </div>
                 <ul>
                         <li *ngFor="let proyecto of listaProyectos">
                                 <img src="{{proyecto.imagen}}" alt="{{proyecto.nombre}}" width=60px weight=60px>
                                 <h6>{{proyecto.nombre}}
-                                        <i class="bi bi-pencil-fill" [routerLink]="['/proyectos/editar/',proyecto.id]"></i>
-                                        <i class="bi bi-trash-fill" [routerLink]="['/proyectos/borrar/',proyecto.id]"></i>
+                                        <i class="bi bi-pencil-fill" *ngIf="isLogged" [routerLink]="['/proyectos/editar/',proyecto.id]"></i>
+                                        <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/proyectos/borrar/',proyecto.id]"></i>
                                 </h6>
                                 <!-- nombre de los campos en la BD o JSON!-->
                                 <p class="principal"><time>{{proyecto.fecha}}</time></p>

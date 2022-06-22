@@ -5,8 +5,9 @@
                         <div
                                 class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                                 <h4>Experiencia Laboral</h4>
-                                <i class="bi bi-plus-circle-fill" [routerLink]="['/experiencia/crear']"></i>
-
+                                <i class="fa-solid fa-pen-to-square" *ngIf="isLogged" [routerLink]="['/experiencia/crear']" ></i>
+                                <a class="btn btn-dark btn-sm mx-3" [routerLink]="['/experiencia/info/']" *ngIf="!isLogged">
+                                        <i class="fa-solid fa-circle-info"></i> + Info</a>
                         </div>
                 </div>
                 <ul class="items-list">
@@ -14,9 +15,9 @@
                                 <img src="{{experiencia.img_logo}}" alt="{{experiencia.empresa}}" width=60px
                                         weight=60px>
                                 <h6>{{experiencia.empresa}}
-                                        <i class="bi bi-pencil-fill"
+                                        <i class="fa-solid fa-pen-to-square" *ngIf="isLogged"
                                                 [routerLink]="['/experiencia/editar/',experiencia.id]"></i>
-                                        <i class="bi bi-trash-fill"
+                                        <i class="bi bi-trash-fill" *ngIf="isLogged"
                                                 [routerLink]="['/experiencia/borrar/',experiencia.id]"></i>
                                 </h6><!-- nombre de los campos en la BD o JSON!-->
                                 <p class="principal">{{experiencia.puesto}}</p>

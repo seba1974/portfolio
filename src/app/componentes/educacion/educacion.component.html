@@ -5,7 +5,7 @@
                         <div
                                 class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                                 <h4>Educación</h4>
-                                <i class="bi bi-plus-circle-fill" [routerLink]="['/educacion/crear']"></i>
+                                <i class="bi bi-plus-circle-fill" *ngIf="isLogged" [routerLink]="['/educacion/crear']"></i>
                         </div>
                 </div>
                         <ul class="items-list">
@@ -15,9 +15,9 @@
                                         <img [src]="educacion.imagen" [alt]="educacion.institucion" width=50px
                                                 weight=50px>
                                         <h6>{{educacion.institucion}}
-                                                <i class="bi bi-pencil-fill"
+                                                <i class="fa-solid fa-pen-to-square" *ngIf="isLogged" 
                                                         [routerLink]="['/educacion/editar/',educacion.id]"></i>
-                                                <i class="bi bi-trash-fill"
+                                                <i class="bi bi-trash-fill" *ngIf="isLogged"
                                                         [routerLink]="['/educacion/borrar/',educacion.id]"></i>
                                         </h6>
                                         <p class="secundario">{{educacion.titulo}}</p>

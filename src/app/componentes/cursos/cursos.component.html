@@ -5,15 +5,15 @@
                         <div
                                 class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                                 <h4>Cursos</h4>
-                                <i class="bi bi-plus-circle-fill" [routerLink]="['/cursos/crear']"></i>
+                                <i class="bi bi-plus-circle-fill" *ngIf="isLogged" [routerLink]="['/cursos/crear']"></i>
                         </div>
                 </div>
                 <ul>
                         <!-- declaro la variable educacion que recorre la listaEducacion !-->
                         <li *ngFor="let curso of listaCursos">
                                 <!-- directiva estructural recorre la estructura  !-->
-                                <h6>{{curso.curso}}<i class="bi bi-pencil-fill" [routerLink]="['/cursos/editar/',curso.id]"></i>
-                                        <i class="bi bi-trash-fill" [routerLink]="['/cursos/borrar/',curso.id]"></i>
+                                <h6>{{curso.curso}}<i class="bi bi-pencil-fill"  *ngIf="isLogged" [routerLink]="['/cursos/editar/',curso.id]"></i>
+                                        <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/cursos/borrar/',curso.id]"></i>
                                 </h6>
                                 <p class="secundario">{{curso.dictado_por}}</p>
                                 <p class="principal"><time>{{curso.anio}}</time></p>

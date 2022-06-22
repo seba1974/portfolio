@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IdiomasService } from 'src/app/servicios/idiomas.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-idiomas',
@@ -8,10 +9,23 @@ import { IdiomasService } from 'src/app/servicios/idiomas.service';
 })
 export class IdiomasComponent implements OnInit {
   listaIdiomas: any;
+  isLogged = false;
+  nombreUsuario = '';
 
-  constructor(private idiomasService: IdiomasService) { }
+  constructor(private idiomasService: IdiomasService,
+    private tokenService: TokenService) { }
 
   ngOnInit(): void {
+
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+      this.nombreUsuario = this.tokenService.getUserName();
+    } else {
+      this.isLogged = false;
+      this.nombreUsuario = '';
+    }
+
+
     this.idiomasService.obtenerIdiomas().subscribe(data => {
       console.log(data);
       this.listaIdiomas = data; //.tblidiomas nombre de la tabla de la BD o JSON

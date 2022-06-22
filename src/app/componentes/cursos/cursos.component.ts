@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CursosService } from 'src/app/servicios/cursos.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-cursos',
@@ -9,9 +10,22 @@ import { CursosService } from 'src/app/servicios/cursos.service';
 export class CursosComponent implements OnInit {
   listaCursos: any;
 
-  constructor(private cursosService: CursosService) { }
+  isLogged = false;
+  nombreUsuario = '';
+
+  constructor(private cursosService: CursosService,
+    private tokenService: TokenService) { }
 
   ngOnInit(): void {
+
+    if(this.tokenService.getToken()) {
+      this.isLogged = true;
+      this.nombreUsuario = this.tokenService.getUserName();
+    } else {
+      this.isLogged = false;
+      this.nombreUsuario = '';
+    }
+
     this.cursosService.obtenerCursos().subscribe(data => {
       this.listaCursos = data;
     })

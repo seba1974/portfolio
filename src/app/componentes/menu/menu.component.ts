@@ -3,6 +3,7 @@ import { Usuarios } from 'src/app/Models/usuarios';
 
 import { HeaderService } from 'src/app/servicios/header.service';
 import { RedessocialesService } from 'src/app/servicios/redessociales.service';
+import { TokenService } from 'src/app/servicios/token.service';
 import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
 @Component({
@@ -23,11 +24,23 @@ export class MenuComponent implements OnInit {
       sobre_mi : '', ocupacion : '', imagen_background_header : '', imagen_perfil : '', perfil :''
     };
     //
-  constructor(private datosHeader:HeaderService,
-              private datosUsuarios:UsuariosService,
-              private datosRedesSociales:RedessocialesService) { }
+
+    isLogged = false;
+    nombreUsuario = '';
+
+  constructor(private datosHeader : HeaderService,
+              private datosUsuarios : UsuariosService,
+              private datosRedesSociales : RedessocialesService,
+              private tokenService : TokenService) { }
 
   ngOnInit(): void {
+    if(this.tokenService.getToken()) {
+      this.isLogged = true;
+      this.nombreUsuario = this.tokenService.getUserName();
+    } else {
+      this.isLogged = false;
+      this.nombreUsuario = '';
+    }
 
     this.datosHeader.obtenerHeader().subscribe(data => {
       this.listaHeader = data;}) 
@@ -45,6 +58,10 @@ export class MenuComponent implements OnInit {
       //
     this.datosRedesSociales.obtenerRedesSociales().subscribe(data => {
       this.listaRedesSociales = data;})
+  }
+  onLogOut(): void {
+    this.tokenService.logOut();
+    window.location.reload();
   }
 }
 

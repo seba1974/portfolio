@@ -5,7 +5,7 @@
                         <div
                                 class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                                 <h4>Idiomas</h4>
-                                <i class="bi bi-plus-circle-fill" [routerLink]="['/idiomas/crear']"></i>
+                                <i class="bi bi-plus-circle-fill" *ngIf="isLogged" [routerLink]="['/idiomas/crear']"></i>
                         </div>
                 </div>
                 <ul>
@@ -13,8 +13,8 @@
                         <li *ngFor="let idiomas of listaIdiomas">
                                 <!-- directiva estructural recorre la estructura  !-->
                                 <h6>{{idiomas.idioma}}
-                                        <i class="bi bi-pencil-fill" [routerLink]="['/idiomas/editar/',idiomas.id]"></i>
-                                        <i class="bi bi-trash-fill" [routerLink]="['/idiomas/borrar/',idiomas.id]"></i>
+                                        <i class="bi bi-pencil-fill" *ngIf="isLogged" [routerLink]="['/idiomas/editar/',idiomas.id]"></i>
+                                        <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/idiomas/borrar/',idiomas.id]"></i>
                                 </h6>
                                 <p class="secundario">{{idiomas.porcentaje_oral}} % Oralidad</p>
                                 <p class="secundario">{{idiomas.porcentaje_escrita}} % Escritura</p>

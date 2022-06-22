@@ -1,10 +1,9 @@
-<div class="divisor"></div>
-
+<app-menu></app-menu>
 <div class="container-fluid">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    Redes Sociales <a><i class="bi bi-plus-circle-fill mx-4" [routerLink]="['/redessociales/crear']"></i></a>
+                    Redes Sociales <a><i class="bi bi-plus-circle-fill mx-4" *ngIf="isLogged" [routerLink]="['/redessociales/crear']"></i></a>
                 </h6>
             </div>
             <div class="card-body">
@@ -12,20 +11,22 @@
                     <table class="table table-bordered" id="usuarios" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>red Social</th>
-                                <th>Imagen</th>
+                                <th>Red Social</th>
                                 <th>Link</th>
+                                <th>Imágen</th>
+                                <th>Link Imágen</th>
                                 <th>Acciones</th>
                                 </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let redessociales of listaRedSocial">
                                 <td>{{redessociales.red}}</td>
-                                <td><img id="img_iconos" width = 50px [src]="redessociales.imagen" [alt]="redessociales.red"></td>
                                 <td>{{redessociales.link}}</td>
+                                <td><img id="img_iconos" width = 50px [src]="redessociales.imagen" [alt]="redessociales.red"></td>
+                                <td>{{redessociales.imagen}}</td>
                                 <td>
-                                    <a><i class="bi bi-pencil-fill mx-2" [routerLink]="['/redessociales/editar/',redessociales.id]"></i></a> 
-                                    <a><i class="bi bi-trash-fill mx-2" [routerLink]="['/redessociales/borrar/',redessociales.id]"></i></a>
+                                    <a><i class="bi bi-pencil-fill mx-2" *ngIf="isLogged" [routerLink]="['/redessociales/editar/',redessociales.id]"></i></a> 
+                                    <a><i class="bi bi-trash-fill mx-2" *ngIf="isLogged" [routerLink]="['/redessociales/borrar/',redessociales.id]"></i></a>
                                 </td>
                             </tr>
                             

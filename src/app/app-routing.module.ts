@@ -5,10 +5,6 @@ import { AltaExperienciaComponent } from './componentes/experiencia/alta-experie
 import { ModificarExperienciaComponent } from './componentes/experiencia/modificar-experiencia/modificar-experiencia.component';
 import { BajaExperienciaComponent } from './componentes/experiencia/baja-experiencia/baja-experiencia.component';
 
-import { AltaHeaderComponent } from './componentes/header/alta-header/alta-header.component';
-import { ModificarHeaderComponent } from './componentes/header/modificar-header/modificar-header.component';
-import { BajaHeaderComponent } from './componentes/header/baja-header/baja-header.component';
-
 import { AltaProyectosComponent } from './componentes/proyectos/alta-proyectos/alta-proyectos.component';
 import { ModificarProyectosComponent } from './componentes/proyectos/modificar-proyectos/modificar-proyectos.component';
 import { BajaProyectosComponent } from './componentes/proyectos/baja-proyectos/baja-proyectos.component';
@@ -27,10 +23,6 @@ import { AltaCursosComponent } from './componentes/cursos/alta-cursos/alta-curso
 import { ModificarCursosComponent } from './componentes/cursos/modificar-cursos/modificar-cursos.component';
 import { BajaCursosComponent } from './componentes/cursos/baja-cursos/baja-cursos.component';
 
-//import { AltaAcercadeComponent } from './componentes/acercade/alta-acercade/alta-acercade.component';
-//import { ModificarAcercadeComponent } from './componentes/acercade/modificar-acercade/modificar-acercade.component';
-//import { BajaAcercadeComponent } from './componentes/acercade/baja-acercade/baja-acercade.component';
-
 import { HeaderComponent } from './componentes/header/header.component';
 
 import { BajaIdiomasComponent } from './componentes/idiomas/baja-idiomas/baja-idiomas.component';
@@ -42,75 +34,67 @@ import { BajaRedessocialesComponent } from './componentes/redessociales/baja-red
 import { ModificarRedessocialesComponent } from './componentes/redessociales/modificar-redessociales/modificar-redessociales.component';
 import { AltaRedessocialesComponent } from './componentes/redessociales/alta-redessociales/alta-redessociales.component';
 
-import { ModificarUsuarioComponent } from './componentes/usuarios/modificar-usuario/modificar-usuario.component';
-import { AltaUsuarioComponent } from './componentes/usuarios/alta-usuario/alta-usuario.component';
-//import { LoginComponent } from './componentes/header/login/login.component';
-//import { AltaLoginComponent } from './componentes/header/login/alta-login/alta-login.component';
-import { BajaUsuarioComponent } from './componentes/usuarios/baja-usuario/baja-usuario.component';
-
+import { ModificarImagenesComponent } from './componentes/acercade/modificar-imagenes/modificar-imagenes.component';
+import { ModificarPerfilComponent } from './componentes/acercade/modificar-perfil/modificar-perfil.component';
 import { UsuariosComponent } from './componentes/usuarios/usuarios.component';
 
 import { RegistroComponent } from './auth/registro.component';
 import { LoginComponent } from './auth/login.component';
+import { ProdGuardService as guard } from './guards/prod-guard.service';
+import { InfoExperienciaComponent } from './componentes/experiencia/info-experiencia/info-experiencia.component';
 
 
-const routes : Routes = [
 
-  {path: '', component:HeaderComponent},
+
+
+const routes: Routes = [
+
+  { path: '', component: HeaderComponent },
   //{path: '**', redirectTo: '', pathMatch: 'full'},
-  {path: 'login', component:LoginComponent},
-  {path: 'registro', component:RegistroComponent},
-  {path: 'experiencia/crear', component:AltaExperienciaComponent},
-  {path: 'experiencia/editar/:id', component:ModificarExperienciaComponent},
-  {path: 'experiencia/borrar/:id', component:BajaExperienciaComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'registro', component: RegistroComponent },
 
-  {path: 'educacion/crear', component:AltaEducacionComponent},
-  {path: 'educacion/editar/:id', component:ModificarEducacionComponent},
-  {path: 'educacion/borrar/:id', component:BajaEducacionComponent},
+  { path: 'experiencia/info', component: InfoExperienciaComponent },
+  { path: 'experiencia/crear', component: AltaExperienciaComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'experiencia/editar/:id', component: ModificarExperienciaComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'experiencia/borrar/:id', component: BajaExperienciaComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
 
-  {path: 'idiomas/crear', component:AltaIdiomasComponent},
-  {path: 'idiomas/editar/:id', component:ModificarIdiomasComponent},
-  {path: 'idiomas/borrar/:id', component:BajaIdiomasComponent},
+  { path: 'educacion/crear', component: AltaEducacionComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'educacion/editar/:id', component: ModificarEducacionComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'educacion/borrar/:id', component: BajaEducacionComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
 
-  {path: 'skills/crear', component:AltaSkillsComponent},
-  {path: 'skills_hard/editar/:id', component:ModificarSkillsHardComponent},
-  {path: 'skills_soft/editar/:id', component:ModificarSkillsSoftComponent},
-  {path: 'skills_hard/borrar/:id', component:BajaSkillsHardComponent},
-  {path: 'skills_soft/borrar/:id', component:BajaSkillsSoftComponent},
+  { path: 'idiomas/crear', component: AltaIdiomasComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'idiomas/editar/:id', component: ModificarIdiomasComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'idiomas/borrar/:id', component: BajaIdiomasComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
 
-  {path: 'proyectos/crear', component:AltaProyectosComponent},
-  {path: 'proyectos/editar/:id', component:ModificarProyectosComponent},
-  {path: 'proyectos/borrar/:id', component:BajaProyectosComponent},
+  { path: 'skills/crear', component: AltaSkillsComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'skills_hard/editar/:id', component: ModificarSkillsHardComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'skills_soft/editar/:id', component: ModificarSkillsSoftComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'skills_hard/borrar/:id', component: BajaSkillsHardComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'skills_soft/borrar/:id', component: BajaSkillsSoftComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
 
-  {path: 'cursos/crear', component:AltaCursosComponent},
-  {path: 'cursos/editar/:id', component:ModificarCursosComponent},
-  {path: 'cursos/borrar/:id', component:BajaCursosComponent},
+  { path: 'proyectos/crear', component: AltaProyectosComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'proyectos/editar/:id', component: ModificarProyectosComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'proyectos/borrar/:id', component: BajaProyectosComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
 
-  //{path: 'acercade/crear', component:AltaAcercadeComponent},
-  //{path: 'acercade/editar/:id', component:ModificarAcercadeComponent},
-  //{path: 'acercade/borrar/:id', component:BajaAcercadeComponent},
+  { path: 'cursos/crear', component: AltaCursosComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'cursos/editar/:id', component: ModificarCursosComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'cursos/borrar/:id', component: BajaCursosComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
 
-  {path: 'redessociales/listar', component:RedessocialesComponent},
-  {path: 'redessociales/crear', component:AltaRedessocialesComponent},
-  {path: 'redessociales/editar/:id', component:ModificarRedessocialesComponent},
-  {path: 'redessociales/borrar/:id', component:BajaRedessocialesComponent},
+  { path: 'redessociales/listar', component: RedessocialesComponent },
+  { path: 'redessociales/crear', component: AltaRedessocialesComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'redessociales/editar/:id', component: ModificarRedessocialesComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'redessociales/borrar/:id', component: BajaRedessocialesComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
 
-  {path: 'header/crear', component:AltaHeaderComponent},
-  {path: 'header/editar/:id', component:ModificarHeaderComponent},
-  {path: 'header/borrar/:id', component:BajaHeaderComponent},
-
-  {path: 'usuarios/listar', component:UsuariosComponent},
-  {path: 'usuarios/crear', component:AltaUsuarioComponent},
-  {path: 'usuarios/editar/:id', component:ModificarUsuarioComponent},
-  {path: 'usuarios/borrar/:id', component:BajaUsuarioComponent},
-
-  //{path: 'login', component:LoginComponent},
-  //{path: 'registrarse', component:AltaLoginComponent}
+  { path: 'usuarios/listar', component: UsuariosComponent },
+  { path: 'usuarios/editar/:id', component: ModificarPerfilComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  { path: 'usuarios/editar_img/:id', component: ModificarImagenesComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+  
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
-  
+
 })
 export class AppRoutingModule { }
