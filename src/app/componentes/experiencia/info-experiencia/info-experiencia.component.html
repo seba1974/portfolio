@@ -1,0 +1,40 @@
+<app-menu></app-menu>
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Experiencia Laboral </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="experiencia" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Link Imágen Logo</th>
+                            <th>Empresa</th>
+                            <th>Puesto</th>
+                            <th>Ubicación de la Empresa</th>
+                            <th>Área de Cobertura</th>
+                            <th>Fecha de Ingreso</th>
+                            <th>Fecha de Egreso</th>
+                            <th>Descripcion del Puesto</th>
+                            </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let experiencia of listaExperiencia">                            
+                            <td><img id="img_iconos" width = 50px [src]="experiencia.img_logo" [alt]="experiencia.img_logo"></td>
+                            <td>{{experiencia.empresa}}</td>
+                            <td>{{experiencia.puesto}}</td>
+                            <td>{{experiencia.ubic_empresa}}</td>
+                            <td>{{experiencia.area_cobertura}}</td>
+                            <td>{{experiencia.fecha_ingreso}}</td>
+                            <td>{{experiencia.fecha_egreso}}</td>
+                            <td>{{experiencia.descripcion}}</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <button class="btn btn-success" [routerLink]="['/']"><i class="fa-solid fa-arrow-left-long"></i> Volver</button>
+            </div>
+        </div>
+    </div>
+</div>
