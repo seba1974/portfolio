@@ -5,6 +5,7 @@
                         <div
                                 class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                                 <h4>Hard & Soft Skills</h4>
+                                
                                 <i class="bi bi-plus-circle-fill" *ngIf="isLogged" [routerLink]="['/skills/crear']"></i>
                         </div>
 
@@ -12,10 +13,15 @@
                 <ul>
                         <h6>Hard Skills</h6>
                         
+                        
                         <li *ngFor="let skills_hard of lista_Skills_Hard">
-                                <p>{{skills_hard.habilidad}}
-                                        <i class="bi bi-pencil-fill" *ngIf="isLogged" [routerLink]="['/skills_hard/editar/',skills_hard.id]"></i>
-                                        <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/skills_hard/borrar/',skills_hard.id]"></i></p>
+                                
+                                <i class="bi bi-pencil-fill" *ngIf="isLogged" [routerLink]="['/skills_hard/editar/',skills_hard.id]"></i>
+                                <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/skills_hard/borrar/',skills_hard.id]"></i>
+                                
+                                <button (click)="buildChart(skills_hard)">Grafico</button>
+                                <div id="chart_div" style="width:400; height:300"></div>
+                                <p>{{skills_hard.habilidad}}</p>
                                 <p class="principal">{{skills_hard.porcentaje}}%</p>
                         </li>
                 </ul>

@@ -62,6 +62,8 @@ import { interceptorProvider } from './interceptors/prod-interceptor.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+
 
 
 @NgModule({
@@ -115,7 +117,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    Ng2GoogleChartsModule
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent]
