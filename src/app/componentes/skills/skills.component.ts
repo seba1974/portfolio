@@ -15,7 +15,7 @@ declare var google: any;
 })
 export class SkillsComponent implements OnInit {
 
-  private porcentaje: number = 60;
+  //private porcentaje: number = 60;
   private resto: number = 0;
 
   lista_Skills_Hard: any;
@@ -24,7 +24,9 @@ export class SkillsComponent implements OnInit {
   skills: Skills | undefined;
   isLogged = false;
   nombreUsuario = '';
-  i : number | undefined;
+  i: number | undefined;
+  habilidad: any;
+  porcentaje: any;
 
   constructor(private datosSkills_Hard: SkillsHardService,
     private datosSkills_Soft: SkillsSoftService,
@@ -50,8 +52,8 @@ export class SkillsComponent implements OnInit {
 
     this.datosSkills_Hard.obtenerSkills_Hard().subscribe(data => {
       this.lista_Skills_Hard = data;
-      console.log(data)                                         // agregado para graficar (todo el array id 1, 2, 3.)
-    //  console.log(data[2])                                      // solo el objeto cuyo indice es [2]
+      //  console.log(data)                                         // agregado para graficar (todo el array id 1, 2, 3.)
+      //  console.log(data[2])                                      // solo el objeto cuyo indice es [2]
       google.charts.load('current', { packages: ['corechart'] }); // agregado para graficar
       //this.buildChart(data);                                    // agregado para graficar
     })
@@ -61,42 +63,41 @@ export class SkillsComponent implements OnInit {
   }
 
   buildChart(skillsHard: Skills[]) {
-  //  console.log(skillsHard)                    // Objeto {id: 1, habilidad: 'Programación', porcentaje: '40'}
-  //  console.log(Object.entries(skillsHard));    // devuelve todo el objeto id:1 abajo habilidad: Programacion abajo Pocentaje : 40
-  //  console.log(Object.keys(skillsHard));    // devuelve todos los nombres de las propiedades tipo cadena
-    
+    //  console.log(skillsHard)                    // Objeto {id: 1, habilidad: 'Programación', porcentaje: '40'}
+    console.log(Object.entries(skillsHard));    // devuelve todo el objeto id:1 abajo habilidad: Programacion abajo Pocentaje : 40
+    //  console.log(Object.keys(skillsHard));    // devuelve todos los nombres de las propiedades tipo cadena
+    console.log(skillsHard);
     //-----------------------
-    console.log(Object.values(skillsHard));    // devuelve un array [1, 'Programación', '40']
-                                               // con todos los valores correspondientes a las propiedades tipo cadena
+    //console.log(Object.values(skillsHard));    // --------devuelve un array [1, 'Programación', '40']-------
+    // con todos los valores correspondientes a las propiedades tipo cadena
     //--------------------------
-    for (this.i = 1; this.i <Object.values(skillsHard).length; this.i++) {
-      console.log(Object.values(skillsHard)[this.i]);  // ------Devuelve "Programacion" abajo "40"-------
-    //  console.log(`${Object.values(skillsHard)[this.i]}`);  // Devuelve "40 o 25 o 60"
-     // console.log(`${Object.values(skillsHard)[this.i].habilidad}`);  // Devuelve undefined
-    //  console.log(Object.values(skillsHard)[this.i].porcentaje);  // Devuelve undefined
+    for (this.i = 1; this.i < Object.values(skillsHard).length; this.i++) {
 
+      console.log(Object.values(skillsHard)[this.i]);  // ------------Devuelve "Programacion" abajo "40"----------------
+      console.log(`${Object.values(skillsHard)[this.i]}`);  // Devuelve "40 o 25 o 60"
+      // console.log(`${Object.values(skillsHard)[this.i].habilidad}`);  // Devuelve undefined
+      //  console.log(Object.values(skillsHard)[this.i].porcentaje);  // Devuelve undefined
+      //console.log((skillsHard)[this.i].habilidad);
 
-    } 
+    }
     //--------------------------------------hasta acá esta bien!!!!!
     for (const propiedad in skillsHard) {
-     // console.log(`${propiedad}: ${skillsHard[propiedad]}`);
-      
-
+      console.log(`${propiedad}: ${skillsHard[propiedad]}`);
 
       var func = (chart: any) => {
         var data = new google.visualization.DataTable();
         // data.addColumn('string', 'Id');
         data.addColumn('string', 'Habilidad');
         data.addColumn('number', 'Porcentaje');
-      //  console.log(`${propiedad}: ${skillsHard[propiedad]}`);  // Devuelve "porcentaje: 40"
+        //  console.log(`${propiedad}: ${skillsHard[propiedad]}`);  // Devuelve "porcentaje: 40"
 
         data.addRows([
           [`${propiedad}`, parseInt(`${skillsHard[propiedad]}`, 10)],
           ['', this.resto = 100 - parseInt(`${skillsHard[propiedad]}`, 10)],
-          ['',  100]
+          ['', 100]
         ]);
-      //  console.log(`${propiedad}`)             // Devuelve la propiedad ("Porcentaje o Habilidad")
-      //  console.log(`${skillsHard[propiedad]}`) // Devuelve el el valor del porcentaje ("40, 25, 60")
+        //  console.log(`${propiedad}`)             // Devuelve la propiedad ("Porcentaje o Habilidad")
+        //  console.log(`${skillsHard[propiedad]}`) // Devuelve sólo el valor del porcentaje ("40, 25, 60")
         //});
         var options = {
           'title': 'Hard Skills',
@@ -120,6 +121,45 @@ export class SkillsComponent implements OnInit {
 
   }
 
+
+  buildnewChart(habilidad: any, porcentaje: any) {
+    console.log(habilidad);
+    console.log(porcentaje);
+
+    var func = (chart: any) => {
+      var data = new google.visualization.DataTable();
+      // data.addColumn('string', 'Id');
+      data.addColumn('string', 'Habilidad');
+      data.addColumn('number', 'Porcentaje');
+      //  console.log(`${propiedad}: ${skillsHard[propiedad]}`);  // Devuelve "porcentaje: 40"
+
+      data.addRows([
+        [habilidad, parseInt(porcentaje, 10)],
+        ['', (this.resto = 100 - parseInt(porcentaje, 10))],
+        ['', 100]
+      ]);
+    //  console.log(`${propiedad}`)             // Devuelve la propiedad ("Porcentaje o Habilidad")
+    //  console.log(`${skillsHard[propiedad]}`) // Devuelve sólo el valor del porcentaje ("40, 25, 60")
+    //});
+    var options = {
+      'title': habilidad,
+      'width': 400,
+      'height': 300,
+      'pieHole': 0.75,  //tamaño del agujero central
+      'pieStartAngle': 270, //Girar grafico 90°
+      'slices': {
+        0: { color: '#58D68D' },
+        1: { color: '#E5E8E8' },
+        2: { color: 'transparent' }
+      }
+    };
+    chart().draw(data, options);
+  }
+var chart = () => new google.visualization.PieChart(document.getElementById('chart_div'));
+var callback = () => func(chart);
+google.charts.setOnLoadCallback(callback);
+
+}
   /* drawChart(){
      // Create the data table.
      var data = new google.visualization.DataTable();
