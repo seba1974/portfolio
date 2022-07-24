@@ -15,7 +15,7 @@ declare var google: any;
 })
 export class SkillsComponent implements OnInit {
 
-  private porcentaje: number = 75;
+  private porcentaje: number = 60;
   private resto: number = 0;
 
   lista_Skills_Hard: any;
@@ -24,7 +24,7 @@ export class SkillsComponent implements OnInit {
   skills: Skills | undefined;
   isLogged = false;
   nombreUsuario = '';
-
+  i : number | undefined;
 
   constructor(private datosSkills_Hard: SkillsHardService,
     private datosSkills_Soft: SkillsSoftService,
@@ -51,6 +51,7 @@ export class SkillsComponent implements OnInit {
     this.datosSkills_Hard.obtenerSkills_Hard().subscribe(data => {
       this.lista_Skills_Hard = data;
       console.log(data)                                         // agregado para graficar (todo el array id 1, 2, 3.)
+    //  console.log(data[2])                                      // solo el objeto cuyo indice es [2]
       google.charts.load('current', { packages: ['corechart'] }); // agregado para graficar
       //this.buildChart(data);                                    // agregado para graficar
     })
@@ -60,25 +61,42 @@ export class SkillsComponent implements OnInit {
   }
 
   buildChart(skillsHard: Skills[]) {
-    console.log(skillsHard)                    // Objeto {id: 1, habilidad: 'Programación', porcentaje: '40'}
+  //  console.log(skillsHard)                    // Objeto {id: 1, habilidad: 'Programación', porcentaje: '40'}
+  //  console.log(Object.entries(skillsHard));    // devuelve todo el objeto id:1 abajo habilidad: Programacion abajo Pocentaje : 40
+  //  console.log(Object.keys(skillsHard));    // devuelve todos los nombres de las propiedades tipo cadena
+    
+    //-----------------------
+    console.log(Object.values(skillsHard));    // devuelve un array [1, 'Programación', '40']
+                                               // con todos los valores correspondientes a las propiedades tipo cadena
+    //--------------------------
+    for (this.i = 1; this.i <Object.values(skillsHard).length; this.i++) {
+      console.log(Object.values(skillsHard)[this.i]);  // ------Devuelve "Programacion" abajo "40"-------
+    //  console.log(`${Object.values(skillsHard)[this.i]}`);  // Devuelve "40 o 25 o 60"
+     // console.log(`${Object.values(skillsHard)[this.i].habilidad}`);  // Devuelve undefined
+    //  console.log(Object.values(skillsHard)[this.i].porcentaje);  // Devuelve undefined
 
+
+    } 
+    //--------------------------------------hasta acá esta bien!!!!!
     for (const propiedad in skillsHard) {
-      console.log(`${propiedad}: ${skillsHard[propiedad]}`);
-
+     // console.log(`${propiedad}: ${skillsHard[propiedad]}`);
+      
 
 
       var func = (chart: any) => {
         var data = new google.visualization.DataTable();
         // data.addColumn('string', 'Id');
         data.addColumn('string', 'Habilidad');
-        data.addColumn('string', 'Porcentaje');
-        console.log(`${propiedad}: ${skillsHard[propiedad]}`);
+        data.addColumn('number', 'Porcentaje');
+      //  console.log(`${propiedad}: ${skillsHard[propiedad]}`);  // Devuelve "porcentaje: 40"
 
         data.addRows([
-          [`${propiedad}`, `${skillsHard[propiedad]}`]
+          [`${propiedad}`, parseInt(`${skillsHard[propiedad]}`, 10)],
+          ['', this.resto = 100 - parseInt(`${skillsHard[propiedad]}`, 10)],
+          ['',  100]
         ]);
-        console.log(`${propiedad}`)
-        console.log(`${skillsHard[propiedad]}`)
+      //  console.log(`${propiedad}`)             // Devuelve la propiedad ("Porcentaje o Habilidad")
+      //  console.log(`${skillsHard[propiedad]}`) // Devuelve el el valor del porcentaje ("40, 25, 60")
         //});
         var options = {
           'title': 'Hard Skills',
