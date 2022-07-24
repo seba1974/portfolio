@@ -12,17 +12,14 @@
                 </div>
                 <ul>
                         <h6>Hard Skills</h6>
-                        
-                        
+
                         <li *ngFor="let skills_hard of lista_Skills_Hard">
-                                
                                 <i class="bi bi-pencil-fill" *ngIf="isLogged" [routerLink]="['/skills_hard/editar/',skills_hard.id]"></i>
                                 <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/skills_hard/borrar/',skills_hard.id]"></i>
-                                
-                                <button (click)="buildnewChart(skills_hard.habilidad, skills_hard.porcentaje)">Grafico</button>
-                                <div id="chart_div" style="width:400; height:300"></div>
-                                <p>{{skills_hard.habilidad}}</p>
-                                <p class="principal">{{skills_hard.porcentaje}}%</p>
+                                <!---<div>{{this.crearGrafico(skills_hard.habilidad, skills_hard.porcentaje)}}</div>-->
+                                <button (click)="crearGrafico(skills_hard.habilidad, skills_hard.porcentaje)">{{skills_hard.habilidad}}</button>
+                                <div id="chart_div"></div>
+                                                             
                         </li>
                 </ul>
                 <hr>
@@ -30,10 +27,10 @@
                         <h6>Soft Skills</h6>
                         
                         <li *ngFor="let skills_soft of lista_Skills_Soft">
-                                <p>{{skills_soft.habilidad}}
-                                        <i class="bi bi-pencil-fill" *ngIf="isLogged" [routerLink]="['/skills_soft/editar/',skills_soft.id]"></i>
-                                        <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/skills_soft/borrar/',skills_soft.id]"></i></p>
-                                <p class="principal">{{skills_soft.porcentaje}}%</p>
+                                <i class="bi bi-pencil-fill" *ngIf="isLogged" [routerLink]="['/skills_soft/editar/',skills_soft.id]"></i>
+                                <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/skills_soft/borrar/',skills_soft.id]"></i>
+                                <button (click)="crearGrafico(skills_soft.habilidad, skills_soft.porcentaje)">{{skills_soft.habilidad}}</button>
+                                <div id="chart_div"></div>
                         </li>
                 </ul>
                 <hr>
