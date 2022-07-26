@@ -2,18 +2,15 @@
 <div class="conteiner">
         <div class="card mat-card">
                 <div id="skills">
-                        <div
-                                class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                                <h4>Hard & Soft Skills</h4>
-                                
+                        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                                <h4>Hard & Soft Skills</h4>                                
                                 <i class="bi bi-plus-circle-fill" *ngIf="isLogged" [routerLink]="['/skills/crear']"></i>
                         </div>
-
                 </div>
                 <ul>
                         <h6>Hard Skills</h6>
 
-                        <li *ngFor="let skills_hard of lista_Skills_Hard">
+                        <li *ngFor="let skills_hard of lista_Skills_Hard" (onSubmit)="crearGrafico(skills_hard.habilidad, skills_hard.porcentaje)">
                                 <i class="bi bi-pencil-fill" *ngIf="isLogged" [routerLink]="['/skills_hard/editar/',skills_hard.id]"></i>
                                 <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/skills_hard/borrar/',skills_hard.id]"></i>
                                 <!---<div>{{this.crearGrafico(skills_hard.habilidad, skills_hard.porcentaje)}}</div>-->
@@ -23,6 +20,8 @@
                         </li>
                 </ul>
                 <hr>
+                
+                
                 <ul>
                         <h6>Soft Skills</h6>
                         
@@ -30,7 +29,6 @@
                                 <i class="bi bi-pencil-fill" *ngIf="isLogged" [routerLink]="['/skills_soft/editar/',skills_soft.id]"></i>
                                 <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/skills_soft/borrar/',skills_soft.id]"></i>
                                 <button (click)="crearGrafico(skills_soft.habilidad, skills_soft.porcentaje)">{{skills_soft.habilidad}}</button>
-                                <div id="chart_div"></div>
                         </li>
                 </ul>
                 <hr>

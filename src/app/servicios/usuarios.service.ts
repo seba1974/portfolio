@@ -9,8 +9,9 @@ import { Usuarios } from '../Models/usuarios';
 export class UsuariosService {
 
 
-  usuariosURL = "http://localhost:8080/perfil";
+  //usuariosURL = "http://localhost:8080/perfil";
   //usuariosURL = "https://beporfoliosebaveloce.herokuapp.com/perfil"
+  usuariosURL = "https://backend-sebaveloce.herokuapp.com/perfil"
   
   constructor(private http:HttpClient,
               ) { } 
