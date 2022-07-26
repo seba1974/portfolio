@@ -8,8 +8,9 @@ import { RedesSociales } from '../Models/redessociales';
 })
 export class RedessocialesService {
 
-  redessocialesURL = "http://localhost:8080/redessociales";
+  //redessocialesURL = "http://localhost:8080/redessociales";
   //redessocialesURL = "https://beporfoliosebaveloce.herokuapp.com/redessociales";
+  redessocialesURL = "https://backend-sebaveloce.herokuapp.com/redessociales";
 
   constructor(private http:HttpClient) { }
 

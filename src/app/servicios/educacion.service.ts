@@ -8,8 +8,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EducacionService { 
   
-  educacionURL = "http://localhost:8080/educacion";
+  //educacionURL = "http://localhost:8080/educacion";
   //educacionURL = "https://beporfoliosebaveloce.herokuapp.com/educacion"
+  educacionURL = 'https://backend-sebaveloce.herokuapp.com/educacion';
+
   
 constructor(private http:HttpClient) { }
 

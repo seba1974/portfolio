@@ -8,9 +8,9 @@ import { Skills } from '../Models/skills'
 })
 export class SkillsSoftService {
 
-  skills_softURL = "http://localhost:8080/skills_soft"
+  //skills_softURL = "http://localhost:8080/skills_soft"
   //skills_softURL = "https://beporfoliosebaveloce.herokuapp.com/skills_soft"
-
+  skills_softURL = "https://backend-sebaveloce.herokuapp.com/skills_soft"
 
   constructor(private http:HttpClient) { }
 

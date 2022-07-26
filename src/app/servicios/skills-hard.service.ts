@@ -8,8 +8,9 @@ import { Skills } from '../Models/skills'
 })
 export class SkillsHardService {
 
-  skills_hardURL = "http://localhost:8080/skills_hard"
+  //skills_hardURL = "http://localhost:8080/skills_hard"
   //skills_hardURL = "https://beporfoliosebaveloce.herokuapp.com/skills_hard"
+  skills_hardURL = "https://backend-sebaveloce.herokuapp.com/skills_hard"
 
 
   constructor(private http:HttpClient) { }
