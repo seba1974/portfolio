@@ -14,7 +14,9 @@
                                 <i class="bi bi-pencil-fill" *ngIf="isLogged" [routerLink]="['/skills_hard/editar/',skills_hard.id]"></i>
                                 <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/skills_hard/borrar/',skills_hard.id]"></i>
                                 <!---<div>{{this.crearGrafico(skills_hard.habilidad, skills_hard.porcentaje)}}</div>-->
-                                <button (click)="crearGrafico(skills_hard.habilidad, skills_hard.porcentaje)">{{skills_hard.habilidad}}</button>
+                                <a class="btn btn-dark btn-sm mx-3" (click)="crearGrafico(skills_hard.habilidad, skills_hard.porcentaje)">
+                                        <i class="fa-solid fa-circle-info"></i>{{skills_hard.habilidad}}  + Info</a>
+                                <button class="btn btn-primary" (click)="crearGrafico(skills_hard.habilidad, skills_hard.porcentaje)">{{skills_hard.habilidad}}</button>
                                 <div id="chart_div"></div>
                                                              
                         </li>
