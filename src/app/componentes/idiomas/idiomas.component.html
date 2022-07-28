@@ -2,8 +2,7 @@
 <div class="conteiner">
         <div class="card mat-card">
                 <div id="idiomas">
-                        <div
-                                class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                                 <h4>Idiomas</h4>
                                 <i class="bi bi-plus-circle-fill" *ngIf="isLogged" [routerLink]="['/idiomas/crear']"></i>
                         </div>
@@ -14,7 +13,8 @@
                                 <!-- directiva estructural recorre la estructura  !-->
                                 <h6>{{idiomas.idioma}}
                                         <i class="bi bi-pencil-fill" *ngIf="isLogged" [routerLink]="['/idiomas/editar/',idiomas.id]"></i>
-                                        <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/idiomas/borrar/',idiomas.id]"></i>
+                                        <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/idiomas/borrar/',idiomas.id]"></i> 
+                                        <button class="btn btn-outline-success mx-3" (click)="crearGrafico(idiomas.idioma, idiomas.porcentaje_oral,idiomas.porcentaje_escrita, idiomas.porcentaje_lectura)">{{idiomas.idioma}}</button>
                                 </h6>
                                 <p class="secundario">{{idiomas.porcentaje_oral}} % Oralidad</p>
                                 <p class="secundario">{{idiomas.porcentaje_escrita}} % Escritura</p>
@@ -23,5 +23,6 @@
                         </li>
 
                 </ul>
+                <div id="chart_div" class="mx-auto" style="width: 200px;"></div>
         </div>
 </div>
