@@ -14,7 +14,8 @@
                                 <h6>{{idiomas.idioma}}
                                         <i class="bi bi-pencil-fill" *ngIf="isLogged" [routerLink]="['/idiomas/editar/',idiomas.id]"></i>
                                         <i class="bi bi-trash-fill" *ngIf="isLogged" [routerLink]="['/idiomas/borrar/',idiomas.id]"></i> 
-                                        <button class="btn btn-outline-success mx-3" (click)="crearGrafico(idiomas.idioma, idiomas.porcentaje_oral,idiomas.porcentaje_escrita, idiomas.porcentaje_lectura)">{{idiomas.idioma}}</button>
+                                        <!--<button class="btn btn-outline-success mx-3" 
+                                        (click)="crearGrafico(idiomas.idioma, idiomas.porcentaje_oral,idiomas.porcentaje_escrita, idiomas.porcentaje_lectura)">{{idiomas.idioma}}</button>!-->
                                 </h6>
                                 <p class="secundario">{{idiomas.porcentaje_oral}} % Oralidad</p>
                                 <p class="secundario">{{idiomas.porcentaje_escrita}} % Escritura</p>

@@ -10,8 +10,7 @@ import { JwtDTO } from '../Models/jwt-dto';
 })
 export class AuthService {
 
-  //authURL = 'http://localhost:8080/auth/';
-  //authURL = 'https://beporfoliosebaveloce.herokuapp.com/auth/';
+//  authURL = 'http://localhost:8080/auth/';
   authURL = 'https://backend-sebaveloce.herokuapp.com/auth/';
 
 

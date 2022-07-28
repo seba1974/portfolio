@@ -35,7 +35,7 @@ export class IdiomasComponent implements OnInit {
   }
 
 
-  crearGrafico(idioma: any, porcentaje_oral: any, porcentaje_escrita:any, porcentaje_lectura:any) {
+ /* crearGrafico(idioma: any, porcentaje_oral: any, porcentaje_escrita:any, porcentaje_lectura:any) {
     console.log(idioma);
     console.log(porcentaje_oral);
     console.log(porcentaje_escrita);
@@ -45,9 +45,9 @@ export class IdiomasComponent implements OnInit {
       var func = (chart: any) => {
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Habilidad');
-      data.addColumn('number', 'Porcentaje Oral');
-      data.addColumn('number', 'Porcentaje Escrito');
-      data.addColumn('number', 'Porcentaje Lectura');
+      data.addColumn('number', 'Porcentaje');
+     // data.addColumn('number', 'Porcentaje Escrito');
+     // data.addColumn('number', 'Porcentaje Lectura');
       data.addRows([
         ["Oral", parseInt(porcentaje_oral,10)],
         ["Escritura", parseInt(porcentaje_escrita, 10)],
@@ -59,8 +59,8 @@ export class IdiomasComponent implements OnInit {
         'height': 300,
         
         'slices': {
-          0: { color: '#red' },
-          1: { color: '#blue' },
+          0: { color: 'red' },
+          1: { color: 'blue' },
           2: { color: 'yellow' }
         }
       };
@@ -70,5 +70,5 @@ export class IdiomasComponent implements OnInit {
     var chart = () => new google.visualization.PieChart(document.getElementById('chart_div'));
     var callback = () => func(chart);
     google.charts.setOnLoadCallback(callback);
-  }
+  }*/
 }
